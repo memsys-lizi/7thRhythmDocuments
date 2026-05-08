@@ -33,7 +33,7 @@
 | [入口与单例索引](/modding/entry-singletons.md) | 整理 `RDBase`、`RDClass`、`RDEditorBase`、`scrGameManager`、`scrConductor`、`scnGame` 和 `scnEditor` 的入口关系 |
 | [扩展点索引](/modding/extension-points.md) | 串联事件类、Inspector 面板、属性反射、条件系统、官方关卡脚本、房间、VFX 和资源加载入口 |
 | [高风险系统索引](/modding/high-risk-systems.md) | 串联输入、判定、音频、窗口、暂停结算、事件运行、编辑器保存和存档校验等跨模块系统 |
-| [未分类源码覆盖清单](/modding/source-coverage.md) | 统计 `Assembly-CSharp` 下 1050 个 `.cs` 文件的文档命中情况，并建立阶段 7 补文档队列 |
+| [未分类源码覆盖清单](/modding/source-coverage.md) | 统计 `Assembly-CSharp` 下 1051 个 `.cs` 文件的文档命中情况，并建立阶段 7 补文档队列 |
 
 ## 风险提示
 
