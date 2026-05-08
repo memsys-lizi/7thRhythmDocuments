@@ -7,7 +7,7 @@
 - 先读 [核心骨架](/modules/core.md)，理解全局入口、关卡状态、音乐时间轴、游戏场景和编辑器场景。
 - 再读 [编辑器事件系统](/modules/editor-events.md)，理解事件数据、时间线控件和 Inspector 面板如何协作。
 - 查具体事件时，可以从 [事件覆盖清单](/api/editor-events/event-coverage.md) 按 `LevelEventType` 编号进入对应页面。
-- 做跨模块源码研究时，可以从 [可调用方法索引](/modding/callable-methods.md)、[事件写法索引](/modding/event-patterns.md) 和 [数据字段索引](/modding/data-fields.md) 回到对应 API 页面。
+- 做跨模块源码研究时，可以从 [可调用方法索引](/modding/callable-methods.md)、[事件写法索引](/modding/event-patterns.md)、[数据字段索引](/modding/data-fields.md)、[入口与单例索引](/modding/entry-singletons.md) 和 [扩展点索引](/modding/extension-points.md) 回到对应 API 页面。
 
 ## 复核清单
 

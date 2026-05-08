@@ -30,6 +30,8 @@
 | [可调用方法索引](/modding/callable-methods.md) | 从源码研究角度整理 `CallCustomMethod` 可触达的 `LevelBase`、`RDRoom`、官方关卡公开方法和调用前提 |
 | [事件写法索引](/modding/event-patterns.md) | 从源码研究角度整理歌曲、行、视觉、房间、文本、窗口和收尾控制的常见事件组合 |
 | [数据字段索引](/modding/data-fields.md) | 整理 `.rdlevel` 根节点、settings、events、conditionals、bookmarks、colorPalette 和校验入口 |
+| [入口与单例索引](/modding/entry-singletons.md) | 整理 `RDBase`、`RDClass`、`RDEditorBase`、`scrGameManager`、`scrConductor`、`scnGame` 和 `scnEditor` 的入口关系 |
+| [扩展点索引](/modding/extension-points.md) | 串联事件类、Inspector 面板、属性反射、条件系统、官方关卡脚本、房间、VFX 和资源加载入口 |
 
 ## 风险提示
 

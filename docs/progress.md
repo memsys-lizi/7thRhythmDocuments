@@ -17,16 +17,16 @@
 
 ## 当前工作重点
 
-阶段 0 到阶段 4 已完成。阶段 3 和阶段 4 复核记录见 [阶段 3 与阶段 4 复核](/api/review/stage-3-4-review.md)。阶段 5 已完成文件级归属并进入待复核。阶段 6 已完成 [可调用方法索引](/modding/callable-methods.md)、[事件写法索引](/modding/event-patterns.md) 和 [数据字段索引](/modding/data-fields.md)：可调用方法页整理 `CallCustomMethod`、Ink `runLevelMethod`、`LevelBase`、`RDRoom` 和官方关卡公开方法；事件写法页按常见目标回到事件分组页和专页；数据字段页串联 `.rdlevel` 根节点、settings、events、conditionals、bookmarks、colorPalette 和校验入口。下一步转向入口与单例索引、扩展点索引和未分类源码覆盖清单。
+阶段 0 到阶段 4 已完成。阶段 3 和阶段 4 复核记录见 [阶段 3 与阶段 4 复核](/api/review/stage-3-4-review.md)。阶段 5 已完成文件级归属并进入待复核。阶段 6 已完成 [可调用方法索引](/modding/callable-methods.md)、[事件写法索引](/modding/event-patterns.md)、[数据字段索引](/modding/data-fields.md)、[入口与单例索引](/modding/entry-singletons.md) 和 [扩展点索引](/modding/extension-points.md)：可调用方法页整理 `CallCustomMethod`、Ink `runLevelMethod`、`LevelBase`、`RDRoom` 和官方关卡公开方法；事件写法页按常见目标回到事件分组页和专页；数据字段页串联 `.rdlevel` 根节点、settings、events、conditionals、bookmarks、colorPalette 和校验入口；入口页串联 `RDBase`、`RDClass`、`RDEditorBase`、`scrGameManager`、`scrConductor`、`scnGame` 和 `scnEditor`；扩展点页串联事件类、Inspector 面板、属性反射、条件、关卡脚本、房间、VFX 和资源入口。下一步转向未分类源码覆盖清单。
 
 ## 阶段 6 剩余规划
 
 | 顺序 | 页面方向 | 目标 |
 | --- | --- | --- |
 | 1 | 数据字段索引 | 已完成：整理 `.rdlevel`、settings、rows、events、decorations、conditionals、bookmarks、palettes 和设置校验入口 |
-| 2 | 入口与单例索引 | 从源码角度说明 Unity 场景、全局单例、运行时管理器、编辑器管理器的职责和调用前提 |
+| 2 | 入口与单例索引 | 已完成：从源码角度说明 Unity 场景、全局单例、运行时管理器、编辑器管理器的职责和调用前提 |
 | 3 | 高风险系统索引 | 整理判定、输入、音频、窗口、暂停、结算、存档、关卡加载、编辑器保存和事件运行路径 |
-| 4 | 扩展点索引 | 串联事件类、Inspector 面板、关卡脚本公开方法、房间方法、数据模型和资源加载接入点 |
+| 4 | 扩展点索引 | 已完成：串联事件类、Inspector 面板、关卡脚本公开方法、房间方法、数据模型和资源加载接入点 |
 | 5 | 未分类源码覆盖清单 | 统计 `Assembly-CSharp` 下尚未被页面覆盖的 RD 主工程 `.cs` 文件，作为阶段 7 清理依据 |
 
 ## 验收清单

@@ -89,4 +89,6 @@
   * [可调用方法索引](modding/callable-methods.md)
   * [事件写法索引](modding/event-patterns.md)
   * [数据字段索引](modding/data-fields.md)
+  * [入口与单例索引](modding/entry-singletons.md)
+  * [扩展点索引](modding/extension-points.md)
 * [术语表](glossary.md)

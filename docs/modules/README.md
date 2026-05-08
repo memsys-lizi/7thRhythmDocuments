@@ -11,7 +11,7 @@
 | 运行时游戏系统 | [运行时游戏系统](/modules/runtime.md) |
 | 数据模型与枚举 | [数据模型与枚举](/modules/data-models.md) |
 | 官方关卡脚本 | [官方关卡脚本](/modules/levels.md) |
-| 源码研究索引 | [源码研究入口](/modding/README.md) |
+| 源码研究索引 | [源码研究入口](/modding/README.md)、[入口与单例索引](/modding/entry-singletons.md)、[扩展点索引](/modding/extension-points.md) |
 
 ## 阅读路径
 
