@@ -63,6 +63,7 @@
     * [scr 场景、菜单与服务辅助组件索引](/api/review/scr-scene-menu-service-coverage.md)
     * [根目录 UI、暂停菜单与场景脚本索引](/api/review/root-ui-scene-coverage.md)
     * [官方演出、世界显示与统计脚本索引](/api/review/official-presentation-coverage.md)
+    * [工具、枚举与网格渲染脚本索引](/api/review/tools-mesh-light-models-coverage.md)
 
 * 模块
   * [模块入口](/modules/index.md)
