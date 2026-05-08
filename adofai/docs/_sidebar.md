@@ -39,6 +39,7 @@
     * [运行时输入与判定](/api/runtime/input-judgement.md)
     * [控制器状态、暂停与练习流程](/api/runtime/controller-pause-flow.md)
     * [相机与 VFX 运行链路](/api/runtime/camera-vfx-chain.md)
+    * [结算、成绩与进度保存](/api/runtime/results-save-flow.md)
 
 * 模块
   * [模块入口](/modules/index.md)
@@ -57,3 +58,4 @@
   * [运行时输入与判定链路](/modules/runtime-input-judgement.md)
   * [控制器、暂停与练习流程](/modules/runtime-controller-pause.md)
   * [相机与 VFX 运行时](/modules/runtime-camera-vfx.md)
+  * [结算与成绩保存模块](/modules/runtime-results-save.md)

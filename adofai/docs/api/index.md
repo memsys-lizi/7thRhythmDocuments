@@ -15,6 +15,7 @@
 | 编辑器长流程 | [scnEditor 长流程](/api/editor/scnEditor-workflows.md)、[偏好设置、粒子编辑器与辅助面板](/api/editor/preferences-particle-panels.md)、[编辑器小型 UI 类](/api/editor/editor-ui-widgets.md)、[阶段 3 编辑器系统复核](/api/editor/stage-3-review.md) | 文件打开保存、新建关卡、选择、剪贴板、事件增删、撤销重做、播放预览、辅助面板、小型 UI 组件和阶段收口 |
 | 运行时输入与判定 | [运行时输入与判定](/api/runtime/input-judgement.md)、[控制器状态、暂停与练习流程](/api/runtime/controller-pause-flow.md) | 输入聚合、异步键盘、控制器输入处理、玩家更新、命中判定、地板反馈、状态机、暂停、checkpoint、练习和失败胜利流程 |
 | 相机与 VFX | [相机与 VFX 运行链路](/api/runtime/camera-vfx-chain.md) | 相机跟随、自由相机、缩放、旋转、RenderTexture、VFX 调度、滤镜、闪屏、震屏和 Bloom |
+| 结算与保存 | [结算、成绩与进度保存](/api/runtime/results-save-flow.md) | 命中统计、完成度、准确率、X 准确率、官方和自定义成绩保存、详细结果、灯笼和失败条 |
 | 事件效果 | `ffxPlusBase`、`ffx*Plus`、`ffx*` | 事件执行组件、轨道、装饰、滤镜、声音 |
 | 存档与服务 | `Persistence`、`GCS`、`GCNS`、平台 helper、DLC、Steam | 全局状态、存档、平台差异、外部服务 |
 
@@ -60,3 +61,7 @@
 | `scrVfxPlus` | `7thRhythmSource/ADOFAi/scrVfxPlus.cs` | 运行时 VFX 调度器，按歌曲时间触发 `ffxPlusBase` 效果，并维护视频背景、滤镜组件和 tween 状态。 |
 | `ffxPlusBase` | `7thRhythmSource/ADOFAi/ffxPlusBase.cs` | 事件效果基类，保存触发时间、持续时间、视觉质量开关、来源事件和运行时引用。 |
 | `ffxCameraPlus` | `7thRhythmSource/ADOFAi/ffxCameraPlus.cs` | 相机事件组件，按参照方式 tween 相机父物体位置、相机角度和缩放倍率。 |
+| `scrMarginTracker` | `7thRhythmSource/ADOFAi/scrMarginTracker.cs` | 单玩家命中、死亡、完成度、普通准确率和 X 准确率统计器。 |
+| `scrMistakesManager` | `7thRhythmSource/ADOFAi/scrMistakesManager.cs` | 多玩家成绩汇总、官方和自定义关卡保存、checkpoint 进度保存管理器。 |
+| `DetailedResults` | `7thRhythmSource/ADOFAi/DetailedResults.cs` | 结算详细命中统计文本生成器。 |
+| `EndscreenLanterns` | `7thRhythmSource/ADOFAi/EndscreenLanterns.cs` | 结算灯笼 UI，展示完成、最高准确率和 speed trial 状态。 |
