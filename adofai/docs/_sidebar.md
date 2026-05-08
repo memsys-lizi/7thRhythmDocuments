@@ -56,6 +56,7 @@
     * [UI、服务辅助类与依赖接入](/api/platform/ui-service-dependencies.md)
   * 复核与覆盖
     * [文件级覆盖清单](/api/review/source-coverage.md)
+    * [CameraFilterPack 文件族索引](/api/review/camera-filterpack-coverage.md)
 
 * 模块
   * [模块入口](/modules/index.md)
