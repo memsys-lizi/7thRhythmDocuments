@@ -1,13 +1,13 @@
 # 源码 API 索引
 
-本区按源码类型和编辑器事件整理 API 页面。页面内容以 `RDFucked/Assets/Scripts/Assembly-CSharp` 中的 RD 主工程代码为依据，侧重类职责、关键字段、方法行为、调用关系和 Mod 使用风险。
+本区按源码类型和编辑器事件整理 API 页面。页面内容以 `RDFucked/Assets/Scripts/Assembly-CSharp` 中的 RD 主工程代码为依据，侧重类职责、关键字段、方法行为、调用关系和跨模块影响。
 
 ## 阅读方式
 
 - 先读 [核心骨架](/modules/core.md)，理解全局入口、关卡状态、音乐时间轴、游戏场景和编辑器场景。
 - 再读 [编辑器事件系统](/modules/editor-events.md)，理解事件数据、时间线控件和 Inspector 面板如何协作。
 - 查具体事件时，可以从 [事件覆盖清单](/api/editor-events/event-coverage.md) 按 `LevelEventType` 编号进入对应页面。
-- 做跨模块源码研究时，可以从 [可调用方法索引](/modding/callable-methods.md)、[事件写法索引](/modding/event-patterns.md)、[数据字段索引](/modding/data-fields.md)、[入口与单例索引](/modding/entry-singletons.md) 和 [扩展点索引](/modding/extension-points.md) 回到对应 API 页面。
+- 做跨模块源码研究时，可以从 [可调用方法索引](/modding/callable-methods.md)、[事件写法索引](/modding/event-patterns.md)、[数据字段索引](/modding/data-fields.md)、[入口与单例索引](/modding/entry-singletons.md)、[扩展点索引](/modding/extension-points.md)、[高风险系统索引](/modding/high-risk-systems.md) 和 [未分类源码覆盖清单](/modding/source-coverage.md) 回到对应 API 页面。
 
 ## 复核清单
 
@@ -35,6 +35,7 @@
 | [BasePropertyInfo](/api/editor-events/BasePropertyInfo.md) | 事件属性序列化、默认控件映射和 PropertyControl 管线 |
 | [InspectorPanel](/api/editor-events/InspectorPanel.md) | 自动面板、保存监听、本地化和面板管理器 |
 | [编辑器控件索引](/api/editor-events/editor-controls.md) | 时间线控件、属性面板和属性字段控件关系 |
+| [编辑器 UI 辅助类](/api/editor-events/editor-ui-auxiliary.md) | 批量选择、事件选择器、角色颜色房间弹窗、时间线按钮、精灵列表和保存状态辅助 |
 | [时间线与事件控件](/api/editor-events/timeline-controls.md) | `Timeline`、`TabSection`、事件控件、点击创建、拖拽移动和坐标换算 |
 | [Inspector 面板索引与专项行为](/api/editor-events/inspector-panels.md) | `InspectorPanel_*` 子类、手工面板、自动面板和专项字段联动 |
 | [自定义方法事件](/api/editor-events/custom-methods.md) | 自定义方法事件、自动补全规则、`ListedMethod` 和可调用方法清单 |

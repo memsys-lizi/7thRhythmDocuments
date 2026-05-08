@@ -12,12 +12,12 @@
 | 阶段 3：运行时游戏系统 | 已完成 | 覆盖节拍、判定、行、房间、窗口、音频、VFX、场景流程 |
 | 阶段 4：数据模型与枚举 | 已完成 | 覆盖 `RDLevelData`、`RDLevelSettings`、自定义关卡、错误、难度、平台等模型 |
 | 阶段 5：官方关卡脚本 | 待复核 | 覆盖 `Level_*` 系列，说明每个关卡脚本的特殊逻辑 |
-| 阶段 6：源码研究索引 | 进行中 | 整理可调用方法、编辑器事件、数据字段、扩展点、高风险系统和未分类源码索引 |
-| 阶段 7：全站复核 | 未开始 | 补交叉链接、术语表、调用图、缺失项清单 |
+| 阶段 6：源码研究索引 | 已完成 | 整理可调用方法、编辑器事件、数据字段、扩展点、高风险系统和未分类源码索引 |
+| 阶段 7：全站复核 | 进行中 | 补交叉链接、术语表、调用图、缺失项清单 |
 
 ## 当前工作重点
 
-阶段 0 到阶段 4 已完成。阶段 3 和阶段 4 复核记录见 [阶段 3 与阶段 4 复核](/api/review/stage-3-4-review.md)。阶段 5 已完成文件级归属并进入待复核。阶段 6 已完成 [可调用方法索引](/modding/callable-methods.md)、[事件写法索引](/modding/event-patterns.md)、[数据字段索引](/modding/data-fields.md)、[入口与单例索引](/modding/entry-singletons.md) 和 [扩展点索引](/modding/extension-points.md)：可调用方法页整理 `CallCustomMethod`、Ink `runLevelMethod`、`LevelBase`、`RDRoom` 和官方关卡公开方法；事件写法页按常见目标回到事件分组页和专页；数据字段页串联 `.rdlevel` 根节点、settings、events、conditionals、bookmarks、colorPalette 和校验入口；入口页串联 `RDBase`、`RDClass`、`RDEditorBase`、`scrGameManager`、`scrConductor`、`scnGame` 和 `scnEditor`；扩展点页串联事件类、Inspector 面板、属性反射、条件、关卡脚本、房间、VFX 和资源入口。下一步转向未分类源码覆盖清单。
+阶段 0 到阶段 4 已完成。阶段 3 和阶段 4 复核记录见 [阶段 3 与阶段 4 复核](/api/review/stage-3-4-review.md)。阶段 5 已完成文件级归属并进入待复核。阶段 6 已完成 [可调用方法索引](/modding/callable-methods.md)、[事件写法索引](/modding/event-patterns.md)、[数据字段索引](/modding/data-fields.md)、[入口与单例索引](/modding/entry-singletons.md)、[扩展点索引](/modding/extension-points.md)、[高风险系统索引](/modding/high-risk-systems.md) 和 [未分类源码覆盖清单](/modding/source-coverage.md)。覆盖清单统计 `Assembly-CSharp` 下 1050 个 `.cs` 文件，当前 703 个文件名已在文档中命中，347 个文件名未命中，并建立阶段 7 补文档队列。阶段 7 已补 [编辑器 UI 辅助类](/api/editor-events/editor-ui-auxiliary.md)，覆盖 RDLevelEditor 未命中的 35 个 UI、弹窗、选择器、时间线和保存辅助文件。下一步补根目录 UI 与菜单辅助类。
 
 ## 阶段 6 剩余规划
 
@@ -25,9 +25,9 @@
 | --- | --- | --- |
 | 1 | 数据字段索引 | 已完成：整理 `.rdlevel`、settings、rows、events、decorations、conditionals、bookmarks、palettes 和设置校验入口 |
 | 2 | 入口与单例索引 | 已完成：从源码角度说明 Unity 场景、全局单例、运行时管理器、编辑器管理器的职责和调用前提 |
-| 3 | 高风险系统索引 | 整理判定、输入、音频、窗口、暂停、结算、存档、关卡加载、编辑器保存和事件运行路径 |
+| 3 | 高风险系统索引 | 已完成：整理判定、输入、音频、窗口、暂停、结算、存档、关卡加载、编辑器保存和事件运行路径 |
 | 4 | 扩展点索引 | 已完成：串联事件类、Inspector 面板、关卡脚本公开方法、房间方法、数据模型和资源加载接入点 |
-| 5 | 未分类源码覆盖清单 | 统计 `Assembly-CSharp` 下尚未被页面覆盖的 RD 主工程 `.cs` 文件，作为阶段 7 清理依据 |
+| 5 | 未分类源码覆盖清单 | 已完成：统计 `Assembly-CSharp` 下 `.cs` 文件并建立阶段 7 补文档队列 |
 
 ## 验收清单
 

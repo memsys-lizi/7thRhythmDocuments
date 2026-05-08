@@ -59,6 +59,7 @@ flowchart TD
 | [BasePropertyInfo](/api/editor-events/BasePropertyInfo.md) | 事件属性反射、序列化映射、默认控件映射、`Property` 和 `PropertyControl`。 |
 | [InspectorPanel](/api/editor-events/InspectorPanel.md) | 自动面板、保存监听、本地化、属性控件更新和 `RDInspectorPanelManager`。 |
 | [编辑器控件索引](/api/editor-events/editor-controls.md) | 时间线控件、属性面板和字段控件三层 UI 关系。 |
+| [编辑器 UI 辅助类](/api/editor-events/editor-ui-auxiliary.md) | 批量选择、事件选择器、弹窗、时间线按钮、精灵列表和保存状态辅助。 |
 | [时间线与事件控件](/api/editor-events/timeline-controls.md) | `Timeline`、`TabSection`、事件控件、点击创建、拖拽移动、书签、波形和坐标换算。 |
 | [Inspector 面板索引与专项行为](/api/editor-events/inspector-panels.md) | `InspectorPanel_*` 子类、手工面板、自动面板和专项字段联动。 |
 | [事件覆盖清单](/api/editor-events/event-coverage.md) | 按 `LevelEventType` 枚举顺序记录事件页面归属和覆盖状态。 |
