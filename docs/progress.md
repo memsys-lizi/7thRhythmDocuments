@@ -17,7 +17,7 @@
 
 ## 当前工作重点
 
-阶段 2 已开始。当前已完成 `LevelEvent_Base`、`LevelEventInfo`、`BasePropertyInfo`、`InspectorPanel` 的第一版人工初稿，并补了歌曲与音频事件、行与节拍事件、视觉与镜头事件、房间与精灵事件、文本与脚本控制事件、窗口与剩余事件分组页，以及编辑器控件索引。阶段 6 已启动自定义方法索引，记录 `CallCustomMethod`、`MethodAutocompleteUI`、`ListedMethod` 和可调用方法清单。下一步补事件覆盖清单，再进入具体面板和控件逐类深写。
+阶段 2 已开始。当前已完成 `LevelEvent_Base`、`LevelEventInfo`、`BasePropertyInfo`、`InspectorPanel` 的第一版人工初稿，并补了歌曲与音频事件、行与节拍事件、视觉与镜头事件、房间与精灵事件、文本与脚本控制事件、窗口与剩余事件分组页、编辑器控件索引、事件覆盖清单、事件运行路径、Inspector 面板读写链路，以及重点事件 `AddClassicBeat`、`AddOneshotBeat`、`SetRowXs`、`PlaySong`、歌曲时间线事件专页。自定义方法已整理到编辑器事件分组，Mod 区保留入口页。当前步骤是继续拆重点事件专页。
 
 ## 验收清单
 

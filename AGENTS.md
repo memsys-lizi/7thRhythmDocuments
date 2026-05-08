@@ -33,11 +33,11 @@
 | --- | --- | --- | --- |
 | 阶段 0：文档基础设施 | 待复核 | 完善 docsify 首页、侧边栏、搜索、黑白样式、模块目录 | 已创建 docsify 站点、长期手册、模块导航和写作规范 |
 | 阶段 1：核心骨架 | 待复核 | 深写 `RDBase`、`RDClass`、`LevelBase`、`scrConductor`、`scnGame`、`scnEditor` | 六个核心类均已完成第一版人工初稿；后续进入全量成员拆页和交叉链接复核 |
-| 阶段 2：关卡编辑器事件系统 | 进行中 | 深写 `LevelEvent_Base`、`LevelEvent_*`、`InspectorPanel`、`InspectorPanel_*`、事件属性与控件关系 | 已完成 `LevelEvent_Base`、`LevelEventInfo`、`BasePropertyInfo`、`InspectorPanel` 第一版人工初稿；已补歌曲与音频事件、行与节拍事件、视觉与镜头事件、房间与精灵事件、文本与脚本控制事件、窗口与剩余事件分组页、编辑器控件索引；下一步补事件覆盖清单，再进入具体面板和控件逐类深写 |
+| 阶段 2：关卡编辑器事件系统 | 进行中 | 深写 `LevelEvent_Base`、`LevelEvent_*`、`InspectorPanel`、`InspectorPanel_*`、事件属性与控件关系 | 已完成 `LevelEvent_Base`、`LevelEventInfo`、`BasePropertyInfo`、`InspectorPanel` 第一版人工初稿；已补歌曲与音频事件、行与节拍事件、视觉与镜头事件、房间与精灵事件、文本与脚本控制事件、窗口与剩余事件分组页、编辑器控件索引、事件覆盖清单、事件运行路径、Inspector 面板读写链路、`AddClassicBeat`、`AddOneshotBeat`、`SetRowXs`、`PlaySong`、歌曲时间线事件专页；当前步骤是继续拆重点事件专页 |
 | 阶段 3：运行时游戏系统 | 未开始 | 覆盖节拍、判定、行、房间、窗口、音频、VFX、场景流程 | 待开始 |
 | 阶段 4：数据模型与枚举 | 未开始 | 覆盖 `RDLevelData`、`RDLevelSettings`、自定义关卡、错误、难度、平台等模型 | 待开始 |
 | 阶段 5：官方关卡脚本 | 未开始 | 覆盖 `Level_*` 系列，说明每个关卡脚本的特殊逻辑 | 待开始 |
-| 阶段 6：Mod 作者索引 | 进行中 | 整理可调用方法、编辑器事件、数据字段、扩展点和风险提示 | 已完成自定义方法索引第一版，覆盖 `CallCustomMethod` 表达式、自动补全、`ListedMethod` 和已标注方法清单 |
+| 阶段 6：Mod 作者索引 | 进行中 | 整理可调用方法、编辑器事件、数据字段、扩展点和风险提示 | 已完成自定义方法事件第一版，页面归入编辑器事件目录，Mod 区保留交叉入口 |
 | 阶段 7：全站复核 | 未开始 | 补交叉链接、术语表、调用图、缺失项清单 | 待开始 |
 
 状态只能使用：`未开始`、`进行中`、`已完成`、`待复核`。

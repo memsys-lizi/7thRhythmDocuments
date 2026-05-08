@@ -179,4 +179,4 @@ flowchart LR
 | [LevelEvent_Base](/api/editor-events/LevelEvent_Base.md) | 事件数据来源 |
 | [BasePropertyInfo](/api/editor-events/BasePropertyInfo.md) | 字段反射和属性包装来源 |
 | [InspectorPanel](/api/editor-events/InspectorPanel.md) | 面板创建、显示、保存和自动控件生成 |
-| [自定义方法索引](/api/custom-methods/README.md) | `InspectorPanel_CallCustomMethod` 的方法补全与调用规则 |
+| [自定义方法事件](/api/editor-events/custom-methods.md) | `InspectorPanel_CallCustomMethod` 的方法补全与调用规则 |

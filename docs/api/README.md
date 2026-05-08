@@ -26,7 +26,7 @@
 - 自动草稿不能替代人工深写。
 - 核心模块 API 页必须与模块讲解页互相链接。
 
-## 已写页面
+## 核心类
 
 | 页面 | 状态 | 说明 |
 | --- | --- | --- |
@@ -36,15 +36,39 @@
 | [scrConductor](/api/core/scrConductor.md) | 初稿 | 已人工阅读源码，记录音乐时间轴、播放、Scrub、BPM 和校准入口 |
 | [scnGame](/api/core/scnGame.md) | 初稿 | 已人工阅读源码，记录游戏场景状态、Beat、行、房间、判定和流程入口 |
 | [scnEditor](/api/core/scnEditor.md) | 初稿 | 已人工阅读源码，记录编辑器场景状态、事件控件、文件、播放预览和选择流程 |
+
+## 编辑器事件基础机制
+
+| 页面 | 状态 | 说明 |
+| --- | --- | --- |
 | [LevelEvent_Base](/api/editor-events/LevelEvent_Base.md) | 初稿 | 已人工阅读源码，记录事件公共字段、编码解码、条件、标签和节拍调度 |
 | [LevelEventInfo](/api/editor-events/LevelEventInfo.md) | 初稿 | 已人工阅读源码，记录事件元数据 Attribute、属性反射和枚举范围 |
 | [BasePropertyInfo](/api/editor-events/BasePropertyInfo.md) | 初稿 | 已人工阅读源码，记录事件属性序列化、默认控件映射和 PropertyControl 管线 |
 | [InspectorPanel](/api/editor-events/InspectorPanel.md) | 初稿 | 已人工阅读源码，记录自动面板、保存监听、本地化和面板管理器 |
 | [编辑器控件索引](/api/editor-events/editor-controls.md) | 初稿 | 已人工阅读源码，记录时间线控件、属性面板和属性字段控件关系 |
+| [自定义方法事件](/api/editor-events/custom-methods.md) | 初稿 | 已人工阅读源码，记录自定义方法事件、自动补全规则、`ListedMethod` 和可调用方法清单 |
+| [事件覆盖清单](/api/editor-events/event-coverage.md) | 初稿 | 已按 `LevelEventType` 枚举顺序记录 0 到 80 号事件的页面归属和覆盖状态 |
+| [事件运行路径](/api/editor-events/runtime-flow.md) | 初稿 | 已人工阅读源码，记录 `LevelEvent_Base`、`LevelBase`、`scrExecuteOnCertainBeat` 的运行调度关系 |
+| [Inspector 面板读写链路](/api/editor-events/inspector-flow.md) | 初稿 | 已人工阅读源码，记录自动面板、手工面板、输入监听和 `AddOneshotBeat` 面板读写示例 |
+
+## 编辑器事件分组
+
+| 页面 | 状态 | 说明 |
+| --- | --- | --- |
 | [歌曲与音频事件](/api/editor-events/song-audio-events.md) | 初稿 | 已人工阅读源码，记录歌曲、BPM、节拍声音、计数音、拍手音和游戏音效事件 |
 | [行与节拍事件](/api/editor-events/row-events.md) | 初稿 | 已人工阅读源码，记录行创建、Classic/Oneshot/FreeTime 节拍、行移动、隐藏、换行和 X pattern |
 | [视觉与镜头事件](/api/editor-events/visual-camera-events.md) | 初稿 | 已人工阅读源码，记录主题、VFX、背景前景、闪光、镜头、震屏、行染色和手部事件 |
 | [房间与精灵事件](/api/editor-events/room-sprite-events.md) | 初稿 | 已人工阅读源码，记录房间显示、变换、遮罩、透视、精灵创建、移动、染色、平铺、动画和排序 |
 | [文本与脚本控制事件](/api/editor-events/text-control-events.md) | 初稿 | 已人工阅读源码，记录对话、浮动文字、旁白、注释指令、标签、自定义方法、表情、换角色和 Stutter |
+| [自定义方法事件](/api/editor-events/custom-methods.md) | 初稿 | 已人工阅读源码，记录自定义方法事件、自动补全规则、`ListedMethod` 和可调用方法清单 |
 | [窗口与剩余事件](/api/editor-events/window-misc-events.md) | 初稿 | 已人工阅读源码，记录窗口舞蹈、缩放、内容、标题、显示、排序、播放风格和精灵混合 |
-| [自定义方法索引](/api/custom-methods/README.md) | 初稿 | 已人工阅读源码，记录自定义方法事件、自动补全规则、`ListedMethod` 和可调用方法清单 |
+
+## 重点事件专页
+
+| 页面 | 状态 | 说明 |
+| --- | --- | --- |
+| [AddClassicBeat](/api/editor-events/AddClassicBeat.md) | 初稿 | 已人工阅读源码，记录 Classic 字段、Hold、Swing、Prepare、Run、拆 FreeTime 和面板读写 |
+| [AddOneshotBeat](/api/editor-events/AddOneshotBeat.md) | 初稿 | 已人工阅读源码，记录 Oneshot 字段、验证、解码、准备、预备音频、运行和面板读写 |
+| [PlaySong](/api/editor-events/PlaySong.md) | 初稿 | 已人工阅读源码，记录歌曲字段、旧音量迁移、音频准备、播放、BPM 设置和时间线控件 |
+| [SetRowXs](/api/editor-events/SetRowXs.md) | 初稿 | 已人工阅读源码，记录 X pattern、Synco、运行修饰、面板读写和时间线显示 |
+| [歌曲时间线事件](/api/editor-events/SongTimingEvents.md) | 初稿 | 已人工阅读源码，记录 `SetBeatsPerMinute`、`SetCrotchetsPerBar`、面板、时间线和换算关系 |
