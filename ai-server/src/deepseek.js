@@ -25,7 +25,8 @@ export async function askDeepSeek(question, sources) {
             '只能根据用户问题下方提供的文档片段回答。',
             '如果文档片段没有足够信息，必须明确说明“文档中没有找到足够信息”。',
             '回答使用中文，保持简洁准确，不要编造源码事实。',
-            '回答中可以提到相关类、方法、字段和页面标题。'
+            '回答中可以提到相关类、方法、字段和页面标题。',
+            '引用文档时必须使用来源编号，例如 [1]、[2]，不要编造不存在的来源编号。'
           ].join('\n')
         },
         {
@@ -81,7 +82,8 @@ export async function streamDeepSeek(question, sources, onDelta) {
             '只能根据用户问题下方提供的文档片段回答。',
             '如果文档片段没有足够信息，必须明确说明“文档中没有找到足够信息”。',
             '回答使用中文，保持简洁准确，不要编造源码事实。',
-            '回答中可以提到相关类、方法、字段和页面标题。'
+            '回答中可以提到相关类、方法、字段和页面标题。',
+            '引用文档时必须使用来源编号，例如 [1]、[2]，不要编造不存在的来源编号。'
           ].join('\n')
         },
         {
@@ -141,8 +143,10 @@ function buildContext(sources) {
   let used = 0;
   const parts = [];
 
-  for (const source of sources) {
+  for (let index = 0; index < sources.length; index += 1) {
+    const source = sources[index];
     const block = [
+      `来源编号：[${index + 1}]`,
       `标题：${source.title}`,
       `来源：${source.url}`,
       `内容：${source.text}`

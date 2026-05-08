@@ -81,6 +81,10 @@
       if (event.key === 'Enter' && (event.ctrlKey || event.metaKey)) {
         form.requestSubmit();
       }
+      if (event.key === 'Enter' && !event.shiftKey && !event.ctrlKey && !event.metaKey) {
+        event.preventDefault();
+        form.requestSubmit();
+      }
     });
 
     form.addEventListener('submit', function (event) {
@@ -225,12 +229,8 @@
     var label = role === 'user' ? '你' : 'AI';
     var html = [
       '<div class="ai-sidebar-role">' + escapeHtml(label) + '</div>',
-      '<div class="ai-sidebar-content">' + renderMarkdown(content) + (streaming ? '<span class="ai-stream-caret"></span>' : '') + '</div>'
+      '<div class="ai-sidebar-content">' + renderMarkdown(content, sources) + (streaming ? '<span class="ai-stream-caret"></span>' : '') + '</div>'
     ];
-
-    if (sources && sources.length) {
-      html.push(renderSources(sources));
-    }
 
     message.innerHTML = html.join('');
     Array.prototype.forEach.call(message.querySelectorAll('[data-ai-source]'), function (button) {
@@ -243,20 +243,6 @@
     if (container) {
       container.scrollTop = container.scrollHeight;
     }
-  }
-
-  function renderSources(sources) {
-    var items = sources.slice(0, 5).map(function (source, index) {
-      var title = source.title || source.path || '来源 ' + (index + 1);
-      var score = typeof source.score === 'number' ? ' · ' + source.score.toFixed(4) : '';
-      return [
-        '<button class="ai-sidebar-source" type="button" data-ai-source="' + escapeAttribute(source.url || '') + '">',
-        '<span>' + escapeHtml(title) + '</span>',
-        '<small>' + escapeHtml(source.path || '') + score + '</small>',
-        '</button>'
-      ].join('');
-    });
-    return '<div class="ai-sidebar-sources"><strong>来源</strong>' + items.join('') + '</div>';
   }
 
   function jumpToSource(url) {
@@ -272,7 +258,7 @@
     window.location.href = normalized;
   }
 
-  function renderMarkdown(markdown) {
+  function renderMarkdown(markdown, sources) {
     var text = String(markdown || '');
     var blocks = [];
     text = text.replace(/```([\s\S]*?)```/g, function (_, code) {
@@ -288,6 +274,7 @@
     html = html.replace(/`([^`]+)`/g, '<code>$1</code>');
     html = renderLists(html);
     html = html.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>');
+    html = renderCitationMarks(html, sources || []);
     html = html
       .split(/\n{2,}/)
       .map(function (part) {
@@ -302,6 +289,23 @@
       html = html.replace('@@CODE_BLOCK_' + index + '@@', block);
     });
     return html;
+  }
+
+  function renderCitationMarks(html, sources) {
+    if (!sources.length) return html;
+    return html.replace(/\[(\d+)\]/g, function (match, rawIndex) {
+      var index = Number(rawIndex) - 1;
+      var source = sources[index];
+      if (!source) return match;
+      var title = source.title || source.path || '来源 ' + rawIndex;
+      return [
+        '<sup>',
+        '<button class="ai-sidebar-cite" type="button" data-ai-source="' + escapeAttribute(source.url || '') + '" title="' + escapeAttribute(title) + '">',
+        escapeHtml(rawIndex),
+        '</button>',
+        '</sup>'
+      ].join('');
+    });
   }
 
   function renderLists(html) {

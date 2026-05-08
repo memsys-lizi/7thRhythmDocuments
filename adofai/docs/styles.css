@@ -87,7 +87,7 @@ body {
   height: 100vh;
   background: #ffffff;
   border-left: 1px solid #111111;
-  box-shadow: -14px 0 34px rgba(0, 0, 0, 0.12);
+  box-shadow: none;
   transform: translateX(100%);
   transition: transform 220ms ease, box-shadow 220ms ease;
   pointer-events: auto;
@@ -98,31 +98,46 @@ body {
 }
 
 .ai-sidebar-rail {
-  position: absolute;
-  top: 88px;
-  left: -43px;
-  width: 44px;
-  height: 74px;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 48px;
+  height: 48px;
   border: 1px solid #111111;
-  border-right: 0;
-  border-radius: 8px 0 0 8px;
+  border-radius: 8px;
   background: #111111;
   color: #ffffff;
   cursor: pointer;
   font-weight: 700;
   letter-spacing: 0;
   pointer-events: auto;
-  transition: background 160ms ease, color 160ms ease;
+  transition: background 160ms ease, color 160ms ease, opacity 160ms ease;
 }
 
-.ai-sidebar.is-open .ai-sidebar-rail {
+.ai-sidebar-rail:hover {
   background: #ffffff;
   color: #111111;
 }
 
+.ai-sidebar.is-open .ai-sidebar-rail {
+  opacity: 0;
+  pointer-events: none;
+}
+
 body.ai-sidebar-open .content {
   right: 390px;
+  overflow-x: hidden;
   transition: right 220ms ease;
+}
+
+body.ai-sidebar-open .markdown-section {
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow-x: auto;
+}
+
+body.ai-sidebar-open .markdown-section table {
+  min-width: 720px;
 }
 
 .ai-sidebar-header {
@@ -292,57 +307,25 @@ body.ai-sidebar-open .content {
   background: #ffffff;
 }
 
-.ai-sidebar-sources {
-  margin-top: 8px;
-  padding: 10px;
-  border: 1px solid #d8d8d8;
-  border-radius: 8px;
+.ai-sidebar-cite {
+  min-width: 18px;
+  height: 18px;
+  margin: 0 2px;
+  padding: 0 5px;
+  border: 1px solid #111111;
+  border-radius: 999px;
   background: #ffffff;
-}
-
-.ai-sidebar-sources > strong {
-  display: block;
-  margin-bottom: 8px;
-  color: #111111;
-  font-size: 12px;
-}
-
-.ai-sidebar-source {
-  display: block;
-  width: 100%;
-  margin: 0 0 8px;
-  padding: 8px;
-  border: 1px solid #d8d8d8;
-  border-radius: 6px;
-  background: #f7f7f7;
   color: #111111;
   cursor: pointer;
-  text-align: left;
-  transition: border-color 160ms ease, background 160ms ease, transform 160ms ease;
-}
-
-.ai-sidebar-source:last-child {
-  margin-bottom: 0;
-}
-
-.ai-sidebar-source:hover {
-  border-color: #111111;
-  background: #ffffff;
-  transform: translateX(-2px);
-}
-
-.ai-sidebar-source span,
-.ai-sidebar-source small {
-  display: block;
-}
-
-.ai-sidebar-source span {
+  font-size: 11px;
   font-weight: 700;
+  line-height: 16px;
+  vertical-align: text-top;
 }
 
-.ai-sidebar-source small {
-  margin-top: 3px;
-  color: #666666;
+.ai-sidebar-cite:hover {
+  background: #111111;
+  color: #ffffff;
 }
 
 .ai-sidebar-form {
