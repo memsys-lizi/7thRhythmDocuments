@@ -13,6 +13,7 @@
 | 编辑器控件 | [InspectorPanel](/api/editor/InspectorPanel.md)、[PropertiesPanel](/api/editor/PropertiesPanel.md)、[Property](/api/data-models/Property.md)、[PropertyControl 控件族](/api/editor/property-controls.md) | 属性面板、控件绑定、事件编辑 |
 | 编辑器动作 | [ADOFAI.Editor.Actions](/api/editor/editor-actions.md) | 撤销、重做、选择、复制、粘贴、播放、文件、书签和面板动作 |
 | 编辑器长流程 | [scnEditor 长流程](/api/editor/scnEditor-workflows.md)、[偏好设置、粒子编辑器与辅助面板](/api/editor/preferences-particle-panels.md)、[编辑器小型 UI 类](/api/editor/editor-ui-widgets.md)、[阶段 3 编辑器系统复核](/api/editor/stage-3-review.md) | 文件打开保存、新建关卡、选择、剪贴板、事件增删、撤销重做、播放预览、辅助面板、小型 UI 组件和阶段收口 |
+| 运行时输入与判定 | [运行时输入与判定](/api/runtime/input-judgement.md) | 输入聚合、异步键盘、控制器输入处理、玩家更新、命中判定和地板反馈 |
 | 事件效果 | `ffxPlusBase`、`ffx*Plus`、`ffx*` | 事件执行组件、相机、轨道、装饰、滤镜、声音 |
 | 存档与服务 | `Persistence`、`GCS`、`GCNS`、平台 helper、DLC、Steam | 全局状态、存档、平台差异、外部服务 |
 
@@ -50,3 +51,5 @@
 | `TransformGizmoHolder` | `7thRhythmSource/ADOFAi/TransformGizmoHolder.cs` | 编辑器 gizmo 手柄集合基类，负责手柄位置、旋转、hover 动画和图标切换。 |
 | `GradientEditor` | `7thRhythmSource/ADOFAi/ADOFAI.Editor.Components.Gradients/GradientEditor.cs` | 渐变弹窗编辑器，管理颜色 marker、alpha marker、预览、模式、撤销重做和弹窗动画。 |
 | `EditorKeybindManager` | `7thRhythmSource/ADOFAi/ADOFAI.Editor/EditorKeybindManager.cs` | 编辑器快捷键管理器，把 `EditorKeybind` 映射到一组 `EditorAction` 并执行按下的动作。 |
+| `RDInput` | `7thRhythmSource/ADOFAi/RDInput.cs` | 运行时输入聚合层，统一普通键盘、鼠标、摇杆和异步键盘输入。 |
+| `AsyncInputManager` | `7thRhythmSource/ADOFAi/AsyncInputManager.cs` | SkyHook 异步输入管理器，维护事件队列和按键集合，并在 PlayerControl 状态接管键盘输入。 |

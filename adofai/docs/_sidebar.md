@@ -35,6 +35,8 @@
     * [scnEditor 长流程](/api/editor/scnEditor-workflows.md)
     * [编辑器小型 UI 类](/api/editor/editor-ui-widgets.md)
     * [阶段 3 编辑器系统复核](/api/editor/stage-3-review.md)
+  * 运行时系统
+    * [运行时输入与判定](/api/runtime/input-judgement.md)
 
 * 模块
   * [模块入口](/modules/index.md)
@@ -50,3 +52,4 @@
   * [编辑器辅助面板](/modules/editor-auxiliary-panels.md)
   * [编辑器长流程](/modules/editor-workflows.md)
   * [编辑器小型 UI 组件](/modules/editor-ui-widgets.md)
+  * [运行时输入与判定链路](/modules/runtime-input-judgement.md)
