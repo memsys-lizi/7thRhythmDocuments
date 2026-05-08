@@ -17,6 +17,9 @@
     * [scnEditor](/api/core/scnEditor.md)
     * [scrLevelMaker](/api/core/scrLevelMaker.md)
     * [scrFloor](/api/core/scrFloor.md)
+  * 关卡数据模型
+    * [LevelData](/api/data-models/LevelData.md)
+    * [LevelEvent](/api/data-models/LevelEvent.md)
 
 * 模块
   * [模块入口](/modules/index.md)
@@ -26,3 +29,4 @@
   * [自定义关卡运行主线](/modules/custom-level-runtime.md)
   * [路径生成与地板运行时](/modules/path-floor-runtime.md)
   * [编辑器主入口](/modules/editor-main.md)
+  * [关卡数据模型](/modules/level-data-model.md)

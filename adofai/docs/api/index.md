@@ -1,6 +1,6 @@
 # API 入口
 
-本页作为 ADOFAI 源码 API 文档的入口。当前处于阶段 0，后续会按源码分层逐步补齐类页和专题页。
+本页作为 ADOFAI 源码 API 文档的入口。当前已完成核心骨架，正在推进关卡数据模型阶段。
 
 ## 计划中的核心 API 页
 
@@ -9,7 +9,7 @@
 | 核心入口 | [ADOBase](/api/core/ADOBase.md)、[ADOClass](/api/core/ADOClass.md)、[ADOStartup](/api/core/ADOStartup.md) | 全局访问器、启动流程、平台初始化、资源初始化 |
 | 场景控制 | [scrController](/api/core/scrController.md)、[scrConductor](/api/core/scrConductor.md)、[scnGame](/api/core/scnGame.md)、[scnEditor](/api/core/scnEditor.md) | 游戏状态、音频时钟、自定义关卡运行、编辑器入口 |
 | 轨道与地板 | [scrLevelMaker](/api/core/scrLevelMaker.md)、[scrFloor](/api/core/scrFloor.md)、`Level` | 路径生成、地板对象、官方关卡脚本基类 |
-| 关卡数据 | `LevelData`、`LevelEvent`、`LevelEventInfo`、`PropertyInfo` | `.adofai` 数据、事件对象、属性元数据 |
+| 关卡数据 | [LevelData](/api/data-models/LevelData.md)、[LevelEvent](/api/data-models/LevelEvent.md)、`LevelEventInfo`、`PropertyInfo` | `.adofai` 数据、事件对象、属性元数据 |
 | 编辑器控件 | `InspectorPanel`、`PropertiesPanel`、`Property`、`PropertyControl_*` | 属性面板、控件绑定、事件编辑 |
 | 编辑器动作 | `EditorAction` 与 `ADOFAI.Editor.Actions` | 撤销、重做、选择、复制、粘贴、播放和文件动作 |
 | 事件效果 | `ffxPlusBase`、`ffx*Plus`、`ffx*` | 事件执行组件、相机、轨道、装饰、滤镜、声音 |
