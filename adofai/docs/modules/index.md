@@ -12,7 +12,7 @@ ADOFAI 文档按源码模块组织。模块页面负责解释系统边界、核�
 | [自定义关卡运行主线](/modules/custom-level-runtime.md) | `scnGame`、`LevelData`、`scrLevelMaker`、`scrFloor`、`ffxPlusBase` | `.adofai` 数据怎样变成运行时地板、装饰、音频和 VFX。 |
 | 官方关卡脚本 | `Level`、`LevelML`、`LevelTNO` | 官方关卡脚本的运行路径和特殊逻辑。 |
 | [音频与节拍运行时](/modules/audio-beat-runtime.md) | `scrConductor`、`CalibrationPreset`、`AudioManager`、`AsyncInputManager` | DSP 时间、BPM、偏移、音频输出、节拍传播和预排声音。 |
-| 轨道与地板 | `scrLevelMaker`、`scrFloor`、`FloorRenderer`、轨道形状枚举 | 路径数据怎样生成地板，地板怎样承载事件和判定状态。 |
+| [路径生成与地板运行时](/modules/path-floor-runtime.md) | `scrLevelMaker`、`scrFloor`、`scrLevelMaker2`、`FloorRenderer` | 路径数据怎样生成地板，地板怎样承载事件和判定状态。 |
 | 关卡数据模型 | `LevelData`、`LevelEvent`、`EventsArray`、`DecorationsArray`、序列化转换器 | `.adofai` 文件怎样映射到运行时对象。 |
 | 编辑器事件与属性面板 | `InspectorPanel`、`PropertiesPanel`、`Property`、`PropertyControl_*` | 事件元数据怎样生成编辑器控件，控件怎样写回 `LevelEvent`。 |
 | 编辑器动作系统 | `ADOFAI.Editor.Actions` | 快捷键、菜单动作、撤销重做、复制粘贴和选择流程。 |
