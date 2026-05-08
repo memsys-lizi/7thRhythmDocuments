@@ -17,7 +17,7 @@
 
 ## 当前工作重点
 
-阶段 2 已开始。当前已完成 `LevelEvent_Base`、`LevelEventInfo`、`BasePropertyInfo`、`InspectorPanel` 的第一版人工初稿，并补了歌曲与音频事件、行与节拍事件、视觉与镜头事件、房间与精灵事件分组页。下一步继续拆文本对话事件、窗口事件、脚本控制事件，并补 `LevelEventControl_*` 时间线控件行为。
+阶段 2 已开始。当前已完成 `LevelEvent_Base`、`LevelEventInfo`、`BasePropertyInfo`、`InspectorPanel` 的第一版人工初稿，并补了歌曲与音频事件、行与节拍事件、视觉与镜头事件、房间与精灵事件、文本与脚本控制事件、窗口与剩余事件分组页。下一步补 `LevelEventControl_*` 时间线控件、`InspectorPanel_*` 具体面板索引和事件覆盖清单。
 
 ## 验收清单
 

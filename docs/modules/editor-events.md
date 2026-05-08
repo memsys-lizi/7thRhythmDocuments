@@ -62,6 +62,8 @@ flowchart TD
 | [行与节拍事件](/api/editor-events/row-events.md) | `MakeRow`、Classic/Oneshot/FreeTime 节拍、`SetRowXs`、行显示、行移动和玩家换行。 |
 | [视觉与镜头事件](/api/editor-events/visual-camera-events.md) | 主题、VFX preset、背景前景、闪光、镜头移动、震屏、行染色和手部显示。 |
 | [房间与精灵事件](/api/editor-events/room-sprite-events.md) | 房间显示、房间变换、遮罩、透视、排序，以及自定义精灵创建、移动、染色、平铺和动画。 |
+| [文本与脚本控制事件](/api/editor-events/text-control-events.md) | 对话、浮动文字、旁白、注释脚本、标签触发、自定义方法、角色表情、换角色和 Stutter。 |
+| [窗口与剩余事件](/api/editor-events/window-misc-events.md) | 窗口舞蹈、窗口缩放、窗口内容、主窗口、窗口标题、窗口显示、窗口排序、播放风格和精灵混合。 |
 
 ## Mod 作者关注点
 

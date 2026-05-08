@@ -30,6 +30,8 @@
     * [行与节拍事件](api/editor-events/row-events.md)
     * [视觉与镜头事件](api/editor-events/visual-camera-events.md)
     * [房间与精灵事件](api/editor-events/room-sprite-events.md)
+    * [文本与脚本控制事件](api/editor-events/text-control-events.md)
+    * [窗口与剩余事件](api/editor-events/window-misc-events.md)
 * Mod
   * [Mod 作者入口](modding/README.md)
 * [术语表](glossary.md)
