@@ -6,7 +6,8 @@ ADOFAI 文档按源码模块组织。模块页面负责解释系统边界、核�
 
 | 模块 | 范围 | 重点问题 |
 | --- | --- | --- |
-| 核心启动与全局状态 | `ADOStartup`、`ADOBase`、`ADOClass`、`GCS`、`GCNS` | 游戏启动时初始化了哪些系统，全局单例从哪里取，哪些状态跨场景保存。 |
+| [核心启动与全局访问](/modules/core-startup.md) | `ADOStartup`、`ADOBase`、`ADOClass` | 游戏启动时初始化了哪些系统，全局对象从哪里取。 |
+| 核心全局状态 | `GCS`、`GCNS`、`Persistence` | 哪些状态跨场景保存，哪些字段来自存档和全局常量。 |
 | 场景与运行时控制 | `scrController`、`States`、`scnGame`、`Level`、`LevelML`、`LevelTNO` | 游戏状态机、官方关卡与自定义关卡的运行路径。 |
 | 音频与节拍 | `scrConductor`、`AudioManager`、校准、hitsound、hold sound | DSP 时间、BPM、偏移、音频输出和节拍调度。 |
 | 轨道与地板 | `scrLevelMaker`、`scrFloor`、`FloorRenderer`、轨道形状枚举 | 路径数据怎样生成地板，地板怎样承载事件和判定状态。 |

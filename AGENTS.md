@@ -52,6 +52,13 @@ ADOFAI 文档写完的标准不是阶段页面存在，而是 `7thRhythmSource/A
 
 如果 ADOFAI 自动化任务启动时发现上述条件已经满足，应停止继续写作，不再新增重复页面或空泛总结；如果自动化系统允许删除或暂停当前任务，必须删除当前 ADOFAI 文档自动化任务，避免用户不在时继续空转。
 
+## ADOFAI 当前进度
+
+| 阶段 | 状态 | 当前记录 |
+| --- | --- | --- |
+| 阶段 0：文档基础设施与架构侦察 | 已完成 | 已建立 `adofai/` docsify 项目、首页、侧边栏、黑白样式、进度页、架构总览和源码地图。 |
+| 阶段 1：核心骨架 | 进行中 | 已完成 `ADOBase`、`ADOClass`、`ADOStartup` 和核心启动模块页；下一步继续 `scrController`、`scrConductor`、`scnGame`、`scnEditor`、`scrLevelMaker`、`scrFloor`。 |
+
 ## 完成判定与自动化停止规则
 
 本项目的“文档写完”不是指阶段页面存在，而是指 `RDFucked/Assets/Scripts/Assembly-CSharp` 中 RD 主工程代码文件已经被系统性覆盖：
