@@ -64,8 +64,20 @@ flowchart TD
 | [Inspector 面板读写链路](/api/editor-events/inspector-flow.md) | 自动面板与手工面板的显示、保存、输入监听和字段回写路径。 |
 | [AddClassicBeat](/api/editor-events/AddClassicBeat.md) | Classic 节拍事件字段、Hold、Swing、准备、运行、拆 FreeTime 和面板读写。 |
 | [AddOneshotBeat](/api/editor-events/AddOneshotBeat.md) | Oneshot 节拍事件字段、验证、解码、准备、预备音频、运行和面板读写。 |
+| [音频与声音事件](/api/editor-events/AudioSoundEvents.md) | 播放音效、拍手音、系统音、行 pulse sound、数拍音和 SoundData。 |
+| [FloatingText 事件](/api/editor-events/FloatingTextEvents.md) | `FloatingText`、`AdvanceText`、歌词推进、朗读、面板和时间线联动。 |
+| [镜头与震屏事件](/api/editor-events/CameraShakeEvents.md) | `MoveCamera`、`ShakeScreen`、`PulseCamera`、`ShakeScreenCustom` 的字段与运行路径。 |
 | [PlaySong](/api/editor-events/PlaySong.md) | 歌曲字段、旧音量迁移、音频准备、播放、BPM 设置和时间线控件。 |
+| [房间控制事件](/api/editor-events/RoomControlEvents.md) | 房间显示、移动、排序、遮罩、透明度、内容模式和透视顶点。 |
+| [行控制与自由节拍事件](/api/editor-events/RowControlEvents.md) | 行创建、自由节拍、显示隐藏、移动、玩家换行、波形、排序和旋转行。 |
 | [SetRowXs](/api/editor-events/SetRowXs.md) | X pattern、Synco、运行修饰、面板读写和时间线显示。 |
+| [ShowDialogue](/api/editor-events/ShowDialogue.md) | 普通文本、Ink 指令、本地化、自定义角色准备、RDInk 调用和面板关系。 |
+| [精灵生命周期事件](/api/editor-events/SpriteLifecycleEvents.md) | `MakeSprite`、`Move`、`PlayAnimation`、自定义资源加载、精灵注册和面板读写。 |
+| [精灵渲染与排序事件](/api/editor-events/SpriteRenderEvents.md) | `Tint`、`Tile`、`SetVisible`、`ReorderSprite`、`Blend` 和 `CustomSprite` 平铺更新。 |
+| [文本控制与脚本事件](/api/editor-events/TextControlEvents.md) | 表情、文字爆炸、注释脚本、标签、Stutter、旁白和换角色。 |
+| [视觉样式与特效事件](/api/editor-events/VisualStyleEvents.md) | 主题、VFX、背景前景、闪光、行染色、手部和桌面颜色事件。 |
+| [窗口控制事件](/api/editor-events/WindowControlEvents.md) | 窗口舞蹈、缩放、内容、显示、标题、排序和主窗口。 |
+| [杂项游戏事件](/api/editor-events/MiscGameEvents.md) | 爆心、RDGS、BassDrop、状态牌、完成关卡、手部归属和播放风格。 |
 | [歌曲时间线事件](/api/editor-events/SongTimingEvents.md) | `SetBeatsPerMinute`、`SetCrotchetsPerBar`、面板、时间线和换算关系。 |
 | [歌曲与音频事件](/api/editor-events/song-audio-events.md) | `PlaySong`、BPM、拍号、播放音效、行节拍音、计数音、拍手音和游戏音效替换。 |
 | [行与节拍事件](/api/editor-events/row-events.md) | `MakeRow`、Classic/Oneshot/FreeTime 节拍、`SetRowXs`、行显示、行移动和玩家换行。 |

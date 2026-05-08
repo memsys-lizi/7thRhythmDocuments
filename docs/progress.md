@@ -17,7 +17,7 @@
 
 ## 当前工作重点
 
-阶段 2 已开始。当前已完成 `LevelEvent_Base`、`LevelEventInfo`、`BasePropertyInfo`、`InspectorPanel` 的第一版人工初稿，并补了歌曲与音频事件、行与节拍事件、视觉与镜头事件、房间与精灵事件、文本与脚本控制事件、窗口与剩余事件分组页、编辑器控件索引、事件覆盖清单、事件运行路径、Inspector 面板读写链路，以及重点事件 `AddClassicBeat`、`AddOneshotBeat`、`SetRowXs`、`PlaySong`、歌曲时间线事件专页。自定义方法已整理到编辑器事件分组，Mod 区保留入口页。当前步骤是继续拆重点事件专页。
+阶段 2 已开始。当前已完成 `LevelEvent_Base`、`LevelEventInfo`、`BasePropertyInfo`、`InspectorPanel` 的第一版人工初稿，并补了歌曲与音频事件、行与节拍事件、视觉与镜头事件、房间与精灵事件、文本与脚本控制事件、窗口与剩余事件分组页、编辑器控件索引、事件覆盖清单、事件运行路径、Inspector 面板读写链路，以及重点事件 `AddClassicBeat`、`AddOneshotBeat`、`SetRowXs`、`PlaySong`、歌曲时间线事件、`ShowDialogue`、`FloatingText` 事件、精灵生命周期事件、精灵渲染与排序事件、镜头与震屏事件、房间控制事件、窗口控制事件、视觉样式与特效事件、行控制与自由节拍事件、音频与声音事件、文本控制与脚本事件、杂项游戏事件专页。自定义方法已整理到编辑器事件分组，Mod 区保留入口页。当前步骤是阶段 2 复核：补 Inspector 面板、时间线控件、交叉链接和缺失项清单。
 
 ## 验收清单
 

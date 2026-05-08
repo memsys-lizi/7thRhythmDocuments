@@ -33,7 +33,7 @@
 | --- | --- | --- | --- |
 | 阶段 0：文档基础设施 | 待复核 | 完善 docsify 首页、侧边栏、搜索、黑白样式、模块目录 | 已创建 docsify 站点、长期手册、模块导航和写作规范 |
 | 阶段 1：核心骨架 | 待复核 | 深写 `RDBase`、`RDClass`、`LevelBase`、`scrConductor`、`scnGame`、`scnEditor` | 六个核心类均已完成第一版人工初稿；后续进入全量成员拆页和交叉链接复核 |
-| 阶段 2：关卡编辑器事件系统 | 进行中 | 深写 `LevelEvent_Base`、`LevelEvent_*`、`InspectorPanel`、`InspectorPanel_*`、事件属性与控件关系 | 已完成 `LevelEvent_Base`、`LevelEventInfo`、`BasePropertyInfo`、`InspectorPanel` 第一版人工初稿；已补歌曲与音频事件、行与节拍事件、视觉与镜头事件、房间与精灵事件、文本与脚本控制事件、窗口与剩余事件分组页、编辑器控件索引、事件覆盖清单、事件运行路径、Inspector 面板读写链路、`AddClassicBeat`、`AddOneshotBeat`、`SetRowXs`、`PlaySong`、歌曲时间线事件专页；当前步骤是继续拆重点事件专页 |
+| 阶段 2：关卡编辑器事件系统 | 进行中 | 深写 `LevelEvent_Base`、`LevelEvent_*`、`InspectorPanel`、`InspectorPanel_*`、事件属性与控件关系 | 已完成 `LevelEvent_Base`、`LevelEventInfo`、`BasePropertyInfo`、`InspectorPanel` 第一版人工初稿；已补歌曲与音频事件、行与节拍事件、视觉与镜头事件、房间与精灵事件、文本与脚本控制事件、窗口与剩余事件分组页、编辑器控件索引、事件覆盖清单、事件运行路径、Inspector 面板读写链路、`AddClassicBeat`、`AddOneshotBeat`、`SetRowXs`、`PlaySong`、歌曲时间线事件、`ShowDialogue`、`FloatingText` 事件、精灵生命周期事件、精灵渲染与排序事件、镜头与震屏事件、房间控制事件、窗口控制事件、视觉样式与特效事件、行控制与自由节拍事件、音频与声音事件、文本控制与脚本事件、杂项游戏事件专页；当前步骤是阶段 2 复核：补 Inspector 面板、时间线控件、交叉链接和缺失项清单 |
 | 阶段 3：运行时游戏系统 | 未开始 | 覆盖节拍、判定、行、房间、窗口、音频、VFX、场景流程 | 待开始 |
 | 阶段 4：数据模型与枚举 | 未开始 | 覆盖 `RDLevelData`、`RDLevelSettings`、自定义关卡、错误、难度、平台等模型 | 待开始 |
 | 阶段 5：官方关卡脚本 | 未开始 | 覆盖 `Level_*` 系列，说明每个关卡脚本的特殊逻辑 | 待开始 |
