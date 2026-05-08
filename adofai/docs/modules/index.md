@@ -40,3 +40,4 @@ ADOFAI 文档按源码模块组织。模块页面负责解释系统边界、核�
 | [scr 动画、相机与 HUD 辅助组件索引](/api/review/scr-animation-hud-camera-coverage.md) | 第二批剩余 `scr*` 文件 | 覆盖 transform 动画、beat 显示、flash、HUD、倒计时、命中反馈、相机适配、parallax、背景条和频谱响应组件。 |
 | [scr 场景、菜单与服务辅助组件索引](/api/review/scr-scene-menu-service-coverage.md) | 第三批剩余 `scr*` 文件 | 覆盖世界入口、Taro/Neo Cosmos 演出、文本替换、选项界面、校准、存档、Web 服务、SFX 和遗留空组件。 |
 | [根目录 UI、暂停菜单与场景脚本索引](/api/review/root-ui-scene-coverage.md) | 根目录 UI 与场景脚本 | 覆盖成就弹窗、暂停菜单按钮、暂停关卡选择、Taro medal、玩家选择、Splash、Taro 菜单和扫雷小游戏。 |
+| [官方演出、世界显示与统计脚本索引](/api/review/official-presentation-coverage.md) | 官方演出文件族 | 覆盖世界完成灯光、Neo Cosmos/Taro 统计类、Mawaru 演出对象、Taro 剧情文本系统和 Cutscene 系列。 |
