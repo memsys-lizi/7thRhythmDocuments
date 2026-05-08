@@ -16,6 +16,7 @@
 | 运行时输入与判定 | [运行时输入与判定](/api/runtime/input-judgement.md)、[控制器状态、暂停与练习流程](/api/runtime/controller-pause-flow.md) | 输入聚合、异步键盘、控制器输入处理、玩家更新、命中判定、地板反馈、状态机、暂停、checkpoint、练习和失败胜利流程 |
 | 相机与 VFX | [相机与 VFX 运行链路](/api/runtime/camera-vfx-chain.md) | 相机跟随、自由相机、缩放、旋转、RenderTexture、VFX 调度、滤镜、闪屏、震屏和 Bloom |
 | 结算与保存 | [结算、成绩与进度保存](/api/runtime/results-save-flow.md) | 命中统计、完成度、准确率、X 准确率、官方和自定义成绩保存、详细结果、灯笼和失败条 |
+| 场景流转 | [场景流转与加载跳转](/api/runtime/scene-loading-flow.md) | 传送门分发、官方关卡进入、自定义关卡加载、黑场转场、场景加载和自定义关卡重置 |
 | 事件效果 | `ffxPlusBase`、`ffx*Plus`、`ffx*` | 事件执行组件、轨道、装饰、滤镜、声音 |
 | 存档与服务 | `Persistence`、`GCS`、`GCNS`、平台 helper、DLC、Steam | 全局状态、存档、平台差异、外部服务 |
 
@@ -65,3 +66,5 @@
 | `scrMistakesManager` | `7thRhythmSource/ADOFAi/scrMistakesManager.cs` | 多玩家成绩汇总、官方和自定义关卡保存、checkpoint 进度保存管理器。 |
 | `DetailedResults` | `7thRhythmSource/ADOFAi/DetailedResults.cs` | 结算详细命中统计文本生成器。 |
 | `EndscreenLanterns` | `7thRhythmSource/ADOFAi/EndscreenLanterns.cs` | 结算灯笼 UI，展示完成、最高准确率和 speed trial 状态。 |
+| `scrLoader` | `7thRhythmSource/ADOFAi/scrLoader.cs` | 全局加载器，负责黑场转场、加载动画、DLC Addressables 场景和普通 Unity 场景加载。 |
+| `Portal` | `7thRhythmSource/ADOFAi/Portal.cs` | 运行时传送门目标枚举，由 `scrController.PortalTravelAction()` 分发。 |
