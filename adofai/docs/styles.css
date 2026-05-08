@@ -1,0 +1,72 @@
+:root {
+  --theme-color: #111111;
+  --base-font-family: "Inter", "Segoe UI", "Microsoft YaHei", Arial, sans-serif;
+  --mono-font-family: "Cascadia Code", "SFMono-Regular", Consolas, monospace;
+}
+
+body {
+  color: #161616;
+  background: #ffffff;
+}
+
+.sidebar {
+  border-right: 1px solid #dddddd;
+}
+
+.sidebar, .sidebar-toggle {
+  background: #ffffff;
+}
+
+.sidebar ul li a {
+  color: #333333;
+}
+
+.sidebar ul li.active > a {
+  color: #000000;
+  border-right: 2px solid #000000;
+}
+
+.markdown-section {
+  max-width: 980px;
+}
+
+.markdown-section h1,
+.markdown-section h2,
+.markdown-section h3 {
+  color: #111111;
+  letter-spacing: 0;
+}
+
+.markdown-section table {
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.markdown-section th {
+  background: #f2f2f2;
+  color: #111111;
+}
+
+.markdown-section th,
+.markdown-section td {
+  border: 1px solid #d8d8d8;
+  padding: 8px 10px;
+}
+
+.markdown-section code {
+  color: #111111;
+  background: #f3f3f3;
+  border-radius: 4px;
+}
+
+.markdown-section pre {
+  background: #f6f6f6;
+  border: 1px solid #dcdcdc;
+  border-radius: 6px;
+}
+
+.app-name-link {
+  color: #111111;
+  font-weight: 700;
+}

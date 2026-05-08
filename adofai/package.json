@@ -1,0 +1,11 @@
+{
+  "name": "adofai-doc",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "docs": "docsify serve docs --port 1969"
+  },
+  "devDependencies": {
+    "docsify-cli": "^4.4.4"
+  }
+}

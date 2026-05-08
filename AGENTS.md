@@ -8,7 +8,9 @@
 - 前端设计禁止出现紫色；默认使用黑白配色。
 - 禁止在文档正文和导航中使用 emoji。
 - `RDFucked/` 是本地 Unity 工程源码参考目录，不进入 Git 仓库。
+- `7thRhythmSource/` 是本地源码参考目录，不进入 Git 仓库。
 - 节奏医生 docsify 文档项目位于 `rhythm-doctor/`，文档内容位于 `rhythm-doctor/docs/`。
+- ADOFAI docsify 文档项目位于 `adofai/`，文档内容位于 `adofai/docs/`。
 - 文档站使用 docsify，文档语言使用中文。
 
 ## 项目目标
@@ -23,6 +25,32 @@
 - 源码研究者关心的可调用入口、扩展点、风险点、运行时入口和数据字段。
 
 第三方插件目录 `RDFucked/Assets/Plugins/Assembly-CSharp-firstpass` 不逐项深写，只说明依赖用途和 RD 中的接入点。
+
+## ADOFAI 文档目标
+
+ADOFAI 文档站位于 `adofai/`，源码参考目录为 `7thRhythmSource/ADOFAi`。文档目标与 RD 文档一致：面向源码研究者，尽量覆盖主工程代码本身，而不是写外部工具链教程。
+
+ADOFAI 当前源码目录包含 1222 个 `.cs` 文件。后续文档必须优先覆盖：
+
+- 启动、全局访问器和场景控制：`ADOStartup`、`ADOBase`、`ADOClass`、`scrController`、`scrConductor`、`scnGame`、`scnEditor`。
+- 关卡数据模型：`LevelData`、`LevelEvent`、`LevelEventInfo`、`PropertyInfo`、`Property`、`LevelEventType`、序列化与校验。
+- 编辑器系统：`InspectorPanel`、`PropertiesPanel`、`PropertyControl_*`、`ADOFAI.Editor.Actions`、偏好设置、粒子编辑器和编辑器面板。
+- 运行时系统：`scrLevelMaker`、`scrFloor`、`ffxPlusBase`、`ffx*Plus`、`ffx*`、`ADOFAI.FloorFX`、输入、音频、判定、相机和 VFX。
+- 平台、存档、服务与 UI：`Persistence`、`GCS`、`GCNS`、平台 helper、Steam、DLC、CLS、关卡选择、菜单和移动端 UI。
+
+ADOFAI 的第三方或通用依赖，例如 `Rewired`、`ByteSheep.Events`、`TMPro.Examples`、`BlendModes`、`MonsterLove.StateMachine`，只说明它们在 ADOFAI 中的接入点和用途，不逐项深写第三方源码。
+
+## ADOFAI 完成判定与自动化停止规则
+
+ADOFAI 文档写完的标准不是阶段页面存在，而是 `7thRhythmSource/ADOFAi` 中主工程代码文件已经被系统性覆盖：
+
+- 几乎所有 ADOFAI 主工程 `.cs` 文件都有对应页面、分组页面或索引说明。
+- 重点类、事件效果、编辑器动作、数据模型、枚举、运行时系统、平台服务和 UI 类族已经解释字段、属性、方法、生命周期和协作关系。
+- 自动生成或人工维护的覆盖清单中，没有未分类的大块源码文件。
+- ADOFAI 阶段 0 到阶段 7 均为 `已完成`，并且阶段 7 已完成全站复核、交叉链接、术语表、调用图和缺失项清单清理。
+- `adofai/docs/progress.md`、`adofai/docs/_sidebar.md`、`adofai/docs/api/index.md`、模块页和本文件的进度一致。
+
+如果 ADOFAI 自动化任务启动时发现上述条件已经满足，应停止继续写作，不再新增重复页面或空泛总结；如果自动化系统允许删除或暂停当前任务，必须删除当前 ADOFAI 文档自动化任务，避免用户不在时继续空转。
 
 ## 完成判定与自动化停止规则
 
@@ -69,11 +97,12 @@
 ## 每次继续工作的流程
 
 1. 先阅读本文件，确认当前阶段和约束。
-2. 检查 `rhythm-doctor/docs/` 目录和 `_sidebar.md`，确认文档结构。
-3. 根据当前阶段读取 `RDFucked/Assets/Scripts/Assembly-CSharp` 中对应源码。
+2. 根据当前任务检查对应文档目录：RD 使用 `rhythm-doctor/docs/`，ADOFAI 使用 `adofai/docs/`。
+3. 根据当前阶段读取对应源码：RD 使用 `7thRhythmSource/RhythmDoctor`，ADOFAI 使用 `7thRhythmSource/ADOFAi`。
 4. 写文档时同时维护导航、交叉链接和进度记录。
 5. 完成一个阶段或子模块后，更新本文件的阶段进度。
-6. 验证 docsify 页面可访问，并检查 `RDFucked/`、`node_modules/` 没有进入 Git 状态。
+6. 验证 docsify 页面可访问，并检查 `7thRhythmSource/`、`RDFucked/`、`node_modules/` 没有进入 Git 状态。
+7. ADOFAI 文档任务每轮都要提交一次 Git，提交信息必须使用中文。
 
 ## 类页面写作模板
 
