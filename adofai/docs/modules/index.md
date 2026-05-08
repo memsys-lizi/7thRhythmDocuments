@@ -37,3 +37,4 @@ ADOFAI 文档按源码模块组织。模块页面负责解释系统边界、核�
 | [CameraFilterPack 文件族索引](/api/review/camera-filterpack-coverage.md) | `CameraFilterPack_*` | 覆盖 61 个相机后处理组件、共同结构、运行时接入链路和 `SetFilterAdvanced` 边界。 |
 | [旧式 ffx 效果组件索引](/api/review/legacy-ffx-coverage.md) | 剩余 `ffx*` 文件 | 覆盖 48 个旧式效果组件、官方关卡演出、菜单彩蛋、sprite tween 和地板命中特效。 |
 | [scr UI、条件与文本辅助组件索引](/api/review/scr-ui-condition-coverage.md) | 第一批剩余 `scr*` 文件 | 覆盖平台条件、进度条件、节日条件、链接文本、版本文本、debug 状态和菜单 phase 显隐组件。 |
+| [scr 动画、相机与 HUD 辅助组件索引](/api/review/scr-animation-hud-camera-coverage.md) | 第二批剩余 `scr*` 文件 | 覆盖 transform 动画、beat 显示、flash、HUD、倒计时、命中反馈、相机适配、parallax、背景条和频谱响应组件。 |
