@@ -47,6 +47,7 @@
     * [事件执行总览](/api/events/event-execution-overview.md)
     * [轨道与地板事件](/api/events/track-floor-events.md)
     * [相机、滤镜与屏幕事件](/api/events/camera-filter-events.md)
+    * [装饰、对象、文本与声音事件](/api/events/decoration-object-text-sound-events.md)
 
 * 模块
   * [模块入口](/modules/index.md)
@@ -72,3 +73,4 @@
   * [事件到效果调度模块](/modules/event-effect-dispatch.md)
   * [轨道与地板事件模块](/modules/track-floor-events.md)
   * [相机、滤镜与屏幕事件模块](/modules/camera-filter-events.md)
+  * [装饰、对象、文本与声音事件模块](/modules/decoration-object-text-sound-events.md)

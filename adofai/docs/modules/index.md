@@ -29,6 +29,7 @@ ADOFAI 文档按源码模块组织。模块页面负责解释系统边界、核�
 | [事件到效果调度模块](/modules/event-effect-dispatch.md) | `LevelEventType`、`scnGame.ApplyEventsToFloors`、`scnGame.ApplyEvent`、`ffxPlusBase`、`scrVfxPlus` | `LevelEventType` 怎样映射到运行时效果组件，普通时间调度与手动触发怎样分流。 |
 | [轨道与地板事件模块](/modules/track-floor-events.md) | `SetSpeed`、`Twirl`、`MoveTrack`、`RecolorTrack`、`AnimateTrack`、`Checkpoint`、`FreeRoam` | 轨道和地板事件怎样写入 `scrFloor`，以及怎样生成地板 tween、轨道动画和 checkpoint 效果。 |
 | [相机、滤镜与屏幕事件模块](/modules/camera-filter-events.md) | `MoveCamera`、`Flash`、`SetFilter`、`SetFilterAdvanced`、`HallOfMirrors`、`ShakeScreen`、`Bloom`、`ScreenTile`、`ScreenScroll` | 相机、滤镜、闪屏、震屏、Bloom、屏幕平铺和滚动事件怎样写入运行时组件。 |
+| [装饰、对象、文本与声音事件模块](/modules/decoration-object-text-sound-events.md) | `MoveDecorations`、`SetObject`、`SetText`、`SetDefaultText`、`PlaySound`、`AddComponent`、`KillPlayer` | 装饰、对象装饰、文本、HUD 文案、声音、动态组件和条件死亡事件怎样执行。 |
 | UI、菜单与关卡选择 | `scnLevelSelect`、`LevelSelectBase`、`CustomLevelTile`、`MobileMenu` | 关卡选择、CLS、菜单面板和移动端 UI。 |
 | 平台、存档与服务 | `Persistence`、`ADOFAI.Common.Platform`、Steam、DLC、Analytics | 存档字段、平台差异、服务初始化和 DLC 状态。 |
 | 第三方依赖接入 | `Rewired`、`ByteSheep.Events`、`BlendModes`、`TMPro.Examples` | 只说明 ADOFAI 使用入口，不逐项深写第三方源码。 |
