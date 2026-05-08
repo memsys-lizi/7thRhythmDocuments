@@ -19,7 +19,7 @@
 | 场景流转 | [场景流转与加载跳转](/api/runtime/scene-loading-flow.md) | 传送门分发、官方关卡进入、自定义关卡加载、黑场转场、场景加载和自定义关卡重置 |
 | 事件效果 | [事件执行总览](/api/events/event-execution-overview.md)、[轨道与地板事件](/api/events/track-floor-events.md)、[相机、滤镜与屏幕事件](/api/events/camera-filter-events.md)、[装饰、对象、文本与声音事件](/api/events/decoration-object-text-sound-events.md)、[输入、粒子与剩余运行时事件](/api/events/input-particle-runtime-events.md)、[运行时效果族补充](/api/runtime/effect-families.md)、[官方关卡脚本运行入口](/api/runtime/official-level-scripts.md)、`ffxPlusBase`、`ffx*Plus`、`ffx*` | 事件执行组件、事件到效果映射、轨道、装饰、对象、文本、滤镜、声音、粒子、输入事件、帧率和官方关卡方法调用 |
 | 存档与服务 | [全局状态、常量与存档](/api/platform/global-state-persistence.md)、[平台 Helper、DLC、Steam 与服务](/api/platform/platform-dlc-steam-services.md)、[CLS、关卡选择、移动菜单与本地化](/api/platform/cls-level-select-mobile-localization.md)、[UI、服务辅助类与依赖接入](/api/platform/ui-service-dependencies.md) | `Persistence`、`GCS`、`GCNS`、平台 helper、DLC、Steam、Workshop、GameServices、Analytics、CLS、关卡选择、移动菜单、本地化、通知、导入面板、设置菜单和第三方依赖接入点 |
-| 复核与覆盖 | [文件级覆盖清单](/api/review/source-coverage.md)、[CameraFilterPack 文件族索引](/api/review/camera-filterpack-coverage.md)、[旧式 ffx 效果组件索引](/api/review/legacy-ffx-coverage.md) | 1222 个 `.cs` 文件的目录统计、命中统计、未命中文件族、阶段 7 补齐批次、相机滤镜文件族和旧式效果组件 |
+| 复核与覆盖 | [文件级覆盖清单](/api/review/source-coverage.md)、[CameraFilterPack 文件族索引](/api/review/camera-filterpack-coverage.md)、[旧式 ffx 效果组件索引](/api/review/legacy-ffx-coverage.md)、[scr UI、条件与文本辅助组件索引](/api/review/scr-ui-condition-coverage.md) | 1222 个 `.cs` 文件的目录统计、命中统计、未命中文件族、阶段 7 补齐批次、相机滤镜文件族、旧式效果组件和第一批 `scr*` 轻量组件 |
 
 ## 当前已确认的关键事实
 

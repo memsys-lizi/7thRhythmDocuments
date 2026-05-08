@@ -58,6 +58,7 @@
     * [文件级覆盖清单](/api/review/source-coverage.md)
     * [CameraFilterPack 文件族索引](/api/review/camera-filterpack-coverage.md)
     * [旧式 ffx 效果组件索引](/api/review/legacy-ffx-coverage.md)
+    * [scr UI、条件与文本辅助组件索引](/api/review/scr-ui-condition-coverage.md)
 
 * 模块
   * [模块入口](/modules/index.md)

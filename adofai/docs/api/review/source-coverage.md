@@ -11,9 +11,9 @@
 | 项目 | 数量 | 说明 |
 | --- | --- | --- |
 | 源码 `.cs` 文件总数 | 1222 | PowerShell 递归统计 `7thRhythmSource/ADOFAi`。 |
-| 文档 `.md` 文件总数 | 76 | PowerShell 递归统计 `adofai/docs`。 |
-| 文件名或类型名已在文档中命中 | 580 | 用文档正文匹配 `.cs` 文件名或去扩展名后的类型名。 |
-| 文件名或类型名尚未在文档中命中 | 642 | 其中包含第三方目录、示例脚本、小型 UI 和旧式 `scr*` 类。 |
+| 文档 `.md` 文件总数 | 77 | PowerShell 递归统计 `adofai/docs`。 |
+| 文件名或类型名已在文档中命中 | 621 | 用文档正文匹配 `.cs` 文件名或去扩展名后的类型名。 |
+| 文件名或类型名尚未在文档中命中 | 601 | 其中包含第三方目录、示例脚本、小型 UI 和剩余 `scr*` 类。 |
 
 这个命中统计只用于找漏项。一个文件名未命中不等于完全没有解释：例如部分 `CameraFilterPack_*` 文件已被相机滤镜流程页从系统层面说明，但还没有按文件族做覆盖索引。
 
@@ -63,7 +63,7 @@
 | --- | --- | --- |
 | 7.1 | `CameraFilterPack_*`、滤镜 shader 驱动组件、`scrVfxPlus` 中滤镜字典使用点 | 已完成：[CameraFilterPack 文件族索引](/api/review/camera-filterpack-coverage.md)。 |
 | 7.2 | 剩余 `ffx*`、旧式官方关卡效果、sprite tween、相机 tween、菜单效果 | 已完成：[旧式 ffx 效果组件索引](/api/review/legacy-ffx-coverage.md)。 |
-| 7.3 | 剩余 `scr*` 条件开关、按钮、菜单、文本、调试 HUD 和小型 UI | UI、菜单与条件组件补充。 |
+| 7.3 | 剩余 `scr*` 条件开关、按钮、菜单、文本、调试 HUD 和小型 UI | 进行中：第一批见 [scr UI、条件与文本辅助组件索引](/api/review/scr-ui-condition-coverage.md)。 |
 | 7.4 | `MobileMenu` 目录剩余控件、`nn.hid`、Switch/移动端输入小类 | 移动端与平台输入补充。 |
 | 7.5 | `ADOFAI.Editor.Actions` 剩余动作类、编辑器模型和接口 | 编辑器动作文件级索引。 |
 | 7.6 | 官方关卡大型脚本和小游戏脚本剩余类 | 官方演出与小游戏补充。 |
