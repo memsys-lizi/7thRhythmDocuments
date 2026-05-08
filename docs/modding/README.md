@@ -1,13 +1,13 @@
-# Mod 作者入口
+# 源码研究入口
 
-本区域面向希望研究或修改 RD 行为的 Mod 作者。
+本区域是源码研究的交叉入口，用来把可调用方法、事件写法和数据字段回链到正式 API 页面。它不讲解外部修改工具链，也不围绕具体外部框架组织内容。
 
 ## 目标
 
 - 整理可调用方法和常用入口。
 - 标出事件系统、关卡数据、运行时管理器的关键字段。
 - 说明哪些成员适合读取、哪些成员修改风险较高。
-- 记录反编译命名和源码导出结构对 Mod 使用造成的影响。
+- 记录反编译命名和源码导出结构对阅读代码造成的影响。
 
 ## 首批关注点
 
@@ -18,6 +18,8 @@
 | 编辑器事件 | `LevelEvent_*`、`InspectorPanel_*`、`ControlAttribute` |
 | 自定义方法 | `LevelEvent_CallCustomMethod`、`MethodAutocompleteUI`、`ListedMethodAttribute`、`LevelBase`、`RDRoom` |
 | 自定义关卡 | `CustomLevelData`、`RDLevelData`、`RDLevelSettings` |
+| 入口与单例 | `RDBase`、`RDClass`、`scrGameManager`、`scnGame`、`scnEditor`、`PauseMenu` |
+| 高风险系统 | 输入、判定、音频、窗口、关卡加载、编辑器保存、事件运行路径 |
 
 ## 已关联页面
 
@@ -25,6 +27,9 @@
 | --- | --- |
 | [编辑器事件系统](/modules/editor-events.md) | 编辑器事件模块入口 |
 | [自定义方法事件](/api/editor-events/custom-methods.md) | `CallCustomMethod` 表达式、参数解析、自动补全范围、`ListedMethod` 标记和已标注方法清单 |
+| [可调用方法索引](/modding/callable-methods.md) | 从源码研究角度整理 `CallCustomMethod` 可触达的 `LevelBase`、`RDRoom`、官方关卡公开方法和调用前提 |
+| [事件写法索引](/modding/event-patterns.md) | 从源码研究角度整理歌曲、行、视觉、房间、文本、窗口和收尾控制的常见事件组合 |
+| [数据字段索引](/modding/data-fields.md) | 整理 `.rdlevel` 根节点、settings、events、conditionals、bookmarks、colorPalette 和校验入口 |
 
 ## 风险提示
 

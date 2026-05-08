@@ -41,3 +41,7 @@
 - 条件列表如何序列化，事件如何引用条件，运行时如何检查条件。
 - 声音、颜色、tag、书签这类小模型如何进入事件属性和 `.rdlevel` 根结构。
 - `JsonPropertyAttribute`、`BasePropertyInfo` 和控件 Attribute 如何把事件属性变成 Inspector 控件。
+
+## 复核状态
+
+阶段 4 已完成导航、API 索引和模块页复核，记录见 [阶段 3 与阶段 4 复核](/api/review/stage-3-4-review.md)。

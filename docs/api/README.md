@@ -7,6 +7,13 @@
 - 先读 [核心骨架](/modules/core.md)，理解全局入口、关卡状态、音乐时间轴、游戏场景和编辑器场景。
 - 再读 [编辑器事件系统](/modules/editor-events.md)，理解事件数据、时间线控件和 Inspector 面板如何协作。
 - 查具体事件时，可以从 [事件覆盖清单](/api/editor-events/event-coverage.md) 按 `LevelEventType` 编号进入对应页面。
+- 做跨模块源码研究时，可以从 [可调用方法索引](/modding/callable-methods.md)、[事件写法索引](/modding/event-patterns.md) 和 [数据字段索引](/modding/data-fields.md) 回到对应 API 页面。
+
+## 复核清单
+
+| 页面 | 内容 |
+| --- | --- |
+| [阶段 3 与阶段 4 复核](/api/review/stage-3-4-review.md) | 运行时系统和数据模型与枚举页面的导航、API 索引、模块页入口复核 |
 
 ## 核心类
 
@@ -104,3 +111,5 @@
 | [运动与节奏变体](/api/levels/athlete-freezeshot.md) | `Level_Freezeshot`、`Level_FreezeshotH`、`Level_FreezeshotBooth`、`Level_AthleteTherapy`、`Level_AthleteFinale`、`Level_Injury` 的棒球、灯牌、afterimage、杯子、泡泡和手机直播逻辑 |
 | [视觉与窗口特殊关卡](/api/levels/visual-special.md) | `Level_SVT`、`Level_Smokin`、`Level_Blurred`、`Level_Bitterness`、`Level_Montage`、`Level_Montage2`、`Level_Trailer` 的 kaleidoscope、咖啡杯、窗口 peek、粒子、Boss 失败和 trailer 演示逻辑 |
 | [叙事与场景关卡](/api/levels/story-scene-levels.md) | `Level_Lofi`、`Level_Lounge`、`Level_LuckyBreak`、`Level_HaileyDuet`、`Level_DistantDuet`、`Level_HelpingHands`、`Level_Steinway`、`Level_SteinwayH`、`Level_StevensonsTango` 的手部、背景、灯光、体育场和 credits 逻辑 |
+| [其余官方与测试脚本](/api/levels/misc-official-levels.md) | 早期主线、活动曲、联动曲、测试脚本、空实现脚本、cutscene 脚本和辅助组件的文件级覆盖 |
+| [官方关卡覆盖清单](/api/levels/coverage.md) | 75 个 `Level_*.cs` 文件的专题页或文件级归属复核 |

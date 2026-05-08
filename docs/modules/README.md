@@ -11,8 +11,8 @@
 | 运行时游戏系统 | [运行时游戏系统](/modules/runtime.md) |
 | 数据模型与枚举 | [数据模型与枚举](/modules/data-models.md) |
 | 官方关卡脚本 | [官方关卡脚本](/modules/levels.md) |
-| Mod 作者索引 | [Mod 作者入口](/modding/README.md) |
+| 源码研究索引 | [源码研究入口](/modding/README.md) |
 
 ## 阅读路径
 
-建议先从核心骨架进入，理解 `RDBase`、`RDClass`、`LevelBase`、`scrConductor`、`scnGame` 和 `scnEditor` 的关系。随后阅读编辑器事件系统，它连接关卡数据、运行时调度、Inspector 面板和 Mod 作者最常接触的事件模型。
+建议先从核心骨架进入，理解 `RDBase`、`RDClass`、`LevelBase`、`scrConductor`、`scnGame` 和 `scnEditor` 的关系。随后阅读编辑器事件系统，它连接关卡数据、运行时调度、Inspector 面板和事件模型。

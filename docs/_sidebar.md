@@ -11,6 +11,8 @@
   * [官方关卡脚本](modules/levels.md)
 * API
   * [源码 API 索引](api/README.md)
+  * 复核清单
+    * [阶段 3 与阶段 4 复核](api/review/stage-3-4-review.md)
   * 核心类
     * [RDBase](api/core/RDBase.md)
     * [RDClass](api/core/RDClass.md)
@@ -80,6 +82,11 @@
     * [运动与节奏变体](api/levels/athlete-freezeshot.md)
     * [视觉与窗口特殊关卡](api/levels/visual-special.md)
     * [叙事与场景关卡](api/levels/story-scene-levels.md)
-* Mod
-  * [Mod 作者入口](modding/README.md)
+    * [其余官方与测试脚本](api/levels/misc-official-levels.md)
+    * [官方关卡覆盖清单](api/levels/coverage.md)
+* 源码研究
+  * [源码研究入口](modding/README.md)
+  * [可调用方法索引](modding/callable-methods.md)
+  * [事件写法索引](modding/event-patterns.md)
+  * [数据字段索引](modding/data-fields.md)
 * [术语表](glossary.md)

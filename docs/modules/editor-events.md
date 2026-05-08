@@ -105,4 +105,5 @@ flowchart TD
 - [时间线与事件控件](/api/editor-events/timeline-controls.md)：解释底部时间线、标签页、事件控件、坐标换算、点击创建和拖拽编辑。
 - [Inspector 面板索引与专项行为](/api/editor-events/inspector-panels.md)：解释手工面板、自动面板和复杂字段联动。
 - [Inspector 面板读写链路](/api/editor-events/inspector-flow.md)：解释属性面板如何显示事件并把字段写回数据对象。
-- [自定义方法事件](/api/editor-events/custom-methods.md)：解释 `CallCustomMethod` 与 `[ListedMethod(true)]` 的 Mod 入口。
+- [自定义方法事件](/api/editor-events/custom-methods.md)：解释 `CallCustomMethod` 与 `[ListedMethod(true)]` 的事件入口。
+- [事件写法索引](/modding/event-patterns.md)：从源码研究角度按常见目标回到事件分组页和专页。

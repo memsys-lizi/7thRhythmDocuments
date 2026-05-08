@@ -14,6 +14,8 @@
 | [运动与节奏变体](/api/levels/athlete-freezeshot.md) | `Level_Freezeshot`、`Level_FreezeshotH`、`Level_FreezeshotBooth`、`Level_AthleteTherapy`、`Level_AthleteFinale`、`Level_Injury` 的体育场棒球、灯牌、afterimage、杯子、泡泡和手机直播。 |
 | [视觉与窗口特殊关卡](/api/levels/visual-special.md) | `Level_SVT`、`Level_Smokin`、`Level_Blurred`、`Level_Bitterness`、`Level_Montage`、`Level_Montage2`、`Level_Trailer` 的 kaleidoscope、咖啡杯、窗口 peek、粒子、Boss 失败和 trailer 演示。 |
 | [叙事与场景关卡](/api/levels/story-scene-levels.md) | `Level_Lofi`、`Level_Lounge`、`Level_LuckyBreak`、`Level_HaileyDuet`、`Level_DistantDuet`、`Level_HelpingHands`、`Level_Steinway`、`Level_SteinwayH`、`Level_StevensonsTango` 的手部、背景、灯光、体育场、泡泡和 credits。 |
+| [其余官方与测试脚本](/api/levels/misc-official-levels.md) | 早期主线、活动曲、联动曲、测试脚本、空实现脚本、cutscene 脚本和辅助组件的文件级覆盖。 |
+| [官方关卡覆盖清单](/api/levels/coverage.md) | 75 个 `Level_*.cs` 文件的专题页或文件级归属复核。 |
 
 ## 写作重点
 
@@ -27,4 +29,4 @@
 
 ## 下一步
 
-阶段 5 下一页深写其他官方与测试脚本，覆盖活动曲、测试脚本、空实现脚本和其余 `Level_*` 文件。
+阶段 5 已完成 `Level_*.cs` 文件级归属，下一步扩展阶段 6 源码研究索引，并在阶段 7 用覆盖清单清理未分类源码。

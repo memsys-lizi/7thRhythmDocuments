@@ -118,13 +118,14 @@ flowchart TD
 | `athlete-freezeshot.md` | Freezeshot、Athlete、Injury | 已建立 |
 | `visual-special.md` | SVT、Smokin、Blurred、Bitterness、Montage、Trailer | 已建立 |
 | `story-scene-levels.md` | Lofi、Lounge、LuckyBreak、HaileyDuet、DistantDuet、Steinway | 已建立 |
-| `misc-official-levels.md` | 活动曲、测试脚本、空实现与其他官方脚本 | 待写 |
+| `misc-official-levels.md` | 活动曲、测试脚本、空实现与其他官方脚本 | 已建立 |
+| `coverage.md` | 75 个 `Level_*.cs` 文件的专题页或文件级归属 | 已建立 |
 
-## Mod 关注点
+## 源码研究关注点
 
 | 场景 | 注意事项 |
 | --- | --- |
 | 调用官方关卡公开方法 | 很多 `public void` 是给 `CallCustomMethod` 或 Ink 调用的关卡专用入口，依赖关卡内 prefab、行编号、房间和已加载资源。 |
-| Hook `preactions()` / `actions()` | 这些方法按小节执行，内部常用 `conductor.barNumber` 和 `scrExecuteOnCertainBeat` 安排延迟动作。 |
-| Hook `OnHit()` / `OnMistake()` | Boss、体育场和低血量关卡在这些回调中推进状态，改动会影响结算、失败和视觉反馈。 |
+| `preactions()` / `actions()` 回调 | 这些方法按小节执行，内部常用 `conductor.barNumber` 和 `scrExecuteOnCertainBeat` 安排延迟动作。 |
+| `OnHit()` / `OnMistake()` 回调 | Boss、体育场和低血量关卡在这些回调中推进状态，改动会影响结算、失败和视觉反馈。 |
 | 复用素材加载逻辑 | `LoadBigAssets()` 会实例化关卡专用 prefab，并把它们放到指定房间或 HUD 位置；复用前需要先确认当前关卡有相同资源。 |

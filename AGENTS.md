@@ -12,14 +12,14 @@
 
 ## 项目目标
 
-这个仓库要建设一个大型 Rhythm Doctor 源码文档站，面向源码研究者和 Mod 作者。
+这个仓库要建设一个大型 Rhythm Doctor 源码文档站，主要面向 RD 源码研究者。文档不负责讲解外部修改工具链，也不围绕某一种外部框架组织内容。后续工作必须优先覆盖 RD 主工程源码本身。
 
 最终文档应尽量覆盖 `RDFucked/Assets/Scripts/Assembly-CSharp` 中的 RD 主工程代码，包括：
 
 - 类、结构体、接口、枚举的用途。
 - 字段、属性、方法的作用、来源文件和使用关系。
 - 运行时核心系统、关卡系统、关卡编辑器事件系统、数据模型和官方关卡脚本。
-- Mod 作者关心的可调用方法、扩展点、风险点和数据字段。
+- 源码研究者关心的可调用入口、扩展点、风险点、运行时入口和数据字段。
 
 第三方插件目录 `RDFucked/Assets/Plugins/Assembly-CSharp-firstpass` 不逐项深写，只说明依赖用途和 RD 中的接入点。
 
@@ -33,7 +33,18 @@
 - 阶段 0 到阶段 7 均为 `已完成`，并且阶段 7 已完成全站复核、交叉链接、术语表、调用图和缺失项清单清理。
 - `docs/progress.md`、`docs/_sidebar.md`、`docs/api/README.md`、模块页和 `AGENTS.md` 的进度一致。
 
-如果后续自动化任务启动时发现上述条件已经满足，应停止继续写作，不再新增重复页面或空泛总结；只需要报告“文档已完成，自动化无需继续推进”。如果自动化系统允许删除或暂停当前任务，应优先暂停或删除对应自动化，避免用户不在时继续空转。
+如果后续自动化任务启动时发现上述条件已经满足，应停止继续写作，不再新增重复页面或空泛总结；只需要报告“文档已完成，自动化无需继续推进”。如果自动化系统允许删除或暂停当前任务，必须删除当前文档自动化任务，避免用户不在时继续空转。
+
+## 阶段 6 规划原则
+
+阶段 6 是“源码研究索引”阶段，不写 Mod 制作教程，也不围绕具体 Mod 框架展开。剩余内容由维护者按源码情况自主拆分，但必须服务两个目标：补齐跨模块索引，并为阶段 7 全站覆盖复核做准备。
+
+- 数据字段索引：`.rdlevel`、`RDLevelData`、`RDLevelSettings`、rows、events、decorations、conditionals、bookmarks、palettes、settings 校验入口。
+- 入口与单例索引：Unity 场景、全局单例、`RDBase`、`RDClass`、`scrGameManager`、`scrConductor`、`scnGame`、`scnEditor` 的职责和调用前提。
+- 高风险系统索引：判定、输入、音频、窗口、暂停、结算、存档、关卡加载、编辑器保存和事件运行路径。
+- 扩展点索引：事件类、Inspector 面板、关卡脚本公开方法、房间方法、数据模型和资源加载接入点。
+- 未分类源码索引：用脚本或搜索统计 `Assembly-CSharp` 下尚未被页面覆盖的 RD 主工程 `.cs` 文件，为阶段 7 逐项清理。
+- 交叉入口：每个索引页都要回链到正式 API 页面，避免重复解释后产生矛盾。
 
 ## 写作准则
 
@@ -46,10 +57,10 @@
 | 阶段 0：文档基础设施 | 已完成 | 完善 docsify 首页、侧边栏、搜索、黑白样式、模块目录 | 已复核 docsify 首页、侧边栏、搜索配置和黑白样式；公开导航已移除维护者入口 |
 | 阶段 1：核心骨架 | 已完成 | 深写 `RDBase`、`RDClass`、`LevelBase`、`scrConductor`、`scnGame`、`scnEditor` | 六个核心类页面已完成读者向整理，并与核心骨架模块页、编辑器事件运行路径建立交叉入口 |
 | 阶段 2：关卡编辑器事件系统 | 已完成 | 深写 `LevelEvent_Base`、`LevelEvent_*`、`InspectorPanel`、`InspectorPanel_*`、事件属性与控件关系 | 已完成阶段复核：覆盖 `LevelEventType` 0 到 80 的分组页或专页，补齐基础机制、事件运行路径、Inspector 读写链路、事件覆盖清单、时间线与事件控件、Inspector 面板索引和重点事件专页 |
-| 阶段 3：运行时游戏系统 | 待复核 | 覆盖节拍、判定、行、房间、窗口、音频、VFX、场景流程 | 已完成运行时系统总览、节拍与判定、输入系统、行与角色系统、房间与 VFX 系统、窗口系统、音频运行时、场景流程与暂停流程；下一步复核阶段 3 缺口并进入阶段 4 数据模型与枚举 |
-| 阶段 4：数据模型与枚举 | 待复核 | 覆盖 `RDLevelData`、`RDLevelSettings`、自定义关卡、错误、难度、平台等模型 | 主体页面已完成：覆盖 `RDLevelData`、`RDLevelSettings`、`CustomLevelData`、`LevelValidation`、`LevelError*`、`Rank`、`Difficulty`、`LevelDifficulty`、`LevelPlayMode`、`LevelType`、`LevelSource`、`Conditional`、`ConditionalInfo`、`ConditionalID`、`Conditionals`、`Conditional_*`、`SoundData`、`SoundDataStruct`、`RDGameSounds`、`BookmarkData`、`ColorOrPalette`、`TagAction`、`LevelSettingName`、`BasePropertyInfo`、属性 Attribute、控件 Attribute、`Float2`、`FloatExpression`、`CustomAnimationData` 和小型设置模型；下一步进入阶段 5 官方关卡脚本 |
-| 阶段 5：官方关卡脚本 | 进行中 | 覆盖 `Level_*` 系列，说明每个关卡脚本的特殊逻辑 | 已建立 [官方关卡脚本总览](/api/levels/overview.md)、[教程与开场关卡](/api/levels/tutorials-opening.md)、[Boss 与高压段落](/api/levels/boss-high-pressure.md)、[运动与节奏变体](/api/levels/athlete-freezeshot.md)、[视觉与窗口特殊关卡](/api/levels/visual-special.md) 和 [叙事与场景关卡](/api/levels/story-scene-levels.md)：覆盖教程、开场、Boss2、Boss2 Booth、Boss2 Hard、Paige、Insomniac Hard、FinalRemix、Freezeshot、AthleteTherapy、AthleteFinale、Injury、SVT、Smokin、Blurred、Bitterness、Montage、Montage2、Trailer、Lofi、LuckyBreak、HaileyDuet、DistantDuet、HelpingHands、Steinway 和 StevensonsTango 的资源、流程、回调、失败与公开方法；下一步深写其他官方与测试脚本 |
-| 阶段 6：Mod 作者索引 | 进行中 | 整理可调用方法、编辑器事件、数据字段、扩展点和风险提示 | 已完成自定义方法事件第一版，页面归入编辑器事件目录，Mod 区保留交叉入口 |
+| 阶段 3：运行时游戏系统 | 已完成 | 覆盖节拍、判定、行、房间、窗口、音频、VFX、场景流程 | 已完成运行时系统总览、节拍与判定、输入系统、行与角色系统、房间与 VFX 系统、窗口系统、音频运行时、场景流程与暂停流程，并完成 [阶段 3 与阶段 4 复核](/api/review/stage-3-4-review.md) |
+| 阶段 4：数据模型与枚举 | 已完成 | 覆盖 `RDLevelData`、`RDLevelSettings`、自定义关卡、错误、难度、平台等模型 | 已完成 `RDLevelData`、`RDLevelSettings`、`CustomLevelData`、`LevelValidation`、错误、rank、难度、条件、音频、属性反射和小型模型页面，并完成 [阶段 3 与阶段 4 复核](/api/review/stage-3-4-review.md) |
+| 阶段 5：官方关卡脚本 | 待复核 | 覆盖 `Level_*` 系列，说明每个关卡脚本的特殊逻辑 | 已建立 [官方关卡脚本总览](/api/levels/overview.md)、[教程与开场关卡](/api/levels/tutorials-opening.md)、[Boss 与高压段落](/api/levels/boss-high-pressure.md)、[运动与节奏变体](/api/levels/athlete-freezeshot.md)、[视觉与窗口特殊关卡](/api/levels/visual-special.md)、[叙事与场景关卡](/api/levels/story-scene-levels.md)、[其余官方与测试脚本](/api/levels/misc-official-levels.md) 和 [官方关卡覆盖清单](/api/levels/coverage.md)：75 个 `Level_*.cs` 文件已全部归属到专题页或文件级页面；下一步继续扩展阶段 6 源码研究索引 |
+| 阶段 6：源码研究索引 | 进行中 | 整理可调用方法、编辑器事件、数据字段、扩展点、高风险系统和未分类源码索引 | 已完成自定义方法事件第一版、[可调用方法索引](/modding/callable-methods.md)、[事件写法索引](/modding/event-patterns.md) 和 [数据字段索引](/modding/data-fields.md)：自定义方法仍归属编辑器事件系统，Mod 区只作为源码研究交叉入口整理 `CallCustomMethod`、Ink `runLevelMethod`、`LevelBase`、`RDRoom`、官方关卡公开方法、调用前提、常见事件组合和 `.rdlevel` 字段入口；下一步改为入口与单例索引、扩展点索引和未分类源码覆盖清单 |
 | 阶段 7：全站复核 | 未开始 | 补交叉链接、术语表、调用图、缺失项清单 | 待开始 |
 
 状态只能使用：`未开始`、`进行中`、`已完成`、`待复核`。
@@ -84,7 +95,7 @@
 - 主要职责：这个模块解决什么问题。
 - 核心流程：尽量使用 Mermaid 图或列表说明数据流、调用流。
 - 关键类型：列出入口类、数据类、管理器、事件类。
-- Mod 关注点：哪些方法或字段会被调用、扩展或 Hook。
+- 源码研究关注点：哪些方法或字段会被调用、扩展或跨模块依赖。
 - 缺失清单：尚未解释或需要复核的类。
 
 ## 文档生成策略
