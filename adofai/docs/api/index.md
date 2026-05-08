@@ -1,6 +1,6 @@
 # API 入口
 
-本页作为 ADOFAI 源码 API 文档的入口。当前已完成核心骨架，正在推进关卡数据模型阶段。
+本页作为 ADOFAI 源码 API 文档的入口。当前已完成核心骨架和关卡数据模型，正在推进编辑器系统阶段。
 
 ## 计划中的核心 API 页
 
@@ -12,6 +12,7 @@
 | 关卡数据 | [LevelData](/api/data-models/LevelData.md)、[LevelEvent](/api/data-models/LevelEvent.md)、[LevelEventInfo](/api/data-models/LevelEventInfo.md)、[PropertyInfo](/api/data-models/PropertyInfo.md)、[Property](/api/data-models/Property.md)、[事件类型与属性枚举](/api/data-models/event-metadata-enums.md)、[LevelDataCLS](/api/data-models/LevelDataCLS.md)、[读取结果与序列化](/api/data-models/serialization-validation.md) | `.adofai` 数据、事件对象、属性元数据、事件枚举、属性枚举、关卡选择摘要和序列化 |
 | 编辑器控件 | [InspectorPanel](/api/editor/InspectorPanel.md)、[PropertiesPanel](/api/editor/PropertiesPanel.md)、[Property](/api/data-models/Property.md)、[PropertyControl 控件族](/api/editor/property-controls.md) | 属性面板、控件绑定、事件编辑 |
 | 编辑器动作 | [ADOFAI.Editor.Actions](/api/editor/editor-actions.md) | 撤销、重做、选择、复制、粘贴、播放、文件、书签和面板动作 |
+| 编辑器长流程 | [scnEditor 长流程](/api/editor/scnEditor-workflows.md)、[偏好设置、粒子编辑器与辅助面板](/api/editor/preferences-particle-panels.md) | 文件打开保存、新建关卡、选择、剪贴板、事件增删、撤销重做、播放预览和辅助面板 |
 | 事件效果 | `ffxPlusBase`、`ffx*Plus`、`ffx*` | 事件执行组件、相机、轨道、装饰、滤镜、声音 |
 | 存档与服务 | `Persistence`、`GCS`、`GCNS`、平台 helper、DLC、Steam | 全局状态、存档、平台差异、外部服务 |
 
@@ -43,3 +44,4 @@
 | `EditorPreferencesMenu` | `7thRhythmSource/ADOFAi/ADOFAI.Editor.Preferences/EditorPreferencesMenu.cs` | 编辑器偏好设置弹窗主控制器，生成分类和偏好字段。 |
 | `ParticleEditor` | `7thRhythmSource/ADOFAi/ADOFAI.Editor.ParticleEditor/ParticleEditor.cs` | `AddParticle` 事件的分组属性编辑器和粒子预览面板。 |
 | `FindCommentPanel` | `7thRhythmSource/ADOFAi/ADOFAI.Editor.Panels/FindCommentPanel.cs` | 根据注释文本搜索并跳转地板。 |
+| `SaveStateScope` | `7thRhythmSource/ADOFAi/SaveStateScope.cs` | `scnEditor` 状态保存区间，构造时可调用 `SaveState`，并用 `changingState` 防止嵌套状态切换。 |
