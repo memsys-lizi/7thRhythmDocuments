@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "docs": "docsify serve docs --port 3000"
+    "docs": "docsify serve docs --port 1968"
   },
   "devDependencies": {
     "docsify-cli": "^4.4.4"
