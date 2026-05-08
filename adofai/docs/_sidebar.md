@@ -34,6 +34,7 @@
     * [偏好设置、粒子编辑器与辅助面板](/api/editor/preferences-particle-panels.md)
     * [scnEditor 长流程](/api/editor/scnEditor-workflows.md)
     * [编辑器小型 UI 类](/api/editor/editor-ui-widgets.md)
+    * [阶段 3 编辑器系统复核](/api/editor/stage-3-review.md)
 
 * 模块
   * [模块入口](/modules/index.md)

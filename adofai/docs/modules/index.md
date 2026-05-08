@@ -19,7 +19,7 @@ ADOFAI 文档按源码模块组织。模块页面负责解释系统边界、核�
 | [编辑器动作系统](/modules/editor-actions.md) | `ADOFAI.Editor.Actions` | 快捷键、菜单动作、撤销重做、复制粘贴和选择流程。 |
 | [编辑器辅助面板](/modules/editor-auxiliary-panels.md) | `EditorPreferencesMenu`、`ParticleEditor`、`FindCommentPanel` | 偏好设置、粒子编辑器和查找注释面板。 |
 | [编辑器长流程](/modules/editor-workflows.md) | `scnEditor`、`SaveStateScope`、`LevelState`、`FloorData` | 文件打开保存、新建关卡、状态保存、选择、剪贴板、事件增删、撤销重做和播放预览。 |
-| [编辑器小型 UI 组件](/modules/editor-ui-widgets.md) | `LevelEventButton`、`CategoryTab`、`InspectorTab`、`RDColorPickerPopup`、`ListItem_*`、`TransformGizmoHolder` | 事件栏、tab、颜色选择器、列表项、快捷键提示、地板方向按钮、练习时间线和 gizmo。 |
+| [编辑器小型 UI 组件](/modules/editor-ui-widgets.md) | `LevelEventButton`、`CategoryTab`、`InspectorTab`、`RDColorPickerPopup`、`ListItem_*`、`TransformGizmoHolder` | 事件栏、tab、颜色选择器、列表项、快捷键提示、地板方向按钮、练习时间线和 gizmo；阶段 3 收口见 [阶段 3 编辑器系统复核](/api/editor/stage-3-review.md)。 |
 | 事件效果运行时 | `ffxPlusBase`、`ffx*Plus`、`ffx*`、`ADOFAI.FloorFX` | `LevelEventType` 怎样映射到运行时效果组件。 |
 | UI、菜单与关卡选择 | `scnLevelSelect`、`LevelSelectBase`、`CustomLevelTile`、`MobileMenu` | 关卡选择、CLS、菜单面板和移动端 UI。 |
 | 平台、存档与服务 | `Persistence`、`ADOFAI.Common.Platform`、Steam、DLC、Analytics | 存档字段、平台差异、服务初始化和 DLC 状态。 |
