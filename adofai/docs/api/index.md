@@ -40,3 +40,6 @@
 | `PropertyControl` | `7thRhythmSource/ADOFAi/ADOFAI.LevelEditor.Controls/PropertyControl.cs` | 编辑器属性控件基类，负责控件文本、枚举设置、输入校验、启用状态和对路径/地板变化的回写。 |
 | `PropertyControl_*` | `7thRhythmSource/ADOFAi/ADOFAI.LevelEditor.Controls/*.cs` | 文本、开关、颜色、文件、向量、列表、滤镜、导出、评分、说明和粒子播放控件族。 |
 | `EditorAction` | `7thRhythmSource/ADOFAi/ADOFAI.Editor.Actions/EditorAction.cs` | 编辑器动作基类，定义快捷键分组、描述键和 `Execute(scnEditor)`。 |
+| `EditorPreferencesMenu` | `7thRhythmSource/ADOFAi/ADOFAI.Editor.Preferences/EditorPreferencesMenu.cs` | 编辑器偏好设置弹窗主控制器，生成分类和偏好字段。 |
+| `ParticleEditor` | `7thRhythmSource/ADOFAi/ADOFAI.Editor.ParticleEditor/ParticleEditor.cs` | `AddParticle` 事件的分组属性编辑器和粒子预览面板。 |
+| `FindCommentPanel` | `7thRhythmSource/ADOFAi/ADOFAI.Editor.Panels/FindCommentPanel.cs` | 根据注释文本搜索并跳转地板。 |

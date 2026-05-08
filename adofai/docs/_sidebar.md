@@ -31,6 +31,7 @@
     * [PropertiesPanel](/api/editor/PropertiesPanel.md)
     * [PropertyControl 控件族](/api/editor/property-controls.md)
     * [ADOFAI.Editor.Actions](/api/editor/editor-actions.md)
+    * [偏好设置、粒子编辑器与辅助面板](/api/editor/preferences-particle-panels.md)
 
 * 模块
   * [模块入口](/modules/index.md)
@@ -43,3 +44,4 @@
   * [关卡数据模型](/modules/level-data-model.md)
   * [编辑器事件与属性面板](/modules/editor-property-panels.md)
   * [编辑器动作系统](/modules/editor-actions.md)
+  * [编辑器辅助面板](/modules/editor-auxiliary-panels.md)
