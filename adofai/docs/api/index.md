@@ -1,6 +1,6 @@
 # API 入口
 
-本页作为 ADOFAI 源码 API 文档的入口。当前已完成核心骨架、关卡数据模型、编辑器系统、运行时游戏系统和事件与效果执行阶段，正在推进平台、存档、服务与 UI 阶段。
+本页作为 ADOFAI 源码 API 文档的入口。当前已完成核心骨架、关卡数据模型、编辑器系统、运行时游戏系统、事件与效果执行，以及平台、存档、服务与 UI 阶段；下一步进入文件级覆盖与复核。
 
 ## 计划中的核心 API 页
 
@@ -18,7 +18,7 @@
 | 结算与保存 | [结算、成绩与进度保存](/api/runtime/results-save-flow.md) | 命中统计、完成度、准确率、X 准确率、官方和自定义成绩保存、详细结果、灯笼和失败条 |
 | 场景流转 | [场景流转与加载跳转](/api/runtime/scene-loading-flow.md) | 传送门分发、官方关卡进入、自定义关卡加载、黑场转场、场景加载和自定义关卡重置 |
 | 事件效果 | [事件执行总览](/api/events/event-execution-overview.md)、[轨道与地板事件](/api/events/track-floor-events.md)、[相机、滤镜与屏幕事件](/api/events/camera-filter-events.md)、[装饰、对象、文本与声音事件](/api/events/decoration-object-text-sound-events.md)、[输入、粒子与剩余运行时事件](/api/events/input-particle-runtime-events.md)、[运行时效果族补充](/api/runtime/effect-families.md)、[官方关卡脚本运行入口](/api/runtime/official-level-scripts.md)、`ffxPlusBase`、`ffx*Plus`、`ffx*` | 事件执行组件、事件到效果映射、轨道、装饰、对象、文本、滤镜、声音、粒子、输入事件、帧率和官方关卡方法调用 |
-| 存档与服务 | [全局状态、常量与存档](/api/platform/global-state-persistence.md)、[平台 Helper、DLC、Steam 与服务](/api/platform/platform-dlc-steam-services.md)、[CLS、关卡选择、移动菜单与本地化](/api/platform/cls-level-select-mobile-localization.md) | `Persistence`、`GCS`、`GCNS`、平台 helper、DLC、Steam、Workshop、GameServices、Analytics、CLS、关卡选择、移动菜单、本地化 |
+| 存档与服务 | [全局状态、常量与存档](/api/platform/global-state-persistence.md)、[平台 Helper、DLC、Steam 与服务](/api/platform/platform-dlc-steam-services.md)、[CLS、关卡选择、移动菜单与本地化](/api/platform/cls-level-select-mobile-localization.md)、[UI、服务辅助类与依赖接入](/api/platform/ui-service-dependencies.md) | `Persistence`、`GCS`、`GCNS`、平台 helper、DLC、Steam、Workshop、GameServices、Analytics、CLS、关卡选择、移动菜单、本地化、通知、导入面板、设置菜单和第三方依赖接入点 |
 
 ## 当前已确认的关键事实
 
@@ -89,6 +89,10 @@
 | `scnLevelSelect` | `7thRhythmSource/ADOFAi/scnLevelSelect.cs` | 桌面主关卡选择场景，处理岛屿、快捷键、隐藏输入、传送门和相机跳转。 |
 | `MobileMenuController` | `7thRhythmSource/ADOFAi/MobileMenu/MobileMenuController.cs` | 移动菜单主控制器，处理地图加载、screen 跳转、方向移动、触摸、按钮、子关卡和进入关卡。 |
 | `RDString` | `7thRhythmSource/ADOFAi/RDString.cs` | 本地化和字体入口，支持平台后缀、语言字体、CJK 处理和参数替换。 |
+| `Notification` | `7thRhythmSource/ADOFAi/Notification.cs` | 全局通知条单例，显示校准、音频缓冲、磁盘空间、云存档、服务超时和 entitlement 提示。 |
+| `ImportLevelsCLS` | `7thRhythmSource/ADOFAi/ImportLevelsCLS.cs` | CLS 关卡导入面板，处理本地包、URL、拖放、解压、hash 去重和安装到本地 worlds 路径。 |
+| `SettingsMenu` | `7thRhythmSource/ADOFAi/SettingsMenu.cs` | 暂停设置面板，根据 `PauseMenuSettings` 生成分类与设置项，并读写存档、平台服务和运行时控制器。 |
+| `RDStringToUIText` | `7thRhythmSource/ADOFAi/RDStringToUIText.cs` | 把 `RDString` 文本和语言字体应用到 `Text` 或 `TextMesh`。 |
 | `scnGame.ApplyEventsToFloors` | `7thRhythmSource/ADOFAi/scnGame.cs` | 把激活事件按地板分组，清理旧效果，应用核心事件，并创建运行时效果组件。 |
 | `scnGame.ApplyEvent` | `7thRhythmSource/ADOFAi/scnGame.cs` | 将 `LevelEventType` 映射到 `ffxPlusBase` 子类，解码字段并计算起始时间。 |
 | `scnGame.PrepVfx` | `7thRhythmSource/ADOFAi/scnGame.cs` | 整理普通时间调度、条件事件、手动事件、checkpoint 恢复和 `scrVfxPlus.effects` 排序。 |

@@ -32,4 +32,4 @@ ADOFAI 文档按源码模块组织。模块页面负责解释系统边界、核�
 | [装饰、对象、文本与声音事件模块](/modules/decoration-object-text-sound-events.md) | `MoveDecorations`、`SetObject`、`SetText`、`SetDefaultText`、`PlaySound`、`AddComponent`、`KillPlayer` | 装饰、对象装饰、文本、HUD 文案、声音、动态组件和条件死亡事件怎样执行。 |
 | [输入、粒子与剩余运行时事件模块](/modules/input-particle-runtime-events.md) | `SetInputEvent`、`SetFrameRate`、`ScalePlanets`、`SetHitsound`、`SetHoldSound`、`SetParticle`、`EmitParticle` | 输入事件、帧率、星球缩放、命中声音、hold 声音和粒子效果怎样执行。 |
 | [UI、菜单与关卡选择](/api/platform/cls-level-select-mobile-localization.md) | `scnLevelSelect`、`LevelSelectBase`、`scnCLS`、`OptionsPanelsCLS`、`CustomLevelTile`、`MobileMenu`、`RDString` | 关卡选择、CLS、菜单面板、移动端 UI 和本地化入口。 |
-| 第三方依赖接入 | `Rewired`、`ByteSheep.Events`、`BlendModes`、`TMPro.Examples` | 只说明 ADOFAI 使用入口，不逐项深写第三方源码。 |
+| [UI、服务辅助类与依赖接入](/api/platform/ui-service-dependencies.md) | `Notification`、`ImportLevelsCLS`、`SettingsMenu`、`RDStringToUIText`、`Rewired`、`ByteSheep.Events`、`BlendModes`、`MonsterLove.StateMachine`、`TMPro.Examples` | 通知、导入、设置、平台条件开关、本地化 UI 和第三方依赖在 ADOFAI 中的使用入口。 |
