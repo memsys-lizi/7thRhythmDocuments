@@ -57,7 +57,7 @@ ADOFAI 文档写完的标准不是阶段页面存在，而是 `7thRhythmSource/A
 | 阶段 | 状态 | 当前记录 |
 | --- | --- | --- |
 | 阶段 0：文档基础设施与架构侦察 | 已完成 | 已建立 `adofai/` docsify 项目、首页、侧边栏、黑白样式、进度页、架构总览和源码地图。 |
-| 阶段 1：核心骨架 | 进行中 | 已完成 `ADOBase`、`ADOClass`、`ADOStartup`、`scrController`、`scrConductor`、`scnGame`、`scrLevelMaker`、`scrFloor`、核心启动模块页、运行时控制器状态机模块页、音频节拍模块页、自定义关卡运行模块页和路径地板模块页；下一步继续 `scnEditor`。 |
+| 阶段 1：核心骨架 | 已完成 | 已完成 `ADOBase`、`ADOClass`、`ADOStartup`、`scrController`、`scrConductor`、`scnGame`、`scnEditor`、`scrLevelMaker`、`scrFloor`，以及核心启动、运行时控制器、音频节拍、自定义关卡运行、路径地板和编辑器主入口模块页；下一步进入阶段 2：关卡数据模型。 |
 
 ## 完成判定与自动化停止规则
 

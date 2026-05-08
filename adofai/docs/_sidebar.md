@@ -14,6 +14,7 @@
     * [scrController](/api/core/scrController.md)
     * [scrConductor](/api/core/scrConductor.md)
     * [scnGame](/api/core/scnGame.md)
+    * [scnEditor](/api/core/scnEditor.md)
     * [scrLevelMaker](/api/core/scrLevelMaker.md)
     * [scrFloor](/api/core/scrFloor.md)
 
@@ -24,3 +25,4 @@
   * [音频与节拍运行时](/modules/audio-beat-runtime.md)
   * [自定义关卡运行主线](/modules/custom-level-runtime.md)
   * [路径生成与地板运行时](/modules/path-floor-runtime.md)
+  * [编辑器主入口](/modules/editor-main.md)
