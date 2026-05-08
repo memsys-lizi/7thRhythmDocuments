@@ -1,0 +1,11 @@
+{
+  "name": "rhythm-doctor-doc",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "docs": "docsify serve docs --port 3000"
+  },
+  "devDependencies": {
+    "docsify-cli": "^4.4.4"
+  }
+}

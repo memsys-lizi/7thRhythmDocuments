@@ -1,0 +1,46 @@
+:root {
+  --theme-color: #111111;
+  --text-color-base: #111111;
+  --text-color-secondary: #555555;
+  --border-color: #dddddd;
+  --sidebar-background: #ffffff;
+}
+
+body {
+  color: #111111;
+  background: #ffffff;
+}
+
+.sidebar {
+  border-right: 1px solid #dddddd;
+}
+
+.sidebar,
+.sidebar-toggle {
+  background: #ffffff;
+}
+
+.sidebar ul li a {
+  color: #111111;
+}
+
+.sidebar ul li.active > a,
+.markdown-section a {
+  color: #000000;
+  font-weight: 600;
+}
+
+.markdown-section h1,
+.markdown-section h2,
+.markdown-section h3 {
+  color: #111111;
+}
+
+.markdown-section blockquote {
+  border-left-color: #111111;
+}
+
+.search input {
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+}
