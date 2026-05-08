@@ -25,6 +25,7 @@ ADOFAI 文档按源码模块组织。模块页面负责解释系统边界、核�
 | [相机与 VFX 运行时](/modules/runtime-camera-vfx.md) | `scrCamera`、`scrVfxPlus`、`ffxPlusBase`、相机与滤镜效果 | 相机跟随、自由相机、缩放、旋转、VFX 调度、视频背景、scrub、滤镜、闪屏、震屏和 Bloom。 |
 | [结算与成绩保存模块](/modules/runtime-results-save.md) | `scrMarginTracker`、`scrMistakesManager`、`DetailedResults`、`EndscreenLanterns`、`scrFailBar` | 命中统计、准确率、完成度、官方与自定义关卡保存、详细结果、灯笼和失败条。 |
 | [场景流转与加载模块](/modules/runtime-scene-loading.md) | `scrLoader`、`PortalTravelAction`、`EnterLevel`、`LoadCustomLevel`、`ResetCustomLevel`、`scrUIController` | 传送门分发、官方关卡解析、自定义关卡路径、跨场景黑场加载和场景内重置。 |
+| [运行时效果族模块](/modules/runtime-effect-families.md) | `ffxMoveFloorPlus`、`ffxRecolorFloorPlus`、`ffxMoveDecorationsPlus`、`ffxSetObjectPlus`、`ffxSetTextPlus`、`ffxPlaySound`、`ADOFAI.FloorFX` | 地板、装饰、对象、文本、声音、帧率、输入事件和粒子效果。 |
 | 事件效果运行时 | `ffxPlusBase`、`ffx*Plus`、`ffx*`、`ADOFAI.FloorFX` | `LevelEventType` 怎样映射到运行时效果组件。 |
 | UI、菜单与关卡选择 | `scnLevelSelect`、`LevelSelectBase`、`CustomLevelTile`、`MobileMenu` | 关卡选择、CLS、菜单面板和移动端 UI。 |
 | 平台、存档与服务 | `Persistence`、`ADOFAI.Common.Platform`、Steam、DLC、Analytics | 存档字段、平台差异、服务初始化和 DLC 状态。 |

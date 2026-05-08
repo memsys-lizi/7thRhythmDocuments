@@ -17,7 +17,7 @@
 | 相机与 VFX | [相机与 VFX 运行链路](/api/runtime/camera-vfx-chain.md) | 相机跟随、自由相机、缩放、旋转、RenderTexture、VFX 调度、滤镜、闪屏、震屏和 Bloom |
 | 结算与保存 | [结算、成绩与进度保存](/api/runtime/results-save-flow.md) | 命中统计、完成度、准确率、X 准确率、官方和自定义成绩保存、详细结果、灯笼和失败条 |
 | 场景流转 | [场景流转与加载跳转](/api/runtime/scene-loading-flow.md) | 传送门分发、官方关卡进入、自定义关卡加载、黑场转场、场景加载和自定义关卡重置 |
-| 事件效果 | `ffxPlusBase`、`ffx*Plus`、`ffx*` | 事件执行组件、轨道、装饰、滤镜、声音 |
+| 事件效果 | [运行时效果族补充](/api/runtime/effect-families.md)、`ffxPlusBase`、`ffx*Plus`、`ffx*` | 事件执行组件、轨道、装饰、对象、文本、滤镜、声音、粒子、输入事件和帧率 |
 | 存档与服务 | `Persistence`、`GCS`、`GCNS`、平台 helper、DLC、Steam | 全局状态、存档、平台差异、外部服务 |
 
 ## 当前已确认的关键事实
@@ -68,3 +68,6 @@
 | `EndscreenLanterns` | `7thRhythmSource/ADOFAi/EndscreenLanterns.cs` | 结算灯笼 UI，展示完成、最高准确率和 speed trial 状态。 |
 | `scrLoader` | `7thRhythmSource/ADOFAi/scrLoader.cs` | 全局加载器，负责黑场转场、加载动画、DLC Addressables 场景和普通 Unity 场景加载。 |
 | `Portal` | `7thRhythmSource/ADOFAi/Portal.cs` | 运行时传送门目标枚举，由 `scrController.PortalTravelAction()` 分发。 |
+| `ffxMoveFloorPlus` | `7thRhythmSource/ADOFAi/ffxMoveFloorPlus.cs` | 地板移动、旋转、缩放和透明度效果组件。 |
+| `ffxMoveDecorationsPlus` | `7thRhythmSource/ADOFAi/ffxMoveDecorationsPlus.cs` | 装饰位置、pivot、旋转、缩放、颜色、透明度、视差、图片和遮罩效果组件。 |
+| `ffxSetParticlePlus` | `7thRhythmSource/ADOFAi/ADOFAI.FloorFX/ffxSetParticlePlus.cs` | 粒子装饰模块修改组件。 |

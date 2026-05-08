@@ -41,6 +41,7 @@
     * [相机与 VFX 运行链路](/api/runtime/camera-vfx-chain.md)
     * [结算、成绩与进度保存](/api/runtime/results-save-flow.md)
     * [场景流转与加载跳转](/api/runtime/scene-loading-flow.md)
+    * [运行时效果族补充](/api/runtime/effect-families.md)
 
 * 模块
   * [模块入口](/modules/index.md)
@@ -61,3 +62,4 @@
   * [相机与 VFX 运行时](/modules/runtime-camera-vfx.md)
   * [结算与成绩保存模块](/modules/runtime-results-save.md)
   * [场景流转与加载模块](/modules/runtime-scene-loading.md)
+  * [运行时效果族模块](/modules/runtime-effect-families.md)
