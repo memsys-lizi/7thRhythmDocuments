@@ -10,7 +10,7 @@
 | 场景控制 | [scrController](/api/core/scrController.md)、[scrConductor](/api/core/scrConductor.md)、[scnGame](/api/core/scnGame.md)、[scnEditor](/api/core/scnEditor.md) | 游戏状态、音频时钟、自定义关卡运行、编辑器入口 |
 | 轨道与地板 | [scrLevelMaker](/api/core/scrLevelMaker.md)、[scrFloor](/api/core/scrFloor.md)、`Level` | 路径生成、地板对象、官方关卡脚本基类 |
 | 关卡数据 | [LevelData](/api/data-models/LevelData.md)、[LevelEvent](/api/data-models/LevelEvent.md)、[LevelEventInfo](/api/data-models/LevelEventInfo.md)、[PropertyInfo](/api/data-models/PropertyInfo.md)、[Property](/api/data-models/Property.md)、[事件类型与属性枚举](/api/data-models/event-metadata-enums.md)、[LevelDataCLS](/api/data-models/LevelDataCLS.md)、[读取结果与序列化](/api/data-models/serialization-validation.md) | `.adofai` 数据、事件对象、属性元数据、事件枚举、属性枚举、关卡选择摘要和序列化 |
-| 编辑器控件 | `InspectorPanel`、`PropertiesPanel`、`Property`、`PropertyControl_*` | 属性面板、控件绑定、事件编辑 |
+| 编辑器控件 | [InspectorPanel](/api/editor/InspectorPanel.md)、[PropertiesPanel](/api/editor/PropertiesPanel.md)、[Property](/api/data-models/Property.md)、`PropertyControl_*` | 属性面板、控件绑定、事件编辑 |
 | 编辑器动作 | `EditorAction` 与 `ADOFAI.Editor.Actions` | 撤销、重做、选择、复制、粘贴、播放和文件动作 |
 | 事件效果 | `ffxPlusBase`、`ffx*Plus`、`ffx*` | 事件执行组件、相机、轨道、装饰、滤镜、声音 |
 | 存档与服务 | `Persistence`、`GCS`、`GCNS`、平台 helper、DLC、Steam | 全局状态、存档、平台差异、外部服务 |
@@ -35,4 +35,6 @@
 | `Property` | `7thRhythmSource/ADOFAi/ADOFAI/Property.cs` | 编辑器属性行组件，持有标签、启用按钮、控件容器和 `PropertyInfo`。 |
 | `LevelDataCLS` | `7thRhythmSource/ADOFAi/ADOFAI/LevelDataCLS.cs` | 关卡选择使用的轻量关卡摘要，只解码 `LevelSettings` 和 `SongSettings`。 |
 | `LevelArrayConverter` | `7thRhythmSource/ADOFAi/ADOFAI.Serialization/LevelArrayConverter.cs` | `LevelData.Encode()` 使用的 JSON 写入转换器，特殊格式化 `actions` 和 `decorations` 数组。 |
+| `InspectorPanel` | `7thRhythmSource/ADOFAi/ADOFAI/InspectorPanel.cs` | 管理编辑器事件 tab、当前事件选择、装饰多选、属性面板显示和事件启用/隐藏按钮。 |
+| `PropertiesPanel` | `7thRhythmSource/ADOFAi/ADOFAI/PropertiesPanel.cs` | 根据事件属性元数据创建属性行和具体控件，并把 `LevelEvent` 字段值写入 UI。 |
 | `PropertyControl` | `7thRhythmSource/ADOFAi/ADOFAI.LevelEditor.Controls/PropertyControl.cs` | 编辑器属性控件基类，负责控件文本、枚举设置、输入校验、启用状态和对路径/地板变化的回写。 |

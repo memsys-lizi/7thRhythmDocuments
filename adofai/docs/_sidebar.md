@@ -26,6 +26,9 @@
     * [事件类型与属性枚举](/api/data-models/event-metadata-enums.md)
     * [LevelDataCLS](/api/data-models/LevelDataCLS.md)
     * [读取结果与序列化](/api/data-models/serialization-validation.md)
+  * 编辑器系统
+    * [InspectorPanel](/api/editor/InspectorPanel.md)
+    * [PropertiesPanel](/api/editor/PropertiesPanel.md)
 
 * 模块
   * [模块入口](/modules/index.md)
@@ -36,3 +39,4 @@
   * [路径生成与地板运行时](/modules/path-floor-runtime.md)
   * [编辑器主入口](/modules/editor-main.md)
   * [关卡数据模型](/modules/level-data-model.md)
+  * [编辑器事件与属性面板](/modules/editor-property-panels.md)
