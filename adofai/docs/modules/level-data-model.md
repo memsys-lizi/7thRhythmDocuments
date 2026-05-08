@@ -12,10 +12,12 @@
 | [PropertyInfo](/api/data-models/PropertyInfo.md) | `7thRhythmSource/ADOFAi/ADOFAI/PropertyInfo.cs` | 单个事件属性的元数据，保存类型、默认值、范围、控件类型和条件显示规则。 |
 | [Property](/api/data-models/Property.md) | `7thRhythmSource/ADOFAi/ADOFAI/Property.cs` | 编辑器属性行组件，连接属性元数据和具体输入控件。 |
 | [事件类型与属性枚举](/api/data-models/event-metadata-enums.md) | `7thRhythmSource/ADOFAi/ADOFAI/*.cs` | 事件类型、分类、执行时机、属性类型、控件类型和文件类型枚举。 |
+| [LevelDataCLS](/api/data-models/LevelDataCLS.md) | `7thRhythmSource/ADOFAi/ADOFAI/LevelDataCLS.cs` | 自定义关卡选择使用的轻量关卡摘要。 |
+| [读取结果与序列化](/api/data-models/serialization-validation.md) | `LoadResult.cs`、`LevelArrayConverter.cs`、`LevelValidation.cs` | 读取状态、JSON 写入格式化和当前校验占位类。 |
 | `EventsArray<T>` | `7thRhythmSource/ADOFAi/EventsArray.cs` | 普通事件列表容器。 |
 | `DecorationsArray<T>` | `7thRhythmSource/ADOFAi/DecorationsArray.cs` | 装饰事件列表容器，新增或插入时会通知编辑器装饰列表刷新。 |
 
-阶段 2 后续还会继续覆盖序列化转换器和校验入口。
+阶段 2 的核心数据模型已经覆盖。后续阶段会在编辑器系统、运行时系统和事件效果阶段继续追踪这些数据对象的调用点。
 
 ## 主要职责
 
@@ -128,4 +130,4 @@ flowchart TD
 
 ## 后续补齐
 
-阶段 2 接下来要继续补序列化转换器、校验入口，以及 `LevelDataCLS` 等与关卡数据读写相邻的小型模型。
+阶段 2 已经覆盖关卡数据主容器、事件对象、元数据、属性 UI 行、关卡选择摘要、读取结果、序列化转换器和当前校验占位类。进入后续阶段时，数据模型页会作为编辑器系统和运行时事件效果的交叉入口继续补链。

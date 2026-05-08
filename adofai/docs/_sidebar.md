@@ -24,6 +24,8 @@
     * [PropertyInfo](/api/data-models/PropertyInfo.md)
     * [Property](/api/data-models/Property.md)
     * [事件类型与属性枚举](/api/data-models/event-metadata-enums.md)
+    * [LevelDataCLS](/api/data-models/LevelDataCLS.md)
+    * [读取结果与序列化](/api/data-models/serialization-validation.md)
 
 * 模块
   * [模块入口](/modules/index.md)
