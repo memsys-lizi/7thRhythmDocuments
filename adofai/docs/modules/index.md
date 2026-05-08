@@ -39,3 +39,4 @@ ADOFAI 文档按源码模块组织。模块页面负责解释系统边界、核�
 | [scr UI、条件与文本辅助组件索引](/api/review/scr-ui-condition-coverage.md) | 第一批剩余 `scr*` 文件 | 覆盖平台条件、进度条件、节日条件、链接文本、版本文本、debug 状态和菜单 phase 显隐组件。 |
 | [scr 动画、相机与 HUD 辅助组件索引](/api/review/scr-animation-hud-camera-coverage.md) | 第二批剩余 `scr*` 文件 | 覆盖 transform 动画、beat 显示、flash、HUD、倒计时、命中反馈、相机适配、parallax、背景条和频谱响应组件。 |
 | [scr 场景、菜单与服务辅助组件索引](/api/review/scr-scene-menu-service-coverage.md) | 第三批剩余 `scr*` 文件 | 覆盖世界入口、Taro/Neo Cosmos 演出、文本替换、选项界面、校准、存档、Web 服务、SFX 和遗留空组件。 |
+| [根目录 UI、暂停菜单与场景脚本索引](/api/review/root-ui-scene-coverage.md) | 根目录 UI 与场景脚本 | 覆盖成就弹窗、暂停菜单按钮、暂停关卡选择、Taro medal、玩家选择、Splash、Taro 菜单和扫雷小游戏。 |
