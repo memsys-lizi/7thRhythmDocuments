@@ -11,7 +11,7 @@
 | 项目 | 数量 | 说明 |
 | --- | --- | --- |
 | 源码 `.cs` 文件总数 | 1222 | PowerShell 递归统计 `7thRhythmSource/ADOFAi`。 |
-| 文档 `.md` 文件总数 | 84 | PowerShell 递归统计 `adofai/docs`。 |
+| 文档 `.md` 文件总数 | 85 | PowerShell 递归统计 `adofai/docs`。 |
 | 文件名或类型名已在文档中命中 | 993 | 用文档正文匹配 `.cs` 文件名或去扩展名后的类型名。 |
 | 文件名或类型名尚未在文档中命中 | 229 | 主要来自第三方目录、示例脚本、兼容命名空间和少量根目录小组件。 |
 
@@ -68,7 +68,7 @@
 | 7.5 | `ADOFAI.Editor.Actions` 剩余动作类、编辑器模型和接口 | 已完成：[编辑器动作补充与移动菜单控件索引](/api/review/editor-actions-mobile-menu-coverage.md)。 |
 | 7.6 | 官方关卡大型脚本、Taro cutscene、世界显示和小游戏脚本剩余类 | 进行中：官方演出和世界显示见 [官方演出、世界显示与统计脚本索引](/api/review/official-presentation-coverage.md)。 |
 | 7.7 | 枚举、轻量模型、扩展方法、IO/音频工具、渲染网格类和小型行为组件 | 已完成：[工具、枚举与网格渲染脚本索引](/api/review/tools-mesh-light-models-coverage.md)。 |
-| 7.8 | 平台输入小类、第三方目录归档表和全站链接复核 | 进行中：平台输入和第三方边界见 [平台输入、第三方边界与剩余工具索引](/api/review/platform-input-third-party-boundary.md)。 |
+| 7.8 | 平台输入小类、第三方目录归档表和全站链接复核 | 已完成：平台输入和第三方边界见 [平台输入、第三方边界与剩余工具索引](/api/review/platform-input-third-party-boundary.md)，全站复核见 [阶段 7 全站复核](/api/review/stage-7-final-review.md)。 |
 
 ## 已覆盖专题入口
 
@@ -83,4 +83,4 @@
 
 ## 阶段 7 当前状态
 
-阶段 7 正在补齐剩余文件族。当前已完成文件级统计、`CameraFilterPack_*`、旧式 `ffx*`、三批 `scr*`、根目录 UI/场景、官方演出、世界显示、枚举、扩展工具、IO/音频工具、地板网格、遮罩、小型行为组件、编辑器缩放动作、移动菜单剩余控件、平台输入小类、根目录剩余工具和第三方目录边界。下一轮进入全站最终复核。
+阶段 7 已完成。当前已完成文件级统计、`CameraFilterPack_*`、旧式 `ffx*`、三批 `scr*`、根目录 UI/场景、官方演出、世界显示、枚举、扩展工具、IO/音频工具、地板网格、遮罩、小型行为组件、编辑器缩放动作、移动菜单剩余控件、平台输入小类、根目录剩余工具、第三方目录边界和全站最终复核。
