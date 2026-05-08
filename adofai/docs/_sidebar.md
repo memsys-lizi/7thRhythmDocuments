@@ -51,6 +51,7 @@
     * [输入、粒子与剩余运行时事件](/api/events/input-particle-runtime-events.md)
   * 平台、存档、服务与 UI
     * [全局状态、常量与存档](/api/platform/global-state-persistence.md)
+    * [平台 Helper、DLC、Steam 与服务](/api/platform/platform-dlc-steam-services.md)
 
 * 模块
   * [模块入口](/modules/index.md)
