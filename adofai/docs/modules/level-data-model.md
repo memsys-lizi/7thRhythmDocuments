@@ -8,10 +8,14 @@
 | --- | --- | --- |
 | [LevelData](/api/data-models/LevelData.md) | `7thRhythmSource/ADOFAi/ADOFAI/LevelData.cs` | 关卡总容器，保存路径、角度、settings、事件和装饰。 |
 | [LevelEvent](/api/data-models/LevelEvent.md) | `7thRhythmSource/ADOFAi/ADOFAI/LevelEvent.cs` | 单个事件、装饰或 settings 项的统一数据对象。 |
+| [LevelEventInfo](/api/data-models/LevelEventInfo.md) | `7thRhythmSource/ADOFAi/ADOFAI/LevelEventInfo.cs` | 事件元数据，保存属性表、分类、执行时机、DLC 限制和装饰标记。 |
+| [PropertyInfo](/api/data-models/PropertyInfo.md) | `7thRhythmSource/ADOFAi/ADOFAI/PropertyInfo.cs` | 单个事件属性的元数据，保存类型、默认值、范围、控件类型和条件显示规则。 |
+| [Property](/api/data-models/Property.md) | `7thRhythmSource/ADOFAi/ADOFAI/Property.cs` | 编辑器属性行组件，连接属性元数据和具体输入控件。 |
+| [事件类型与属性枚举](/api/data-models/event-metadata-enums.md) | `7thRhythmSource/ADOFAi/ADOFAI/*.cs` | 事件类型、分类、执行时机、属性类型、控件类型和文件类型枚举。 |
 | `EventsArray<T>` | `7thRhythmSource/ADOFAi/EventsArray.cs` | 普通事件列表容器。 |
 | `DecorationsArray<T>` | `7thRhythmSource/ADOFAi/DecorationsArray.cs` | 装饰事件列表容器，新增或插入时会通知编辑器装饰列表刷新。 |
 
-阶段 2 后续还会继续覆盖 `LevelEventInfo`、`PropertyInfo`、`Property`、`LevelEventType`、`LevelEventCategory`、`LevelEventExecutionTime` 和序列化转换器。
+阶段 2 后续还会继续覆盖序列化转换器和校验入口。
 
 ## 主要职责
 
@@ -24,6 +28,23 @@
 | 属性元数据 | `LevelEventInfo`、`PropertyInfo` | 负责说明某个事件拥有哪些属性、默认值、控件类型、是否可禁用和是否写入文件。 |
 
 ADOFAI 不把每种 `.adofai` 事件拆成独立数据类。事件种类由 `LevelEventType` 表示，事件字段由元数据驱动，具体字段值统一保存在 `LevelEvent.data`。
+
+## 元数据装载流程
+
+```mermaid
+flowchart TD
+    A["ADOStartup.SetupLevelEventsInfo"] --> B["读取 LevelEditorProperties 资源"]
+    B --> C["DecodeLevelEventInfoList(levelEvents)"]
+    B --> D["DecodeLevelEventInfoList(settings)"]
+    C --> E["GCS.levelEventsInfo"]
+    D --> F["GCS.settingsInfo"]
+    B --> G["DecodeLevelEventCategoryList(categories)"]
+    G --> H["补充 LevelEventInfo.categories"]
+    C --> I["PropertyInfo"]
+    D --> I
+```
+
+`LevelEventInfo` 和 `PropertyInfo` 都来自资源数据。源码中的 C# 类型负责解析、校验和运行时访问，不直接硬编码每个事件的属性列表。
 
 ## 文件到运行时对象
 
@@ -107,5 +128,4 @@ flowchart TD
 
 ## 后续补齐
 
-阶段 2 接下来要继续把元数据层补完整：`LevelEventInfo`、`PropertyInfo`、`Property` 和事件类型枚举会说明事件属性如何被定义、如何进入编辑器控件，以及如何连接到运行时效果类族。
-
+阶段 2 接下来要继续补序列化转换器、校验入口，以及 `LevelDataCLS` 等与关卡数据读写相邻的小型模型。

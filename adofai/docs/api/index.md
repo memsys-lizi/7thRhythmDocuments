@@ -9,7 +9,7 @@
 | 核心入口 | [ADOBase](/api/core/ADOBase.md)、[ADOClass](/api/core/ADOClass.md)、[ADOStartup](/api/core/ADOStartup.md) | 全局访问器、启动流程、平台初始化、资源初始化 |
 | 场景控制 | [scrController](/api/core/scrController.md)、[scrConductor](/api/core/scrConductor.md)、[scnGame](/api/core/scnGame.md)、[scnEditor](/api/core/scnEditor.md) | 游戏状态、音频时钟、自定义关卡运行、编辑器入口 |
 | 轨道与地板 | [scrLevelMaker](/api/core/scrLevelMaker.md)、[scrFloor](/api/core/scrFloor.md)、`Level` | 路径生成、地板对象、官方关卡脚本基类 |
-| 关卡数据 | [LevelData](/api/data-models/LevelData.md)、[LevelEvent](/api/data-models/LevelEvent.md)、`LevelEventInfo`、`PropertyInfo` | `.adofai` 数据、事件对象、属性元数据 |
+| 关卡数据 | [LevelData](/api/data-models/LevelData.md)、[LevelEvent](/api/data-models/LevelEvent.md)、[LevelEventInfo](/api/data-models/LevelEventInfo.md)、[PropertyInfo](/api/data-models/PropertyInfo.md)、[Property](/api/data-models/Property.md)、[事件类型与属性枚举](/api/data-models/event-metadata-enums.md) | `.adofai` 数据、事件对象、属性元数据、事件枚举和属性枚举 |
 | 编辑器控件 | `InspectorPanel`、`PropertiesPanel`、`Property`、`PropertyControl_*` | 属性面板、控件绑定、事件编辑 |
 | 编辑器动作 | `EditorAction` 与 `ADOFAI.Editor.Actions` | 撤销、重做、选择、复制、粘贴、播放和文件动作 |
 | 事件效果 | `ffxPlusBase`、`ffx*Plus`、`ffx*` | 事件执行组件、相机、轨道、装饰、滤镜、声音 |
@@ -30,4 +30,7 @@
 | `scrFloor` | `7thRhythmSource/ADOFAi/scrFloor.cs` | 继承 `ADOBase`，表示单块地板，保存角度、时间、判定、视觉、hold、free roam 和运行时事件效果。 |
 | `LevelData` | `7thRhythmSource/ADOFAi/ADOFAI/LevelData.cs` | 保存路径数据、角度数据、事件数组、装饰数组和 8 类 settings 事件，并通过属性读取歌曲、关卡、轨道、背景和相机设置。 |
 | `LevelEvent` | `7thRhythmSource/ADOFAi/ADOFAI/LevelEvent.cs` | 保存 `floor`、`eventType`、属性字典、禁用字典、可见/锁定状态和事件元数据，并提供类型化读取方法。 |
+| `LevelEventInfo` | `7thRhythmSource/ADOFAi/ADOFAI/LevelEventInfo.cs` | 保存事件名、类型、属性定义、分类、执行时机、DLC 限制和分组信息。 |
+| `PropertyInfo` | `7thRhythmSource/ADOFAi/ADOFAI/PropertyInfo.cs` | 描述单个事件属性的类型、默认值、控件类型、范围、条件显示和编码规则。 |
+| `Property` | `7thRhythmSource/ADOFAi/ADOFAI/Property.cs` | 编辑器属性行组件，持有标签、启用按钮、控件容器和 `PropertyInfo`。 |
 | `PropertyControl` | `7thRhythmSource/ADOFAi/ADOFAI.LevelEditor.Controls/PropertyControl.cs` | 编辑器属性控件基类，负责控件文本、枚举设置、输入校验、启用状态和对路径/地板变化的回写。 |

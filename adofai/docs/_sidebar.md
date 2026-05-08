@@ -20,6 +20,10 @@
   * 关卡数据模型
     * [LevelData](/api/data-models/LevelData.md)
     * [LevelEvent](/api/data-models/LevelEvent.md)
+    * [LevelEventInfo](/api/data-models/LevelEventInfo.md)
+    * [PropertyInfo](/api/data-models/PropertyInfo.md)
+    * [Property](/api/data-models/Property.md)
+    * [事件类型与属性枚举](/api/data-models/event-metadata-enums.md)
 
 * 模块
   * [模块入口](/modules/index.md)
