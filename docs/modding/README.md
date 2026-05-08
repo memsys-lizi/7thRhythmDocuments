@@ -16,7 +16,14 @@
 | 全局入口 | `RDBase`、`RDClass`、`scrGameManager`、`scrConductor` |
 | 关卡运行 | `LevelBase`、`LevelEvent_Base`、`Beat` |
 | 编辑器事件 | `LevelEvent_*`、`InspectorPanel_*`、`ControlAttribute` |
+| 自定义方法 | `LevelEvent_CallCustomMethod`、`MethodAutocompleteUI`、`ListedMethodAttribute`、`LevelBase`、`RDRoom` |
 | 自定义关卡 | `CustomLevelData`、`RDLevelData`、`RDLevelSettings` |
+
+## 已完成索引
+
+| 页面 | 内容 |
+| --- | --- |
+| [自定义方法调用](/api/custom-methods/README.md) | 记录 `CallCustomMethod` 表达式、参数解析、自动补全范围、`ListedMethod` 标记和已标注方法清单 |
 
 ## 风险提示
 

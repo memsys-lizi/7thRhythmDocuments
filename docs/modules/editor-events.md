@@ -11,8 +11,8 @@
 | `LevelEvent_Base` | 所有关卡事件的数据基类 | 已写初稿 |
 | `LevelEvent_*` | 具体事件数据，如移动、播放声音、显示房间、设置 BPM | 待深写 |
 | `InspectorPanel` | 编辑器右侧属性面板基类 | 已写初稿 |
-| `InspectorPanel_*` | 具体事件 Inspector 面板 | 待深写 |
-| `LevelEventControl_*` | 时间线上的事件控件 | 待深写 |
+| `InspectorPanel_*` | 具体事件 Inspector 面板 | 已建立索引，待逐类深写 |
+| `LevelEventControl_*` | 时间线上的事件控件 | 已建立索引，待逐类深写 |
 | `ControlAttribute` 及子类 | 自动生成属性控件的元数据 | 已写初稿 |
 
 ## 核心流程
@@ -58,6 +58,7 @@ flowchart TD
 | [LevelEventInfo](/api/editor-events/LevelEventInfo.md) | 事件元数据、Attribute 字段、执行时机、房间用法、标签页和事件类型范围。 |
 | [BasePropertyInfo](/api/editor-events/BasePropertyInfo.md) | 事件属性反射、序列化映射、默认控件映射、`Property` 和 `PropertyControl`。 |
 | [InspectorPanel](/api/editor-events/InspectorPanel.md) | 自动面板、保存监听、本地化、属性控件更新和 `RDInspectorPanelManager`。 |
+| [编辑器控件索引](/api/editor-events/editor-controls.md) | 时间线控件、属性面板和字段控件三层 UI 关系。 |
 | [歌曲与音频事件](/api/editor-events/song-audio-events.md) | `PlaySong`、BPM、拍号、播放音效、行节拍音、计数音、拍手音和游戏音效替换。 |
 | [行与节拍事件](/api/editor-events/row-events.md) | `MakeRow`、Classic/Oneshot/FreeTime 节拍、`SetRowXs`、行显示、行移动和玩家换行。 |
 | [视觉与镜头事件](/api/editor-events/visual-camera-events.md) | 主题、VFX preset、背景前景、闪光、镜头移动、震屏、行染色和手部显示。 |
@@ -79,6 +80,6 @@ flowchart TD
 
 - 每个事件的数据字段和用途。
 - 每个 Inspector Panel 如何读写事件字段。
-- `LevelEventControl_*` 时间线控件行为。
+- `LevelEventControl_*` 时间线控件逐类行为。
 - 事件运行时按模块分类的执行流程。
 - Mod 作者可调用事件和字段索引。

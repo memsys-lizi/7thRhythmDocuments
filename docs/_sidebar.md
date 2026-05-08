@@ -14,6 +14,7 @@
   * [官方关卡脚本](modules/levels.md)
 * API
   * [API 草稿区](api/README.md)
+  * [自定义方法索引](api/custom-methods/README.md)
   * 核心类
     * [RDBase](api/core/RDBase.md)
     * [RDClass](api/core/RDClass.md)
@@ -26,6 +27,7 @@
     * [LevelEventInfo](api/editor-events/LevelEventInfo.md)
     * [BasePropertyInfo](api/editor-events/BasePropertyInfo.md)
     * [InspectorPanel](api/editor-events/InspectorPanel.md)
+    * [编辑器控件索引](api/editor-events/editor-controls.md)
     * [歌曲与音频事件](api/editor-events/song-audio-events.md)
     * [行与节拍事件](api/editor-events/row-events.md)
     * [视觉与镜头事件](api/editor-events/visual-camera-events.md)
@@ -34,4 +36,5 @@
     * [窗口与剩余事件](api/editor-events/window-misc-events.md)
 * Mod
   * [Mod 作者入口](modding/README.md)
+  * [自定义方法调用](api/custom-methods/README.md)
 * [术语表](glossary.md)

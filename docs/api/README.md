@@ -40,9 +40,11 @@
 | [LevelEventInfo](/api/editor-events/LevelEventInfo.md) | 初稿 | 已人工阅读源码，记录事件元数据 Attribute、属性反射和枚举范围 |
 | [BasePropertyInfo](/api/editor-events/BasePropertyInfo.md) | 初稿 | 已人工阅读源码，记录事件属性序列化、默认控件映射和 PropertyControl 管线 |
 | [InspectorPanel](/api/editor-events/InspectorPanel.md) | 初稿 | 已人工阅读源码，记录自动面板、保存监听、本地化和面板管理器 |
+| [编辑器控件索引](/api/editor-events/editor-controls.md) | 初稿 | 已人工阅读源码，记录时间线控件、属性面板和属性字段控件关系 |
 | [歌曲与音频事件](/api/editor-events/song-audio-events.md) | 初稿 | 已人工阅读源码，记录歌曲、BPM、节拍声音、计数音、拍手音和游戏音效事件 |
 | [行与节拍事件](/api/editor-events/row-events.md) | 初稿 | 已人工阅读源码，记录行创建、Classic/Oneshot/FreeTime 节拍、行移动、隐藏、换行和 X pattern |
 | [视觉与镜头事件](/api/editor-events/visual-camera-events.md) | 初稿 | 已人工阅读源码，记录主题、VFX、背景前景、闪光、镜头、震屏、行染色和手部事件 |
 | [房间与精灵事件](/api/editor-events/room-sprite-events.md) | 初稿 | 已人工阅读源码，记录房间显示、变换、遮罩、透视、精灵创建、移动、染色、平铺、动画和排序 |
 | [文本与脚本控制事件](/api/editor-events/text-control-events.md) | 初稿 | 已人工阅读源码，记录对话、浮动文字、旁白、注释指令、标签、自定义方法、表情、换角色和 Stutter |
 | [窗口与剩余事件](/api/editor-events/window-misc-events.md) | 初稿 | 已人工阅读源码，记录窗口舞蹈、缩放、内容、标题、显示、排序、播放风格和精灵混合 |
+| [自定义方法索引](/api/custom-methods/README.md) | 初稿 | 已人工阅读源码，记录自定义方法事件、自动补全规则、`ListedMethod` 和可调用方法清单 |
