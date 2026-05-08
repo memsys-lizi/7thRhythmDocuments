@@ -33,3 +33,4 @@ ADOFAI 文档按源码模块组织。模块页面负责解释系统边界、核�
 | [输入、粒子与剩余运行时事件模块](/modules/input-particle-runtime-events.md) | `SetInputEvent`、`SetFrameRate`、`ScalePlanets`、`SetHitsound`、`SetHoldSound`、`SetParticle`、`EmitParticle` | 输入事件、帧率、星球缩放、命中声音、hold 声音和粒子效果怎样执行。 |
 | [UI、菜单与关卡选择](/api/platform/cls-level-select-mobile-localization.md) | `scnLevelSelect`、`LevelSelectBase`、`scnCLS`、`OptionsPanelsCLS`、`CustomLevelTile`、`MobileMenu`、`RDString` | 关卡选择、CLS、菜单面板、移动端 UI 和本地化入口。 |
 | [UI、服务辅助类与依赖接入](/api/platform/ui-service-dependencies.md) | `Notification`、`ImportLevelsCLS`、`SettingsMenu`、`RDStringToUIText`、`Rewired`、`ByteSheep.Events`、`BlendModes`、`MonsterLove.StateMachine`、`TMPro.Examples` | 通知、导入、设置、平台条件开关、本地化 UI 和第三方依赖在 ADOFAI 中的使用入口。 |
+| [文件级覆盖清单](/api/review/source-coverage.md) | `7thRhythmSource/ADOFAi/**/*.cs` | 统计 1222 个源码文件、归类顶层目录和未命中文件族，并规划阶段 7 的补齐顺序。 |
