@@ -59,6 +59,9 @@ flowchart TD
 | [BasePropertyInfo](/api/editor-events/BasePropertyInfo.md) | 事件属性反射、序列化映射、默认控件映射、`Property` 和 `PropertyControl`。 |
 | [InspectorPanel](/api/editor-events/InspectorPanel.md) | 自动面板、保存监听、本地化、属性控件更新和 `RDInspectorPanelManager`。 |
 | [歌曲与音频事件](/api/editor-events/song-audio-events.md) | `PlaySong`、BPM、拍号、播放音效、行节拍音、计数音、拍手音和游戏音效替换。 |
+| [行与节拍事件](/api/editor-events/row-events.md) | `MakeRow`、Classic/Oneshot/FreeTime 节拍、`SetRowXs`、行显示、行移动和玩家换行。 |
+| [视觉与镜头事件](/api/editor-events/visual-camera-events.md) | 主题、VFX preset、背景前景、闪光、镜头移动、震屏、行染色和手部显示。 |
+| [房间与精灵事件](/api/editor-events/room-sprite-events.md) | 房间显示、房间变换、遮罩、透视、排序，以及自定义精灵创建、移动、染色、平铺和动画。 |
 
 ## Mod 作者关注点
 

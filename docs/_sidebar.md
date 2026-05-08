@@ -27,6 +27,9 @@
     * [BasePropertyInfo](api/editor-events/BasePropertyInfo.md)
     * [InspectorPanel](api/editor-events/InspectorPanel.md)
     * [歌曲与音频事件](api/editor-events/song-audio-events.md)
+    * [行与节拍事件](api/editor-events/row-events.md)
+    * [视觉与镜头事件](api/editor-events/visual-camera-events.md)
+    * [房间与精灵事件](api/editor-events/room-sprite-events.md)
 * Mod
   * [Mod 作者入口](modding/README.md)
 * [术语表](glossary.md)

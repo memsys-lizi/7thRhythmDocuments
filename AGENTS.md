@@ -33,7 +33,7 @@
 | --- | --- | --- | --- |
 | 阶段 0：文档基础设施 | 待复核 | 完善 docsify 首页、侧边栏、搜索、黑白样式、模块目录 | 已创建 docsify 站点、长期手册、模块导航和写作规范 |
 | 阶段 1：核心骨架 | 待复核 | 深写 `RDBase`、`RDClass`、`LevelBase`、`scrConductor`、`scnGame`、`scnEditor` | 六个核心类均已完成第一版人工初稿；后续进入全量成员拆页和交叉链接复核 |
-| 阶段 2：关卡编辑器事件系统 | 进行中 | 深写 `LevelEvent_Base`、`LevelEvent_*`、`InspectorPanel`、`InspectorPanel_*`、事件属性与控件关系 | 已完成 `LevelEvent_Base`、`LevelEventInfo`、`BasePropertyInfo`、`InspectorPanel` 第一版人工初稿；已补歌曲与音频事件分组页；下一步拆行事件、视觉事件、房间与精灵事件和时间线控件 |
+| 阶段 2：关卡编辑器事件系统 | 进行中 | 深写 `LevelEvent_Base`、`LevelEvent_*`、`InspectorPanel`、`InspectorPanel_*`、事件属性与控件关系 | 已完成 `LevelEvent_Base`、`LevelEventInfo`、`BasePropertyInfo`、`InspectorPanel` 第一版人工初稿；已补歌曲与音频事件、行与节拍事件、视觉与镜头事件、房间与精灵事件分组页；下一步拆文本对话事件、窗口事件、脚本控制事件和时间线控件 |
 | 阶段 3：运行时游戏系统 | 未开始 | 覆盖节拍、判定、行、房间、窗口、音频、VFX、场景流程 | 待开始 |
 | 阶段 4：数据模型与枚举 | 未开始 | 覆盖 `RDLevelData`、`RDLevelSettings`、自定义关卡、错误、难度、平台等模型 | 待开始 |
 | 阶段 5：官方关卡脚本 | 未开始 | 覆盖 `Level_*` 系列，说明每个关卡脚本的特殊逻辑 | 待开始 |
