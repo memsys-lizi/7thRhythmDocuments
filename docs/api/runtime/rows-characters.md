@@ -445,7 +445,7 @@ flowchart TD
 | `31` 到 `59` | Rodney、Lucia、Cole、Nicole、鸟类、DancingCouple、Controller、Samurai 变体、节拍角色和 `BlankCPU`。 |
 | `60` 到 `87` | Wren、Canary、Athlete 系列、Lucky 系列、Saturday、Allison、Weightlifter、Lune、Sophia、Tango、Beans、Rhythm 系列和 Book 系列。 |
 
-## Mod 关注点
+## 源码研究关注点
 
 | 场景 | 关注内容 |
 | --- | --- |
@@ -467,3 +467,4 @@ flowchart TD
 | [行控制与自由节拍事件](/api/editor-events/RowControlEvents.md) | MakeRow、MoveRow、HideRow、FreeTime 和行事件来源。 |
 | [SetRowXs](/api/editor-events/SetRowXs.md) | Classic beatbox X pattern 的编辑器事件页。 |
 | [scnGame](/api/core/scnGame.md) | `rows`、`MakeRow()`、`ChangeRowPlayers()`、行重排和判定入口。 |
+

@@ -13,6 +13,8 @@
   * [源码 API 索引](api/README.md)
   * 复核清单
     * [阶段 3 与阶段 4 复核](api/review/stage-3-4-review.md)
+    * [阶段 7 全站复核](api/review/stage-7-site-review.md)
+    * [主干调用图](api/review/call-graphs.md)
   * 核心类
     * [RDBase](api/core/RDBase.md)
     * [RDClass](api/core/RDClass.md)
@@ -70,6 +72,13 @@
     * [场景流程与暂停流程](api/runtime/scene-flow.md)
     * [UI 与菜单辅助类](api/runtime/ui-menu-helpers.md)
     * [视觉与动画辅助类](api/runtime/visual-animation-helpers.md)
+    * [平台与服务辅助类](api/runtime/platform-services.md)
+    * [小游戏与测试组件](api/runtime/mini-games-tests.md)
+    * [依赖与兼容辅助](api/runtime/dependency-compatibility.md)
+    * [场景主题与房间组件](api/runtime/scene-theme-components.md)
+    * [渲染后处理与波形组件](api/runtime/rendering-postprocessing.md)
+    * [音频、导入与 Web 工具](api/runtime/io-audio-web-tools.md)
+    * [收口辅助类与场景脚本](api/runtime/final-utility-scenes.md)
   * 数据模型与枚举
     * [关卡数据模型](api/data-models/level-data.md)
     * [关卡设置模型](api/data-models/level-settings.md)
@@ -78,6 +87,7 @@
     * [条件系统](api/data-models/conditionals.md)
     * [音频与辅助数据模型](api/data-models/audio-and-auxiliary.md)
     * [属性反射与小型模型](api/data-models/property-reflection-small-models.md)
+    * [枚举与轻量模型补充](api/data-models/enums-lightweight-models.md)
   * 官方关卡脚本
     * [官方关卡脚本总览](api/levels/overview.md)
     * [教程与开场关卡](api/levels/tutorials-opening.md)

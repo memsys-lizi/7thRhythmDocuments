@@ -31,6 +31,7 @@
 | [条件系统](/api/data-models/conditionals.md) | `Conditional`、`ConditionalInfo`、`ConditionalID`、`Conditionals`、Inspector、全局条件和运行时检查。 |
 | [音频与辅助数据模型](/api/data-models/audio-and-auxiliary.md) | `SoundData`、`SoundDataStruct`、游戏音效表、书签、调色板、标签动作和枚举属性序列化。 |
 | [属性反射与小型模型](/api/data-models/property-reflection-small-models.md) | `BasePropertyInfo`、属性 Attribute、控件 Attribute、表达式结构、自定义动画数据和指针事件模型。 |
+| [枚举与轻量模型补充](/api/data-models/enums-lightweight-models.md) | 暂停菜单数据、旁白动作、字体包、保存 JSON、选择实体、编辑器小枚举和 UI 小组件。 |
 
 ## 阅读重点
 

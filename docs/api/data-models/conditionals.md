@@ -229,7 +229,7 @@ flowchart TD
 | `scnEditor` | 持有 `conditionalsPanel`、`conditionalsPreview`、`conditionals` 和 `globalConditionals`。 |
 | `scnGame` | 运行时把全局条件与当前关卡条件合并到执行环境，并在事件调度中检查条件。 |
 
-## Mod 关注点
+## 源码研究关注点
 
 | 场景 | 注意事项 |
 | --- | --- |
@@ -238,3 +238,4 @@ flowchart TD
 | 自定义表达式 | 表达式失败分支会记录 `Debug.LogError` 并返回 false；bool 与数值比较分支分开处理。 |
 | 组合条件 | `Conditional_Composite.Check()` 抛出 `NotImplementedException`，运行时直接使用该条件会中断调用路径。 |
 | 全局条件 | `SetConditional()` 只接受 `usedGlobalConditionals` 中列出的 gid。 |
+

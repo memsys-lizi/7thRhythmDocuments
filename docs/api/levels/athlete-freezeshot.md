@@ -289,7 +289,7 @@ Booth 版本与普通 Freezeshot 同样使用 afterimage，但只创建 6 个 re
 
 `JanitorTVUpdate(CustomAnimation anim, CustomAnimationClip clip, int frame)` 会按帧奇偶把 `room0.renderQuadPivot` 的 X 位置设为 177 或 179 减去半个 RD 宽度，用于让画面随 JanitorTV 动画帧同步偏移。
 
-## Mod 关注点
+## 源码研究关注点
 
 | 场景 | 注意事项 |
 | --- | --- |
@@ -299,6 +299,6 @@ Booth 版本与普通 Freezeshot 同样使用 afterimage，但只创建 6 个 re
 | 调用 Injury 手机方法 | 手机 prefab 在 `LoadBigAssets()` 加载；移动与 UI 方法依赖 `RDHoodiePhone` 的 `streamPivot` 和内部手部对象。 |
 | 调用病房滚动 | `StartWardScroll()` 会注册 update 回调并移动 `room2.hospitalWard`，停止时只关闭滚动布尔值。 |
 
-## 下一步
+## 复核状态
 
-阶段 5 下一组深写视觉与窗口特殊关卡，覆盖 `Level_SVT`、`Level_Smokin`、`Level_Blurred`、`Level_Bitterness`、`Level_Montage`、`Level_Montage2` 和 `Level_Trailer`。
+本页已纳入 [官方关卡覆盖清单](/api/levels/coverage.md)，对应运动与节奏变体类群已完成阶段 7 复核。

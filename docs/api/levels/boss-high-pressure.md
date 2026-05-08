@@ -254,6 +254,6 @@ flowchart TD
 | 自定义失败流程 | `Level_Boss2`、`Level_Boss2Booth`、`Level_PaigesReckoning`、`Level_InsomniacHard` 覆写 `FailLevel()`，失败不再只走 `LevelBase` 默认路径。 |
 | 小节脚本 | 高压段落大量依赖 `preactions()` 与 `actions()` 的 `conductor.barNumber` 分支；修改事件顺序时需要同时检查这些硬编码小节。 |
 
-## 下一步
+## 复核状态
 
-阶段 5 下一组深写运动与节奏变体，覆盖 `Level_Freezeshot`、`Level_FreezeshotH`、`Level_FreezeshotBooth`、`Level_AthleteTherapy`、`Level_AthleteFinale` 和 `Level_Injury`。
+本页已纳入 [官方关卡覆盖清单](/api/levels/coverage.md)，对应 Boss 与高压段落类群已完成阶段 7 复核。

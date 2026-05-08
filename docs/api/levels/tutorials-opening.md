@@ -209,7 +209,7 @@ Oneshot 教程脚本共享一套结构：第 1 小节设置 hit sound、BPM、�
 | 跳转 | 下一主线或教程目标 | 下一主线或 Oneshot 目标 | 回到选关 |
 | 资源重点 | Ink、教程主题、手部控制器 | Ink、Oneshot hit sound、聚光灯 | 多主题、Noise、credits、text mask |
 
-## Mod 关注点
+## 源码研究关注点
 
 | 场景 | 注意事项 |
 | --- | --- |
@@ -218,3 +218,4 @@ Oneshot 教程脚本共享一套结构：第 1 小节设置 hit sound、BPM、�
 | 改跳转 | 多数教程通过 `levelToSkipTo` 跳转，`Level_Tutorial_EighthDelay` 完成时直接传 `Level.EighthDelay`。 |
 | 改 Ink 文本 | 教程节点名写死在脚本中，节点缺失会影响 `.Prolong()`、`.WaitForNextBarOnEnd()` 和跳转回调。 |
 | 复用 OpeningCreds 视觉 | 该脚本依赖 `RDCreditsNames`、多套 `RDTheme`、room0 text mask、Noise 背景和 `sevenBeatArmy`。 |
+

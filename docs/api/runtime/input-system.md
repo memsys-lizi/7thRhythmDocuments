@@ -346,7 +346,7 @@ flowchart LR
 
 `RDInput` 不计算命中窗口，也不直接修改错误统计。它只把每帧输入状态标准化。命中窗口、Perfect、JustMiss、BigMiss、hold release 和命中条显示由 `scrPlayerbox`、`Beat` 和 `HitStripManager` 处理。
 
-## Mod 关注点
+## 源码研究关注点
 
 | 场景 | 关注内容 |
 | --- | --- |
@@ -366,3 +366,4 @@ flowchart LR
 | [scnGame](/api/core/scnGame.md) | 游戏场景读取输入并驱动判定、暂停和玩家交换。 |
 | [LevelBase](/api/core/LevelBase.md) | 关卡脚本读取输入状态的转发入口。 |
 | [scrConductor](/api/core/scrConductor.md) | 输入判定所依赖的音频时间轴。 |
+

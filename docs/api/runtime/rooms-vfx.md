@@ -366,7 +366,7 @@ flowchart TD
 | `LevelEvent_PulseCamera` | 按频率添加 `scrExecuteOnCertainBeat`，调用 `RDCamera.PulseCamera()`。 |
 | `LevelEvent_MoveCamera` | 移动真实相机或修改房间/window 材质 `_PosX`、`_PosY`、`_Angle`、`_Scale`。 |
 
-## Mod 关注点
+## 源码研究关注点
 
 | 场景 | 关注内容 |
 | --- | --- |
@@ -388,3 +388,4 @@ flowchart TD
 | [房间与精灵事件](/api/editor-events/room-sprite-events.md) | ShowRooms、MoveRoom、MaskRoom、SetRoomPerspective 和房间内容事件分组。 |
 | [房间控制事件](/api/editor-events/RoomControlEvents.md) | 房间事件重点页。 |
 | [视觉样式与特效事件](/api/editor-events/VisualStyleEvents.md) | Theme 和 VFX preset 重点页。 |
+

@@ -296,7 +296,7 @@ flowchart TD
 | `OpenBlades(bool)` | 启用 blades；非 instant 时把手放到前景；旋转 blade sprites 到最终角度。 |
 | `PixelateAnimation(float)` | Quit 过渡使用，显示黑色 overlay 和 pixelate 效果。 |
 
-## Mod 关注点
+## 源码研究关注点
 
 | 场景 | 关注内容 |
 | --- | --- |
@@ -319,3 +319,4 @@ flowchart TD
 | [音频运行时](/api/runtime/audio-runtime.md) | 暂停、退出、失败和结算中涉及的音频停止与播放。 |
 | [窗口系统](/api/runtime/windows.md) | 暂停、失败和结算中的窗口舞蹈处理。 |
 | [节拍与判定](/api/runtime/beats-judgement.md) | 失败和 mistake 流程的输入来源。 |
+

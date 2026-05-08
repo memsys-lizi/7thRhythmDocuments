@@ -286,7 +286,7 @@ flowchart TD
 | `LevelBase.SetWindowDanceTimeShift(int, float, float, string)` | 把 beat 偏移换成秒，调用目标 dancer 的 `SetTimeShift()`。 |
 | `LevelBase.ToggleWindowDanceWrap(int, bool, bool)` | 切换目标 dancer 的 `forceNoXWrap` 或 `forceNoYWrap`。 |
 
-## Mod 关注点
+## 源码研究关注点
 
 | 场景 | 关注内容 |
 | --- | --- |
@@ -307,3 +307,4 @@ flowchart TD
 | [窗口控制事件](/api/editor-events/WindowControlEvents.md) | 窗口事件重点页。 |
 | [窗口与剩余事件](/api/editor-events/window-misc-events.md) | 窗口事件分组页。 |
 | [输入系统](/api/runtime/input-system.md) | 真实 custom window 键盘输入合并到全局输入。 |
+

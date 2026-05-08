@@ -303,16 +303,16 @@ flowchart TD
 | `SetFallingBaseballsSpeed(float spdPercent)` | 以百分比修改下落棒球 simulation speed。 |
 | `TriggerTwoPlayer()` | 切换 `GC.twoPlayerMode`，并让 `scnGame` 刷新玩家交换和玩家模式状态。 |
 
-## Mod 关注点
+## 源码研究关注点
 
 | 场景 | 注意事项 |
 | --- | --- |
-| SVT slowdown | `slowdown` 是持久命中回调，部分小节会启用或禁用；外部改动 `RDTime.speed` 会影响它的触发分支。 |
+| SVT slowdown | `slowdown` 是持久命中回调，部分小节会启用或禁用；改动 `RDTime.speed` 会影响它的触发分支。 |
 | 咖啡杯堆 | Smokin 与 Montage 都依赖先缓存杯堆坐标，再用 `StartStack()` 进入投掷状态。 |
 | Bitterness 失败 | `FailLevel()` 会 `DOTween.KillAll()`，并运行 `FailLevel` tag；与其他 tween 或窗口效果共存时要考虑清理顺序。 |
 | Window peek | Montage 与 Montage2 使用 `windowChoreographer.dancers` 的窗口中心校准 peek，调用前需要窗口舞蹈对象存在。 |
 | Trailer 二人切换 | `TriggerTwoPlayer()` 直接翻转 `GC.twoPlayerMode`，随后调用游戏场景刷新玩家模式。 |
 
-## 下一步
+## 复核状态
 
-阶段 5 下一组深写叙事与场景关卡，覆盖 `Level_Lofi`、`Level_Lounge`、`Level_LuckyBreak`、`Level_HaileyDuet`、`Level_DistantDuet`、`Level_HelpingHands`、`Level_Steinway`、`Level_SteinwayH` 和 `Level_StevensonsTango`。
+本页已纳入 [官方关卡覆盖清单](/api/levels/coverage.md)，对应视觉与窗口特殊关卡类群已完成阶段 7 复核。

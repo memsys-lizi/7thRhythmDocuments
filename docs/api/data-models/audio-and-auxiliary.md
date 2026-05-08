@@ -275,7 +275,7 @@ flowchart TD
   D --> E["scrExecuteOnCertainBeat 调度"]
 ```
 
-## Mod 关注点
+## 源码研究关注点
 
 | 场景 | 注意事项 |
 | --- | --- |
@@ -284,3 +284,4 @@ flowchart TD
 | 外部音频 | 外部音频在 conductor 中使用 `filename + "*external"` 作为键名。 |
 | 写颜色字段 | 调色板引用使用 `pal{index}`；直接颜色使用十六进制字符串。 |
 | 写 tag 动作 | Run 类动作会区分声音事件和非声音事件；递归 tag 调用会沿用当前 `runningTagEventType`。 |
+

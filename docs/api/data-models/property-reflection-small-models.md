@@ -265,7 +265,7 @@ flowchart TD
   E --> G["InspectorPanel 自动控件"]
 ```
 
-## Mod 关注点
+## 源码研究关注点
 
 | 场景 | 注意事项 |
 | --- | --- |
@@ -275,3 +275,4 @@ flowchart TD
 | 自定义控件 | 显式控件 Attribute 优先；没有显式控件时使用默认控件映射。 |
 | enableIf/saveIf | 目标方法必须在事件类上，无参数且返回 bool。 |
 | 自定义动画 JSON | `clips` 必须存在，clip 至少需要 `name`、`frames`、`loop`、`fps`；缺少 `neutral` 会记录错误。 |
+

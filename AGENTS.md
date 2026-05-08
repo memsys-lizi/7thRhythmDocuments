@@ -12,7 +12,7 @@
 
 ## 项目目标
 
-这个仓库要建设一个大型 Rhythm Doctor 源码文档站，主要面向 RD 源码研究者。文档不负责讲解外部修改工具链，也不围绕某一种外部框架组织内容。后续工作必须优先覆盖 RD 主工程源码本身。
+这个仓库要建设一个大型 Rhythm Doctor 源码文档站，主要面向 RD 源码研究者。文档不负责讲解外部修改工具链，也不围绕某一种外部框架组织内容。维护工作必须优先覆盖 RD 主工程源码本身。
 
 最终文档应尽量覆盖 `RDFucked/Assets/Scripts/Assembly-CSharp` 中的 RD 主工程代码，包括：
 
@@ -33,11 +33,11 @@
 - 阶段 0 到阶段 7 均为 `已完成`，并且阶段 7 已完成全站复核、交叉链接、术语表、调用图和缺失项清单清理。
 - `docs/progress.md`、`docs/_sidebar.md`、`docs/api/README.md`、模块页和 `AGENTS.md` 的进度一致。
 
-如果后续自动化任务启动时发现上述条件已经满足，应停止继续写作，不再新增重复页面或空泛总结；只需要报告“文档已完成，自动化无需继续推进”。如果自动化系统允许删除或暂停当前任务，必须删除当前文档自动化任务，避免用户不在时继续空转。
+如果自动化任务启动时发现上述条件已经满足，应停止继续写作，不再新增重复页面或空泛总结；只需要报告“文档已完成，自动化无需继续推进”。如果自动化系统允许删除或暂停当前任务，必须删除当前文档自动化任务，避免用户不在时继续空转。
 
 ## 阶段 6 规划原则
 
-阶段 6 是“源码研究索引”阶段，不写 Mod 制作教程，也不围绕具体 Mod 框架展开。剩余内容由维护者按源码情况自主拆分，但必须服务两个目标：补齐跨模块索引，并为阶段 7 全站覆盖复核做准备。
+阶段 6 是“源码研究索引”阶段，不写外部工具链教程，也不围绕具体外部框架展开。索引内容由维护者按源码情况拆分，必须服务两个目标：补齐跨模块索引，并为阶段 7 全站覆盖复核做准备。
 
 - 数据字段索引：`.rdlevel`、`RDLevelData`、`RDLevelSettings`、rows、events、decorations、conditionals、bookmarks、palettes、settings 校验入口。
 - 入口与单例索引：Unity 场景、全局单例、`RDBase`、`RDClass`、`scrGameManager`、`scrConductor`、`scnGame`、`scnEditor` 的职责和调用前提。
@@ -59,9 +59,9 @@
 | 阶段 2：关卡编辑器事件系统 | 已完成 | 深写 `LevelEvent_Base`、`LevelEvent_*`、`InspectorPanel`、`InspectorPanel_*`、事件属性与控件关系 | 已完成阶段复核：覆盖 `LevelEventType` 0 到 80 的分组页或专页，补齐基础机制、事件运行路径、Inspector 读写链路、事件覆盖清单、时间线与事件控件、Inspector 面板索引和重点事件专页 |
 | 阶段 3：运行时游戏系统 | 已完成 | 覆盖节拍、判定、行、房间、窗口、音频、VFX、场景流程 | 已完成运行时系统总览、节拍与判定、输入系统、行与角色系统、房间与 VFX 系统、窗口系统、音频运行时、场景流程与暂停流程，并完成 [阶段 3 与阶段 4 复核](/api/review/stage-3-4-review.md) |
 | 阶段 4：数据模型与枚举 | 已完成 | 覆盖 `RDLevelData`、`RDLevelSettings`、自定义关卡、错误、难度、平台等模型 | 已完成 `RDLevelData`、`RDLevelSettings`、`CustomLevelData`、`LevelValidation`、错误、rank、难度、条件、音频、属性反射和小型模型页面，并完成 [阶段 3 与阶段 4 复核](/api/review/stage-3-4-review.md) |
-| 阶段 5：官方关卡脚本 | 待复核 | 覆盖 `Level_*` 系列，说明每个关卡脚本的特殊逻辑 | 已建立 [官方关卡脚本总览](/api/levels/overview.md)、[教程与开场关卡](/api/levels/tutorials-opening.md)、[Boss 与高压段落](/api/levels/boss-high-pressure.md)、[运动与节奏变体](/api/levels/athlete-freezeshot.md)、[视觉与窗口特殊关卡](/api/levels/visual-special.md)、[叙事与场景关卡](/api/levels/story-scene-levels.md)、[其余官方与测试脚本](/api/levels/misc-official-levels.md) 和 [官方关卡覆盖清单](/api/levels/coverage.md)：75 个 `Level_*.cs` 文件已全部归属到专题页或文件级页面；下一步继续扩展阶段 6 源码研究索引 |
-| 阶段 6：源码研究索引 | 已完成 | 整理可调用方法、编辑器事件、数据字段、扩展点、高风险系统和未分类源码索引 | 已完成自定义方法事件第一版、[可调用方法索引](/modding/callable-methods.md)、[事件写法索引](/modding/event-patterns.md)、[数据字段索引](/modding/data-fields.md)、[入口与单例索引](/modding/entry-singletons.md)、[扩展点索引](/modding/extension-points.md)、[高风险系统索引](/modding/high-risk-systems.md) 和 [未分类源码覆盖清单](/modding/source-coverage.md)：覆盖清单统计 `Assembly-CSharp` 下 1050 个 `.cs` 文件，当前 839 个文件名已在文档中命中，211 个文件名未命中，并建立阶段 7 补文档队列 |
-| 阶段 7：全站复核 | 进行中 | 补交叉链接、术语表、调用图、缺失项清单 | 已补 [编辑器 UI 辅助类](/api/editor-events/editor-ui-auxiliary.md)、[UI 与菜单辅助类](/api/runtime/ui-menu-helpers.md) 和 [视觉与动画辅助类](/api/runtime/visual-animation-helpers.md)；下一步补平台与服务 |
+| 阶段 5：官方关卡脚本 | 已完成 | 覆盖 `Level_*` 系列，说明每个关卡脚本的特殊逻辑 | 已建立 [官方关卡脚本总览](/api/levels/overview.md)、[教程与开场关卡](/api/levels/tutorials-opening.md)、[Boss 与高压段落](/api/levels/boss-high-pressure.md)、[运动与节奏变体](/api/levels/athlete-freezeshot.md)、[视觉与窗口特殊关卡](/api/levels/visual-special.md)、[叙事与场景关卡](/api/levels/story-scene-levels.md)、[其余官方与测试脚本](/api/levels/misc-official-levels.md) 和 [官方关卡覆盖清单](/api/levels/coverage.md)：当前源码目录 75 个 `Level_*.cs` 文件已全部归属到专题页或文件级页面 |
+| 阶段 6：源码研究索引 | 已完成 | 整理可调用方法、编辑器事件、数据字段、扩展点、高风险系统和未分类源码索引 | 已完成自定义方法事件第一版、[可调用方法索引](/modding/callable-methods.md)、[事件写法索引](/modding/event-patterns.md)、[数据字段索引](/modding/data-fields.md)、[入口与单例索引](/modding/entry-singletons.md)、[扩展点索引](/modding/extension-points.md)、[高风险系统索引](/modding/high-risk-systems.md) 和 [未分类源码覆盖清单](/modding/source-coverage.md)：覆盖清单统计 `Assembly-CSharp` 下 1050 个 `.cs` 文件，当前 1050 个文件名已在文档中命中，0 个文件名未命中 |
+| 阶段 7：全站复核 | 已完成 | 补交叉链接、术语表、调用图、缺失项清单 | 已补 [编辑器 UI 辅助类](/api/editor-events/editor-ui-auxiliary.md)、[UI 与菜单辅助类](/api/runtime/ui-menu-helpers.md)、[视觉与动画辅助类](/api/runtime/visual-animation-helpers.md)、[平台与服务辅助类](/api/runtime/platform-services.md)、[小游戏与测试组件](/api/runtime/mini-games-tests.md)、[依赖与兼容辅助](/api/runtime/dependency-compatibility.md)、[枚举与轻量模型补充](/api/data-models/enums-lightweight-models.md)、[场景主题与房间组件](/api/runtime/scene-theme-components.md)、[渲染后处理与波形组件](/api/runtime/rendering-postprocessing.md)、[音频、导入与 Web 工具](/api/runtime/io-audio-web-tools.md)、[收口辅助类与场景脚本](/api/runtime/final-utility-scenes.md)、[阶段 7 全站复核](/api/review/stage-7-site-review.md) 和 [主干调用图](/api/review/call-graphs.md)；全站链接、侧边栏路由、覆盖统计和文字口径已完成最终复核 |
 
 状态只能使用：`未开始`、`进行中`、`已完成`、`待复核`。
 

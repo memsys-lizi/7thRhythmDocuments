@@ -34,6 +34,13 @@
 | [场景流程与暂停流程](/api/runtime/scene-flow.md) | `scnGame`、`PauseMenu`、`PauseMenuMode`、`Rankscreen`、加载、开始、暂停、跳过、重开、失败和结算。 |
 | [UI 与菜单辅助类](/api/runtime/ui-menu-helpers.md) | 菜单、对话框、按钮提示、本地化文本、错误面板、Canvas、颜色控件和存档槽 UI 辅助。 |
 | [视觉与动画辅助类](/api/runtime/visual-animation-helpers.md) | BPM 动画、自定义动画、背景、后处理、粒子、Detonator、Stutter、万花筒、眼睛阵列和运动小物件。 |
+| [平台与服务辅助类](/api/runtime/platform-services.md) | Steam、Workshop、Discord 富状态、Web 服务、entitlement、平台窗口抽象、文件读写和自定义关卡选择器服务入口。 |
+| [小游戏与测试组件](/api/runtime/mini-games-tests.md) | Rhythm Weightlifter 独立模式、Bullet 校准测试、行进入测试、波形测试、旁白测试和调试开关。 |
+| [依赖与兼容辅助](/api/runtime/dependency-compatibility.md) | SmfLite MIDI、Unity UI 补充、Rewired 常量与本地化、Kino 后处理、DOTween 扩展、程序树和编译兼容占位。 |
+| [场景主题与房间组件](/api/runtime/scene-theme-components.md) | 主题环境、Rooftop、转场格子、旋转 voxel、时钟灯光、启动场景和警告场景。 |
+| [渲染后处理与波形组件](/api/runtime/rendering-postprocessing.md) | Camera 后处理、像素化、平铺、2D 透视、多边形波形、频谱、音量、credits 和角色选择视觉。 |
+| [音频、导入与 Web 工具](/api/runtime/io-audio-web-tools.md) | Ogg 编码、音频采样、BPM 检测、暂停试听、关卡包安装、CSV/Zip、Web 场景、截图、输入辅助。 |
+| [收口辅助类与场景脚本](/api/runtime/final-utility-scenes.md) | 角色模板导出、展示关卡选择、SleevePaint、旁白访问、旧校准、Care Less 窗口和小型视觉组件。 |
 
 ## 阅读重点
 

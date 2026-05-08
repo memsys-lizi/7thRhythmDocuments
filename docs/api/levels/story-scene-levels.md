@@ -218,7 +218,7 @@ flowchart TD
 | `MoveBackground(float posX, float durationInBeats, string ease)` | 把 beat 时长换算为秒，解析缓动，并 tween `physioWard.transform` 的 local X。 |
 | `ToggleForeground(bool toggled)` | 开关 `physioWard.physioFg` 的 `MeshRenderer.enabled`。 |
 
-## Mod 关注点
+## 源码研究关注点
 
 | 场景 | 注意事项 |
 | --- | --- |
@@ -228,6 +228,6 @@ flowchart TD
 | Credits 挂载 | HelpingHands 会把 room1 行实体临时挂到 credits 下，结束时再挂回房间 rowContainer。 |
 | 空壳关卡 | Lounge 与 SteinwayH 的空生命周期也要保留在覆盖清单中，防止后续误判为漏写。 |
 
-## 下一步
+## 复核状态
 
-阶段 5 下一组深写其他官方与测试脚本，覆盖活动曲、测试脚本、空实现脚本和其余 `Level_*` 文件。
+本页已纳入 [官方关卡覆盖清单](/api/levels/coverage.md)，对应叙事与场景关卡类群已完成阶段 7 复核。

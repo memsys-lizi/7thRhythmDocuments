@@ -307,7 +307,7 @@ flowchart TD
 
 `LevelEvent_PlaySound.GetMixerPath()` 会按 `CustomSoundType` 选择 `CustomMusicSound`、`CustomBeatSound`、`CustomHitSound`、`CustomOtherSound` 或 `CustomCueSound`。
 
-## Mod 关注点
+## 源码研究关注点
 
 | 场景 | 关注内容 |
 | --- | --- |
@@ -329,3 +329,4 @@ flowchart TD
 | [歌曲与音频事件](/api/editor-events/song-audio-events.md) | 编辑器事件分组中的歌曲与音频事件。 |
 | [音频与声音事件](/api/editor-events/AudioSoundEvents.md) | 音频事件重点页。 |
 | [节拍与判定](/api/runtime/beats-judgement.md) | Beat 类如何使用 `RDGameSounds` 和 mixer group。 |
+

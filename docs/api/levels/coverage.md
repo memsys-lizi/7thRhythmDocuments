@@ -29,6 +29,7 @@
 | `Level_ClassyH.cs` | [其余官方与测试脚本](/api/levels/misc-official-levels.md) | 文件级覆盖 |
 | `Level_Cutscene_Airport.cs` | [其余官方与测试脚本](/api/levels/misc-official-levels.md) | 文件级覆盖 |
 | `Level_DistantDuet.cs` | [叙事与场景关卡](/api/levels/story-scene-levels.md) | 专题覆盖 |
+| `Level_djtest.cs` | [其余官方与测试脚本](/api/levels/misc-official-levels.md) | 文件级覆盖 |
 | `Level_Dummy.cs` | [其余官方与测试脚本](/api/levels/misc-official-levels.md) | 文件级覆盖 |
 | `Level_EdegaPerformance.cs` | [其余官方与测试脚本](/api/levels/misc-official-levels.md) | 文件级覆盖 |
 | `Level_EdegaRave.cs` | [其余官方与测试脚本](/api/levels/misc-official-levels.md) | 文件级覆盖 |
@@ -91,4 +92,4 @@
 
 ## 阶段状态
 
-阶段 5 已完成文件级归属。下一步进入阶段 6 的源码研究索引，并在阶段 7 建立全站未分类源码覆盖清单。
+阶段 5 已完成文件级归属并完成阶段 7 复核。后续只在发现源码目录变化时重新统计。

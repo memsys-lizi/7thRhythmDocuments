@@ -48,7 +48,7 @@ flowchart TD
 | --- | --- | --- |
 | Unity 组件便利层 | `RDBase` | 继承 `MonoBehaviour` 链路，为挂在 GameObject 上的脚本提供全局入口和 transform 坐标快捷属性 |
 | 非组件逻辑便利层 | `RDClass` | 不继承 `MonoBehaviour`，为关卡、事件等普通 C# 对象提供与 `RDBase` 相似的全局入口 |
-| 关卡运行状态层 | `LevelBase` | 保存关卡数据、事件、判定统计、Mod 开关、可被关卡事件调用的方法 |
+| 关卡运行状态层 | `LevelBase` | 保存关卡数据、事件、判定统计、兼容开关和可被关卡事件调用的方法 |
 | 音乐时间轴 | `scrConductor` | 提供 BPM、小节、节拍、播放风格、音量和音频播放能力 |
 | 游戏场景实例 | `scnGame` | 提供行、房间、判定结果、排行榜、HP、窗口舞蹈等运行时对象 |
 | 编辑器场景实例 | `scnEditor` | 提供时间线、Inspector、事件控件、标签页和编辑器状态 |
@@ -71,5 +71,5 @@ flowchart TD
 ## 相关页面
 
 - [事件运行路径](/api/editor-events/runtime-flow.md)：说明 `LevelBase` 与 `LevelEvent_Base` 的调度关系。
-- [自定义方法事件](/api/editor-events/custom-methods.md)：说明 `LevelBase` 中带 `[ListedMethod(true)]` 的 Mod 可调用方法如何进入自动补全。
+- [自定义方法事件](/api/editor-events/custom-methods.md)：说明 `LevelBase` 中带 `[ListedMethod(true)]` 的公开方法如何进入自动补全。
 - [编辑器事件系统](/modules/editor-events.md)：说明编辑器事件如何连接运行时和 Inspector UI。
