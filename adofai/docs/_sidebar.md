@@ -60,6 +60,7 @@
     * [旧式 ffx 效果组件索引](/api/review/legacy-ffx-coverage.md)
     * [scr UI、条件与文本辅助组件索引](/api/review/scr-ui-condition-coverage.md)
     * [scr 动画、相机与 HUD 辅助组件索引](/api/review/scr-animation-hud-camera-coverage.md)
+    * [scr 场景、菜单与服务辅助组件索引](/api/review/scr-scene-menu-service-coverage.md)
 
 * 模块
   * [模块入口](/modules/index.md)
