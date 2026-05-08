@@ -43,6 +43,8 @@
     * [场景流转与加载跳转](/api/runtime/scene-loading-flow.md)
     * [运行时效果族补充](/api/runtime/effect-families.md)
     * [官方关卡脚本运行入口](/api/runtime/official-level-scripts.md)
+  * 事件与效果执行
+    * [事件执行总览](/api/events/event-execution-overview.md)
 
 * 模块
   * [模块入口](/modules/index.md)
@@ -65,3 +67,4 @@
   * [场景流转与加载模块](/modules/runtime-scene-loading.md)
   * [运行时效果族模块](/modules/runtime-effect-families.md)
   * [官方关卡脚本运行模块](/modules/runtime-official-level-scripts.md)
+  * [事件到效果调度模块](/modules/event-effect-dispatch.md)

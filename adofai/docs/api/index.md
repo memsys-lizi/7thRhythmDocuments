@@ -1,6 +1,6 @@
 # API 入口
 
-本页作为 ADOFAI 源码 API 文档的入口。当前已完成核心骨架、关卡数据模型、编辑器系统和运行时游戏系统，下一步进入事件与效果执行阶段。
+本页作为 ADOFAI 源码 API 文档的入口。当前已完成核心骨架、关卡数据模型、编辑器系统和运行时游戏系统，正在推进事件与效果执行阶段。
 
 ## 计划中的核心 API 页
 
@@ -17,7 +17,7 @@
 | 相机与 VFX | [相机与 VFX 运行链路](/api/runtime/camera-vfx-chain.md) | 相机跟随、自由相机、缩放、旋转、RenderTexture、VFX 调度、滤镜、闪屏、震屏和 Bloom |
 | 结算与保存 | [结算、成绩与进度保存](/api/runtime/results-save-flow.md) | 命中统计、完成度、准确率、X 准确率、官方和自定义成绩保存、详细结果、灯笼和失败条 |
 | 场景流转 | [场景流转与加载跳转](/api/runtime/scene-loading-flow.md) | 传送门分发、官方关卡进入、自定义关卡加载、黑场转场、场景加载和自定义关卡重置 |
-| 事件效果 | [运行时效果族补充](/api/runtime/effect-families.md)、[官方关卡脚本运行入口](/api/runtime/official-level-scripts.md)、`ffxPlusBase`、`ffx*Plus`、`ffx*` | 事件执行组件、轨道、装饰、对象、文本、滤镜、声音、粒子、输入事件、帧率和官方关卡方法调用 |
+| 事件效果 | [事件执行总览](/api/events/event-execution-overview.md)、[运行时效果族补充](/api/runtime/effect-families.md)、[官方关卡脚本运行入口](/api/runtime/official-level-scripts.md)、`ffxPlusBase`、`ffx*Plus`、`ffx*` | 事件执行组件、事件到效果映射、轨道、装饰、对象、文本、滤镜、声音、粒子、输入事件、帧率和官方关卡方法调用 |
 | 存档与服务 | `Persistence`、`GCS`、`GCNS`、平台 helper、DLC、Steam | 全局状态、存档、平台差异、外部服务 |
 
 ## 当前已确认的关键事实
@@ -76,3 +76,6 @@
 | `LevelTNO` | `7thRhythmSource/ADOFAi/LevelTNO.cs` | `XN-X` 官方关卡脚本，控制背景调色盘和星体半径收缩。 |
 | `ffxCallMethod` | `7thRhythmSource/ADOFAi/ffxCallMethod.cs` | 从事件属性 `method` 读取方法字符串，并反射调用当前 `ADOBase.controller.level` 方法。 |
 | `TaroBGScript` | `7thRhythmSource/ADOFAi/TaroBGScript.cs` | 官方大型关卡背景脚本基类，维护歌曲时间、拍数、BPM 表和节拍动作表。 |
+| `scnGame.ApplyEventsToFloors` | `7thRhythmSource/ADOFAi/scnGame.cs` | 把激活事件按地板分组，清理旧效果，应用核心事件，并创建运行时效果组件。 |
+| `scnGame.ApplyEvent` | `7thRhythmSource/ADOFAi/scnGame.cs` | 将 `LevelEventType` 映射到 `ffxPlusBase` 子类，解码字段并计算起始时间。 |
+| `scnGame.PrepVfx` | `7thRhythmSource/ADOFAi/scnGame.cs` | 整理普通时间调度、条件事件、手动事件、checkpoint 恢复和 `scrVfxPlus.effects` 排序。 |
