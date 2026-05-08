@@ -30,6 +30,7 @@
     * [InspectorPanel](/api/editor/InspectorPanel.md)
     * [PropertiesPanel](/api/editor/PropertiesPanel.md)
     * [PropertyControl 控件族](/api/editor/property-controls.md)
+    * [ADOFAI.Editor.Actions](/api/editor/editor-actions.md)
 
 * 模块
   * [模块入口](/modules/index.md)
@@ -41,3 +42,4 @@
   * [编辑器主入口](/modules/editor-main.md)
   * [关卡数据模型](/modules/level-data-model.md)
   * [编辑器事件与属性面板](/modules/editor-property-panels.md)
+  * [编辑器动作系统](/modules/editor-actions.md)

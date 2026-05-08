@@ -16,7 +16,7 @@ ADOFAI 文档按源码模块组织。模块页面负责解释系统边界、核�
 | [路径生成与地板运行时](/modules/path-floor-runtime.md) | `scrLevelMaker`、`scrFloor`、`scrLevelMaker2`、`FloorRenderer` | 路径数据怎样生成地板，地板怎样承载事件和判定状态。 |
 | [关卡数据模型](/modules/level-data-model.md) | `LevelData`、`LevelEvent`、`LevelEventInfo`、`PropertyInfo`、`LevelDataCLS`、序列化转换器 | `.adofai` 文件怎样映射到运行时对象，以及关卡选择摘要怎样读取 settings。 |
 | [编辑器事件与属性面板](/modules/editor-property-panels.md) | `InspectorPanel`、`PropertiesPanel`、`Property`、`PropertyControl_*` | 事件元数据怎样生成编辑器控件，控件怎样写回 `LevelEvent`。 |
-| 编辑器动作系统 | `ADOFAI.Editor.Actions` | 快捷键、菜单动作、撤销重做、复制粘贴和选择流程。 |
+| [编辑器动作系统](/modules/editor-actions.md) | `ADOFAI.Editor.Actions` | 快捷键、菜单动作、撤销重做、复制粘贴和选择流程。 |
 | 事件效果运行时 | `ffxPlusBase`、`ffx*Plus`、`ffx*`、`ADOFAI.FloorFX` | `LevelEventType` 怎样映射到运行时效果组件。 |
 | UI、菜单与关卡选择 | `scnLevelSelect`、`LevelSelectBase`、`CustomLevelTile`、`MobileMenu` | 关卡选择、CLS、菜单面板和移动端 UI。 |
 | 平台、存档与服务 | `Persistence`、`ADOFAI.Common.Platform`、Steam、DLC、Analytics | 存档字段、平台差异、服务初始化和 DLC 状态。 |
