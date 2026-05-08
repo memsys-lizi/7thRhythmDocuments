@@ -17,7 +17,7 @@
 | 相机与 VFX | [相机与 VFX 运行链路](/api/runtime/camera-vfx-chain.md) | 相机跟随、自由相机、缩放、旋转、RenderTexture、VFX 调度、滤镜、闪屏、震屏和 Bloom |
 | 结算与保存 | [结算、成绩与进度保存](/api/runtime/results-save-flow.md) | 命中统计、完成度、准确率、X 准确率、官方和自定义成绩保存、详细结果、灯笼和失败条 |
 | 场景流转 | [场景流转与加载跳转](/api/runtime/scene-loading-flow.md) | 传送门分发、官方关卡进入、自定义关卡加载、黑场转场、场景加载和自定义关卡重置 |
-| 事件效果 | [事件执行总览](/api/events/event-execution-overview.md)、[轨道与地板事件](/api/events/track-floor-events.md)、[运行时效果族补充](/api/runtime/effect-families.md)、[官方关卡脚本运行入口](/api/runtime/official-level-scripts.md)、`ffxPlusBase`、`ffx*Plus`、`ffx*` | 事件执行组件、事件到效果映射、轨道、装饰、对象、文本、滤镜、声音、粒子、输入事件、帧率和官方关卡方法调用 |
+| 事件效果 | [事件执行总览](/api/events/event-execution-overview.md)、[轨道与地板事件](/api/events/track-floor-events.md)、[相机、滤镜与屏幕事件](/api/events/camera-filter-events.md)、[运行时效果族补充](/api/runtime/effect-families.md)、[官方关卡脚本运行入口](/api/runtime/official-level-scripts.md)、`ffxPlusBase`、`ffx*Plus`、`ffx*` | 事件执行组件、事件到效果映射、轨道、装饰、对象、文本、滤镜、声音、粒子、输入事件、帧率和官方关卡方法调用 |
 | 存档与服务 | `Persistence`、`GCS`、`GCNS`、平台 helper、DLC、Steam | 全局状态、存档、平台差异、外部服务 |
 
 ## 当前已确认的关键事实
@@ -83,3 +83,7 @@
 | `ffxRecolorFloorPlus` | `7thRhythmSource/ADOFAi/ffxRecolorFloorPlus.cs` | `RecolorTrack` 运行时效果，按地板范围重设颜色、样式、脉冲和 glow。 |
 | `ffxChangeTrack` | `7thRhythmSource/ADOFAi/ffxChangeTrack.cs` | 轨道颜色、贴图、出现动画和消失动画的预处理组件。 |
 | `ffxCheckpoint` | `7thRhythmSource/ADOFAi/ffxCheckpoint.cs` | `Checkpoint` 命中效果，更新 checkpoint、复活死亡玩家并刷新图标。 |
+| `ffxCameraPlus` | `7thRhythmSource/ADOFAi/ffxCameraPlus.cs` | `MoveCamera` 运行时效果，移动相机父物体、相机角度和 zoom。 |
+| `ffxSetFilterPlus` | `7thRhythmSource/ADOFAi/ffxSetFilterPlus.cs` | `SetFilter` 运行时效果，操作 `scrVfxPlus` 的滤镜组件字典和强度 tween。 |
+| `ffxSetFilterAdvancedPlus` | `7thRhythmSource/ADOFAi/ffxSetFilterAdvancedPlus.cs` | `SetFilterAdvanced` 运行时效果，通过反射 tween 前景或背景相机滤镜字段。 |
+| `ffxScreenTilePlus` / `ffxScreenScrollPlus` | `7thRhythmSource/ADOFAi/ffxScreenTilePlus.cs`、`7thRhythmSource/ADOFAi/ffxScreenScrollPlus.cs` | 屏幕平铺和滚动效果。 |
