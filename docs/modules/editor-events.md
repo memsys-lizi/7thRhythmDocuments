@@ -89,7 +89,7 @@ flowchart TD
 | [文本与脚本控制事件](/api/editor-events/text-control-events.md) | 对话、浮动文字、旁白、注释脚本、标签触发、自定义方法、角色表情、换角色和 Stutter。 |
 | [窗口与剩余事件](/api/editor-events/window-misc-events.md) | 窗口舞蹈、窗口缩放、窗口内容、主窗口、窗口标题、窗口显示、窗口排序、播放风格和精灵混合。 |
 
-## Mod 作者关注点
+## 源码研究关注点
 
 | 入口 | 说明 |
 | --- | --- |

@@ -68,6 +68,8 @@
     * [窗口系统](api/runtime/windows.md)
     * [音频运行时](api/runtime/audio-runtime.md)
     * [场景流程与暂停流程](api/runtime/scene-flow.md)
+    * [UI 与菜单辅助类](api/runtime/ui-menu-helpers.md)
+    * [视觉与动画辅助类](api/runtime/visual-animation-helpers.md)
   * 数据模型与枚举
     * [关卡数据模型](api/data-models/level-data.md)
     * [关卡设置模型](api/data-models/level-settings.md)

@@ -7,8 +7,8 @@
 | 项目 | 数量 |
 | --- | --- |
 | `Assembly-CSharp` 下 `.cs` 文件总数 | 1050 |
-| 文件名已在文档中命中 | 703 |
-| 文件名未在文档中命中 | 347 |
+| 文件名已在文档中命中 | 839 |
+| 文件名未在文档中命中 | 211 |
 
 ## 目录分布
 
@@ -41,9 +41,9 @@
 
 | 分组 | 未命中数量 | 阶段 7 处理方向 |
 | --- | --- | --- |
-| 根目录文件 | 276 | 按运行时、UI、平台服务、资源、枚举和小游戏继续拆分 |
-| `RDLevelEditor` 文件 | 35 | 已补 [编辑器 UI 辅助类](/api/editor-events/editor-ui-auxiliary.md)，后续复核时把专项 Inspector 回链到事件专页 |
-| 其他目录文件 | 36 | 先做依赖与辅助类说明，再决定是否需要专页 |
+| 根目录文件 | 211 | 按平台服务、资源、枚举、小游戏和测试组件继续拆分 |
+| `RDLevelEditor` 文件 | 3 | 已补 [编辑器 UI 辅助类](/api/editor-events/editor-ui-auxiliary.md)，剩余 `PropertyType`、`RowAndPlayer`、`VerticalDirection` 归入阶段 7 枚举与小型模型复核 |
+| 其他目录文件 | 29 | 先做依赖与辅助类说明，再决定是否需要专页 |
 
 ## 根目录未命中类群
 
@@ -93,8 +93,8 @@
 | 优先级 | 页面方向 | 覆盖目标 |
 | --- | --- | --- |
 | 1 | 编辑器 UI 辅助 | 已完成：把 RDLevelEditor 未命中 35 个文件归入编辑器控件、弹窗、选择器和时间线辅助页面 |
-| 2 | 根目录 UI 与菜单 | 覆盖关卡选择、暂停、通用 UI、按钮、弹窗、文本和 Canvas 辅助类 |
-| 3 | 视觉与动画辅助 | 覆盖动画、精灵、颜色、描边、相机、stutter、Detonator 和背景辅助类 |
+| 2 | 根目录 UI 与菜单 | 已完成：补 [UI 与菜单辅助类](/api/runtime/ui-menu-helpers.md)，覆盖菜单、对话框、按钮提示、本地化文本、错误面板、Canvas、颜色控件和存档槽 UI 辅助 |
+| 3 | 视觉与动画辅助 | 已完成：补 [视觉与动画辅助类](/api/runtime/visual-animation-helpers.md)，覆盖 BPM 动画、自定义动画、背景、后处理、粒子、Detonator、Stutter、万花筒、眼睛阵列和运动小物件 |
 | 4 | 平台与服务 | 覆盖 Analytics、Entitlements、Discord、编辑器网络服务、平台辅助和文件关联 |
 | 5 | 小游戏与测试 | 覆盖 RhythmWeightlifter、Bullet、RowEntranceTest 和测试脚本 |
 | 6 | 依赖与兼容辅助 | 覆盖 SmfLite、Rewired 本地化、UnityEngine UI 补充、`IsExternalInit` 和 DOTween 扩展 |

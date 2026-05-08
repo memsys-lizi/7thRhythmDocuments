@@ -83,7 +83,7 @@
 
 | 名称 | 类型 | 默认值 | 条件 | 作用 |
 | --- | --- | --- | --- | --- |
-| `text` | `string` | 空字符串 | 始终显示 | 状态牌文本，支持 `|` 分段和 `[[key]]` 本地化 |
+| `text` | `string` | 空字符串 | 始终显示 | 状态牌文本，支持 `&#124;` 分段和 `[[key]]` 本地化 |
 | `duration` | `float` | `4` | 始终显示 | 持续时间，单位由 `useBeats` 决定 |
 | `useBeats` | `bool` | `true` | 始终显示 | 为真时把 duration 从 beat 换算成秒 |
 | `narrate` | `bool` | `true` | Narration 可用 | 是否朗读 |
@@ -138,4 +138,3 @@ flowchart TD
   Misc --> Hands
   Misc --> Rank
 ```
-

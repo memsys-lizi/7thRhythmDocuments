@@ -57,10 +57,10 @@ flowchart TD
 
 1. 先读 [RDBase](/api/core/RDBase.md)，理解组件脚本如何拿到全局对象。
 2. 再读 [RDClass](/api/core/RDClass.md)，理解非组件类为什么也能访问游戏和编辑器单例。
-3. 再读 [LevelBase](/api/core/LevelBase.md)，它是后续关卡事件、官方关卡脚本、Mod 方法索引的中心。
+3. 再读 [LevelBase](/api/core/LevelBase.md)，它是后续关卡事件、官方关卡脚本和方法索引的中心。
 4. 再读 [scrConductor](/api/core/scrConductor.md)、[scnGame](/api/core/scnGame.md)、[scnEditor](/api/core/scnEditor.md)，把时间轴、游戏场景和编辑器场景连起来。
 
-## Mod 作者关注点
+## 源码研究关注点
 
 | 类型 | 关注点 | 风险 |
 | --- | --- | --- |

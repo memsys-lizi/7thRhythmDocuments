@@ -89,6 +89,8 @@
 | [窗口系统](/api/runtime/windows.md) | `WindowChoreographer`、真实窗口、虚拟窗口、`WindowDancer`、窗口事件、blit 链路和窗口舞蹈 preset |
 | [音频运行时](/api/runtime/audio-runtime.md) | `AudioManager`、`scrConductor`、`RDGameSounds`、`SoundData`、`RDSongOffsets`、mixer group 和音频调度 |
 | [场景流程与暂停流程](/api/runtime/scene-flow.md) | `scnGame`、`PauseMenu`、`PauseMenuMode`、`Rankscreen`、关卡加载、开始、暂停、重开、失败和结算 |
+| [UI 与菜单辅助类](/api/runtime/ui-menu-helpers.md) | 菜单、对话框、按钮提示、本地化文本、错误面板、Canvas、颜色控件和存档槽 UI 辅助 |
+| [视觉与动画辅助类](/api/runtime/visual-animation-helpers.md) | BPM 动画、自定义动画、背景、后处理、粒子、Detonator、Stutter、万花筒、眼睛阵列和运动小物件 |
 
 ## 数据模型与枚举
 

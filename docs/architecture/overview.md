@@ -46,4 +46,4 @@ RDFucked/
 | --- | --- |
 | `RDBase` 和 `RDClass` 是大量运行时类的便捷基类 | 两者暴露 `conductor`、`game`、`gm`、`editor`、`gc` 等常用入口 |
 | `RDLevelEditor` 是关卡编辑器和事件系统核心命名空间 | 目录中包含 `LevelEvent_*`、`InspectorPanel_*`、`Timeline`、`TabSection_*` 等 |
-| 文档应先覆盖核心和编辑器事件系统 | 这部分最能同时服务源码研究和 Mod 作者 |
+| 文档应先覆盖核心和编辑器事件系统 | 这部分最能同时服务源码研究者理解主工程运行方式 |

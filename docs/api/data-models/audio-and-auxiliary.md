@@ -151,11 +151,11 @@
 | `RDGameSoundData` | `volume:float` | 音量，Inspector 上用 `[Range(0f, 3f)]`。 |
 | `RDGameSoundData` | `minPitch`、`maxPitch` | 音高范围。 |
 | `RDGameSoundData` | `pan:float` | 声像。 |
-| `RDGameSounds.Get(GameSoundType)` | 查询 `data.sounds`，未找到时记录错误并返回空声音数据。 |
-| `RDGameSounds.Set(...)` | 覆盖指定 `GameSoundType` 的文件名、音量、音高和声像。 |
-| `RDGameSounds.SetVolume/SetMinPitch/SetMaxPitch/SetPan` | 分别修改指定音效的单一字段。 |
-| `RDGameSounds.LoadDefaults()` | 从 `defaults` 复制回 `sounds`。 |
-| `RDGameSounds.Init()` | 实例化 `Resources/RDGameSounds`，复制默认数组，并填充 `defaultSounds` 字典。 |
+| `RDGameSounds` | `Get(GameSoundType)` | 查询 `data.sounds`，未找到时记录错误并返回空声音数据。 |
+| `RDGameSounds` | `Set(...)` | 覆盖指定 `GameSoundType` 的文件名、音量、音高和声像。 |
+| `RDGameSounds` | `SetVolume`、`SetMinPitch`、`SetMaxPitch`、`SetPan` | 分别修改指定音效的单一字段。 |
+| `RDGameSounds` | `LoadDefaults()` | 从 `defaults` 复制回 `sounds`。 |
+| `RDGameSounds` | `Init()` | 实例化 `Resources/RDGameSounds`，复制默认数组，并填充 `defaultSounds` 字典。 |
 
 `Beat`、`BeatClassic`、`BeatOneshot` 和 `scrConductor` 会通过 `RDGameSounds.Get()` 读取音效数据，再把文件名、音量、音高、声像交给 conductor 播放。
 

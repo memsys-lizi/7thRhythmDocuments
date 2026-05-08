@@ -195,16 +195,16 @@
 | --- | --- | --- |
 | `CustomAnimation.RenderMode` | `MeshRenderer`、`RawImage` | 控制渲染目标。 |
 | `CustomAnimation` | `jsonData`、`renderMode`、`data`、`currentClip` | 当前动画资源和播放状态。 |
-| `CustomAnimation.Play(string, float, float)` | 根据 clip 名称播放，fps 为 `-1` 时使用 clip 自身 fps。 |
-| `CustomAnimation.PlayFromClip(...)` | 对 `LoopOnBeat` 或 fps 小于等于 0 的 clip 按 crotchet 换算播放速度。 |
-| `CustomAnimation.AttemptLoopOnBeat()` | 当前帧到达末尾时按节拍重播。 |
-| `CustomAnimation.Pause()`、`Resume()` | 切换暂停状态。 |
-| `CustomAnimationData.Setup(...)` | 保存主纹理、outline、glow、freeze 纹理，缺失纹理使用内置黑白纹理，并调用 `LoadFromJson()`。 |
-| `CustomAnimationData.LoadFromJson(string)` | 读取 `name`、`voice`、`size`、`clips`、preview、pivot、portrait 和 clip 字段。 |
-| `CustomAnimationData.CheckSize(int, int)` | 检查 `spriteSize` 是否在纹理尺寸内。 |
-| `CustomAnimationData.GetUVsForSheetFrame(int)` | 根据 `spriteSize` 和 sheet frame 计算四个 UV 点。 |
-| `CustomAnimationData.GetSpriteSizeFromJson(string)` | 只读取 JSON 中的 `size`。 |
-| `CustomAnimationClip.GetPortraitTransformSize()` | 返回 `portraitSize * portraitScale` 后四舍五入的尺寸。 |
+| `CustomAnimation` | `Play(string, float, float)` | 根据 clip 名称播放，fps 为 `-1` 时使用 clip 自身 fps。 |
+| `CustomAnimation` | `PlayFromClip(...)` | 对 `LoopOnBeat` 或 fps 小于等于 0 的 clip 按 crotchet 换算播放速度。 |
+| `CustomAnimation` | `AttemptLoopOnBeat()` | 当前帧到达末尾时按节拍重播。 |
+| `CustomAnimation` | `Pause()`、`Resume()` | 切换暂停状态。 |
+| `CustomAnimationData` | `Setup(...)` | 保存主纹理、outline、glow、freeze 纹理，缺失纹理使用内置黑白纹理，并调用 `LoadFromJson()`。 |
+| `CustomAnimationData` | `LoadFromJson(string)` | 读取 `name`、`voice`、`size`、`clips`、preview、pivot、portrait 和 clip 字段。 |
+| `CustomAnimationData` | `CheckSize(int, int)` | 检查 `spriteSize` 是否在纹理尺寸内。 |
+| `CustomAnimationData` | `GetUVsForSheetFrame(int)` | 根据 `spriteSize` 和 sheet frame 计算四个 UV 点。 |
+| `CustomAnimationData` | `GetSpriteSizeFromJson(string)` | 只读取 JSON 中的 `size`。 |
+| `CustomAnimationClip` | `GetPortraitTransformSize()` | 返回 `portraitSize * portraitScale` 后四舍五入的尺寸。 |
 
 ### 自定义动画 JSON 错误
 

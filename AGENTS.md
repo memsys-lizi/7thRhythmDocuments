@@ -60,8 +60,8 @@
 | 阶段 3：运行时游戏系统 | 已完成 | 覆盖节拍、判定、行、房间、窗口、音频、VFX、场景流程 | 已完成运行时系统总览、节拍与判定、输入系统、行与角色系统、房间与 VFX 系统、窗口系统、音频运行时、场景流程与暂停流程，并完成 [阶段 3 与阶段 4 复核](/api/review/stage-3-4-review.md) |
 | 阶段 4：数据模型与枚举 | 已完成 | 覆盖 `RDLevelData`、`RDLevelSettings`、自定义关卡、错误、难度、平台等模型 | 已完成 `RDLevelData`、`RDLevelSettings`、`CustomLevelData`、`LevelValidation`、错误、rank、难度、条件、音频、属性反射和小型模型页面，并完成 [阶段 3 与阶段 4 复核](/api/review/stage-3-4-review.md) |
 | 阶段 5：官方关卡脚本 | 待复核 | 覆盖 `Level_*` 系列，说明每个关卡脚本的特殊逻辑 | 已建立 [官方关卡脚本总览](/api/levels/overview.md)、[教程与开场关卡](/api/levels/tutorials-opening.md)、[Boss 与高压段落](/api/levels/boss-high-pressure.md)、[运动与节奏变体](/api/levels/athlete-freezeshot.md)、[视觉与窗口特殊关卡](/api/levels/visual-special.md)、[叙事与场景关卡](/api/levels/story-scene-levels.md)、[其余官方与测试脚本](/api/levels/misc-official-levels.md) 和 [官方关卡覆盖清单](/api/levels/coverage.md)：75 个 `Level_*.cs` 文件已全部归属到专题页或文件级页面；下一步继续扩展阶段 6 源码研究索引 |
-| 阶段 6：源码研究索引 | 已完成 | 整理可调用方法、编辑器事件、数据字段、扩展点、高风险系统和未分类源码索引 | 已完成自定义方法事件第一版、[可调用方法索引](/modding/callable-methods.md)、[事件写法索引](/modding/event-patterns.md)、[数据字段索引](/modding/data-fields.md)、[入口与单例索引](/modding/entry-singletons.md)、[扩展点索引](/modding/extension-points.md)、[高风险系统索引](/modding/high-risk-systems.md) 和 [未分类源码覆盖清单](/modding/source-coverage.md)：覆盖清单统计 `Assembly-CSharp` 下 1050 个 `.cs` 文件，当前 703 个文件名已在文档中命中，347 个文件名未命中，并建立阶段 7 补文档队列 |
-| 阶段 7：全站复核 | 进行中 | 补交叉链接、术语表、调用图、缺失项清单 | 已补 [编辑器 UI 辅助类](/api/editor-events/editor-ui-auxiliary.md)，覆盖 RDLevelEditor 未命中的 35 个 UI、弹窗、选择器、时间线和保存辅助文件；下一步补根目录 UI 与菜单辅助类 |
+| 阶段 6：源码研究索引 | 已完成 | 整理可调用方法、编辑器事件、数据字段、扩展点、高风险系统和未分类源码索引 | 已完成自定义方法事件第一版、[可调用方法索引](/modding/callable-methods.md)、[事件写法索引](/modding/event-patterns.md)、[数据字段索引](/modding/data-fields.md)、[入口与单例索引](/modding/entry-singletons.md)、[扩展点索引](/modding/extension-points.md)、[高风险系统索引](/modding/high-risk-systems.md) 和 [未分类源码覆盖清单](/modding/source-coverage.md)：覆盖清单统计 `Assembly-CSharp` 下 1050 个 `.cs` 文件，当前 839 个文件名已在文档中命中，211 个文件名未命中，并建立阶段 7 补文档队列 |
+| 阶段 7：全站复核 | 进行中 | 补交叉链接、术语表、调用图、缺失项清单 | 已补 [编辑器 UI 辅助类](/api/editor-events/editor-ui-auxiliary.md)、[UI 与菜单辅助类](/api/runtime/ui-menu-helpers.md) 和 [视觉与动画辅助类](/api/runtime/visual-animation-helpers.md)；下一步补平台与服务 |
 
 状态只能使用：`未开始`、`进行中`、`已完成`、`待复核`。
 

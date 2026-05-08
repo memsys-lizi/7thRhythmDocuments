@@ -17,7 +17,7 @@
 
 ## 当前工作重点
 
-阶段 0 到阶段 4 已完成。阶段 3 和阶段 4 复核记录见 [阶段 3 与阶段 4 复核](/api/review/stage-3-4-review.md)。阶段 5 已完成文件级归属并进入待复核。阶段 6 已完成 [可调用方法索引](/modding/callable-methods.md)、[事件写法索引](/modding/event-patterns.md)、[数据字段索引](/modding/data-fields.md)、[入口与单例索引](/modding/entry-singletons.md)、[扩展点索引](/modding/extension-points.md)、[高风险系统索引](/modding/high-risk-systems.md) 和 [未分类源码覆盖清单](/modding/source-coverage.md)。覆盖清单统计 `Assembly-CSharp` 下 1050 个 `.cs` 文件，当前 703 个文件名已在文档中命中，347 个文件名未命中，并建立阶段 7 补文档队列。阶段 7 已补 [编辑器 UI 辅助类](/api/editor-events/editor-ui-auxiliary.md)，覆盖 RDLevelEditor 未命中的 35 个 UI、弹窗、选择器、时间线和保存辅助文件。下一步补根目录 UI 与菜单辅助类。
+阶段 0 到阶段 4 已完成。阶段 3 和阶段 4 复核记录见 [阶段 3 与阶段 4 复核](/api/review/stage-3-4-review.md)。阶段 5 已完成文件级归属并进入待复核。阶段 6 已完成 [可调用方法索引](/modding/callable-methods.md)、[事件写法索引](/modding/event-patterns.md)、[数据字段索引](/modding/data-fields.md)、[入口与单例索引](/modding/entry-singletons.md)、[扩展点索引](/modding/extension-points.md)、[高风险系统索引](/modding/high-risk-systems.md) 和 [未分类源码覆盖清单](/modding/source-coverage.md)。覆盖清单统计 `Assembly-CSharp` 下 1050 个 `.cs` 文件，当前 839 个文件名已在文档中命中，211 个文件名未命中，并建立阶段 7 补文档队列。阶段 7 已补 [编辑器 UI 辅助类](/api/editor-events/editor-ui-auxiliary.md)、[UI 与菜单辅助类](/api/runtime/ui-menu-helpers.md) 和 [视觉与动画辅助类](/api/runtime/visual-animation-helpers.md)。下一步补平台与服务。
 
 ## 阶段 6 剩余规划
 
