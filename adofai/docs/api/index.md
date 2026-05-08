@@ -1,6 +1,6 @@
 # API 入口
 
-本页作为 ADOFAI 源码 API 文档的入口。当前已完成核心骨架、关卡数据模型和编辑器系统，正在推进运行时游戏系统阶段。
+本页作为 ADOFAI 源码 API 文档的入口。当前已完成核心骨架、关卡数据模型、编辑器系统和运行时游戏系统，下一步进入事件与效果执行阶段。
 
 ## 计划中的核心 API 页
 
@@ -8,7 +8,7 @@
 | --- | --- | --- |
 | 核心入口 | [ADOBase](/api/core/ADOBase.md)、[ADOClass](/api/core/ADOClass.md)、[ADOStartup](/api/core/ADOStartup.md) | 全局访问器、启动流程、平台初始化、资源初始化 |
 | 场景控制 | [scrController](/api/core/scrController.md)、[scrConductor](/api/core/scrConductor.md)、[scnGame](/api/core/scnGame.md)、[scnEditor](/api/core/scnEditor.md) | 游戏状态、音频时钟、自定义关卡运行、编辑器入口 |
-| 轨道与地板 | [scrLevelMaker](/api/core/scrLevelMaker.md)、[scrFloor](/api/core/scrFloor.md)、`Level` | 路径生成、地板对象、官方关卡脚本基类 |
+| 轨道与地板 | [scrLevelMaker](/api/core/scrLevelMaker.md)、[scrFloor](/api/core/scrFloor.md)、[官方关卡脚本运行入口](/api/runtime/official-level-scripts.md) | 路径生成、地板对象、官方关卡脚本基类、官方关卡方法入口 |
 | 关卡数据 | [LevelData](/api/data-models/LevelData.md)、[LevelEvent](/api/data-models/LevelEvent.md)、[LevelEventInfo](/api/data-models/LevelEventInfo.md)、[PropertyInfo](/api/data-models/PropertyInfo.md)、[Property](/api/data-models/Property.md)、[事件类型与属性枚举](/api/data-models/event-metadata-enums.md)、[LevelDataCLS](/api/data-models/LevelDataCLS.md)、[读取结果与序列化](/api/data-models/serialization-validation.md) | `.adofai` 数据、事件对象、属性元数据、事件枚举、属性枚举、关卡选择摘要和序列化 |
 | 编辑器控件 | [InspectorPanel](/api/editor/InspectorPanel.md)、[PropertiesPanel](/api/editor/PropertiesPanel.md)、[Property](/api/data-models/Property.md)、[PropertyControl 控件族](/api/editor/property-controls.md) | 属性面板、控件绑定、事件编辑 |
 | 编辑器动作 | [ADOFAI.Editor.Actions](/api/editor/editor-actions.md) | 撤销、重做、选择、复制、粘贴、播放、文件、书签和面板动作 |
@@ -17,7 +17,7 @@
 | 相机与 VFX | [相机与 VFX 运行链路](/api/runtime/camera-vfx-chain.md) | 相机跟随、自由相机、缩放、旋转、RenderTexture、VFX 调度、滤镜、闪屏、震屏和 Bloom |
 | 结算与保存 | [结算、成绩与进度保存](/api/runtime/results-save-flow.md) | 命中统计、完成度、准确率、X 准确率、官方和自定义成绩保存、详细结果、灯笼和失败条 |
 | 场景流转 | [场景流转与加载跳转](/api/runtime/scene-loading-flow.md) | 传送门分发、官方关卡进入、自定义关卡加载、黑场转场、场景加载和自定义关卡重置 |
-| 事件效果 | [运行时效果族补充](/api/runtime/effect-families.md)、`ffxPlusBase`、`ffx*Plus`、`ffx*` | 事件执行组件、轨道、装饰、对象、文本、滤镜、声音、粒子、输入事件和帧率 |
+| 事件效果 | [运行时效果族补充](/api/runtime/effect-families.md)、[官方关卡脚本运行入口](/api/runtime/official-level-scripts.md)、`ffxPlusBase`、`ffx*Plus`、`ffx*` | 事件执行组件、轨道、装饰、对象、文本、滤镜、声音、粒子、输入事件、帧率和官方关卡方法调用 |
 | 存档与服务 | `Persistence`、`GCS`、`GCNS`、平台 helper、DLC、Steam | 全局状态、存档、平台差异、外部服务 |
 
 ## 当前已确认的关键事实
@@ -71,3 +71,8 @@
 | `ffxMoveFloorPlus` | `7thRhythmSource/ADOFAi/ffxMoveFloorPlus.cs` | 地板移动、旋转、缩放和透明度效果组件。 |
 | `ffxMoveDecorationsPlus` | `7thRhythmSource/ADOFAi/ffxMoveDecorationsPlus.cs` | 装饰位置、pivot、旋转、缩放、颜色、透明度、视差、图片和遮罩效果组件。 |
 | `ffxSetParticlePlus` | `7thRhythmSource/ADOFAi/ADOFAI.FloorFX/ffxSetParticlePlus.cs` | 粒子装饰模块修改组件。 |
+| `Level` | `7thRhythmSource/ADOFAi/Level.cs` | 官方关卡脚本基类，提供装饰组件查找、装饰显示隐藏和空生命周期钩子。 |
+| `LevelML` | `7thRhythmSource/ADOFAi/LevelML.cs` | `ML-X` 官方关卡脚本，控制碎裂、追逐怪物、夜景、骷髅、暗场和地板闪光风格。 |
+| `LevelTNO` | `7thRhythmSource/ADOFAi/LevelTNO.cs` | `XN-X` 官方关卡脚本，控制背景调色盘和星体半径收缩。 |
+| `ffxCallMethod` | `7thRhythmSource/ADOFAi/ffxCallMethod.cs` | 从事件属性 `method` 读取方法字符串，并反射调用当前 `ADOBase.controller.level` 方法。 |
+| `TaroBGScript` | `7thRhythmSource/ADOFAi/TaroBGScript.cs` | 官方大型关卡背景脚本基类，维护歌曲时间、拍数、BPM 表和节拍动作表。 |
