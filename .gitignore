@@ -1,3 +1,7 @@
 node_modules/
 RDFucked/
 7thRhythmSource/
+.cache/
+.env
+.env.*
+!.env.example
