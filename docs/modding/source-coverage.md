@@ -1,6 +1,6 @@
 # 未分类源码覆盖清单
 
-本页记录阶段 6 对 `RDFucked/Assets/Scripts/Assembly-CSharp` 的源码覆盖统计。统计方式是读取当前源码目录下所有 `.cs` 文件，再用文件名在 `docs/**/*.md` 中做字符串命中检查。它用于阶段 7 制定补文档队列，不代表最终覆盖结论。
+本页记录 `RDFucked/Assets/Scripts/Assembly-CSharp` 的源码覆盖统计。统计方式是读取当前源码目录下所有 `.cs` 文件，再用文件名在 `docs/**/*.md` 中做字符串命中检查。
 
 ## 当前统计
 
@@ -10,17 +10,27 @@
 | 文件名已在文档中命中 | 1050 |
 | 文件名未在文档中命中 | 0 |
 
+## 文档规模统计
+
+| 项目 | 数量 |
+| --- | ---: |
+| Markdown 文档总数 | 99 份 |
+| 文档总大小 | 约 1.09 MB |
+| 去空白字符总数 | 682,707 字符 |
+| 中文汉字数 | 132,080 字 |
+| 英文与代码 token 数 | 50,572 个 |
+
 ## 目录分布
 
 | 目录 | `.cs` 文件数 | 当前覆盖状态 |
 | --- | --- | --- |
-| 根目录 | 645 | 核心类、运行时系统、官方关卡和大量 UI/平台/资源辅助类混在同层，需要阶段 7 继续拆分 |
-| `RDLevelEditor` | 360 | 事件、Inspector、时间线、属性控件和编辑器弹窗已经有主干页面，仍有若干 UI 辅助类未逐项写入 |
-| `RhythmWeightlifter` | 17 | 独立小游戏或额外模式类群，当前只进入未分类队列 |
-| `UnityEngine` | 9 | 项目内补充的 UI 辅助实现，当前只进入未分类队列 |
+| 根目录 | 645 | 已按核心类、运行时系统、官方关卡、UI、平台、资源辅助和收口页面归类 |
+| `RDLevelEditor` | 360 | 已按事件、Inspector、时间线、属性控件、编辑器弹窗和 UI 辅助归类 |
+| `RhythmWeightlifter` | 17 | 已归入 [小游戏与测试组件](/api/runtime/mini-games-tests.md) |
+| `UnityEngine` | 9 | 已归入 [依赖与兼容辅助](/api/runtime/dependency-compatibility.md) |
 | `SmfLite` | 6 | MIDI 读取相关轻量库，按依赖说明处理 |
 | `RewiredConsts` | 3 | Rewired 常量生成文件，按依赖说明处理 |
-| `Kino` | 2 | 图像后处理相关类，后续归到视觉依赖或运行时 VFX |
+| `Kino` | 2 | 已归入后处理与依赖说明 |
 | `Rewired` | 2 | Rewired 本地化辅助，按依赖说明处理 |
 | 其他单文件目录 | 6 | `DG`、`ProceduralTree`、`Properties`、`RowEntranceTest`、`System` 等 |
 
@@ -88,7 +98,7 @@
 | `RowEntranceTest/RowEntranceTest.cs` | 并入测试组件说明 |
 | `System/Runtime/CompilerServices/IsExternalInit.cs` | 编译兼容辅助，放入依赖说明 |
 
-## 阶段 7 补文档队列
+## 阶段 7 补文档完成记录
 
 | 优先级 | 页面方向 | 覆盖目标 |
 | --- | --- | --- |
@@ -110,5 +120,5 @@
 | --- | --- |
 | 文件总数 | 使用 `Get-ChildItem RDFucked/Assets/Scripts/Assembly-CSharp -Recurse -Filter *.cs` 统计 |
 | 文档命中 | 把文件名去掉 `.cs` 后，在 `docs/**/*.md` 正文中查找同名字符串 |
-| 未命中含义 | 文件名没有出现在当前文档正文中，阶段 7 需要人工归类 |
-| 覆盖目标 | 后续页面要覆盖类职责、字段、方法、生命周期和跨模块关系 |
+| 未命中含义 | 文件名没有出现在当前文档正文中；当前未命中为 0 |
+| 覆盖目标 | 页面覆盖类职责、字段、方法、生命周期和跨模块关系 |
