@@ -12,8 +12,10 @@
     * [ADOClass](/api/core/ADOClass.md)
     * [ADOStartup](/api/core/ADOStartup.md)
     * [scrController](/api/core/scrController.md)
+    * [scrConductor](/api/core/scrConductor.md)
 
 * 模块
   * [模块入口](/modules/index.md)
   * [核心启动与全局访问](/modules/core-startup.md)
   * [运行时控制器状态机](/modules/runtime-controller.md)
+  * [音频与节拍运行时](/modules/audio-beat-runtime.md)
