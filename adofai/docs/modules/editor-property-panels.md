@@ -9,7 +9,7 @@
 | [InspectorPanel](/api/editor/InspectorPanel.md) | `7thRhythmSource/ADOFAi/ADOFAI/InspectorPanel.cs` | 管理事件 tab、当前事件选择、面板显示、删除/启用按钮和装饰多选。 |
 | [PropertiesPanel](/api/editor/PropertiesPanel.md) | `7thRhythmSource/ADOFAi/ADOFAI/PropertiesPanel.cs` | 根据属性元数据生成属性行和控件，并把事件值写入 UI。 |
 | [Property](/api/data-models/Property.md) | `7thRhythmSource/ADOFAi/ADOFAI/Property.cs` | 单个属性行，连接标签、启用按钮、控件容器和 `PropertyInfo`。 |
-| `PropertyControl_*` | `7thRhythmSource/ADOFAi/ADOFAI.LevelEditor.Controls` | 各类具体输入控件，后续阶段 3 会分组覆盖。 |
+| [PropertyControl 控件族](/api/editor/property-controls.md) | `7thRhythmSource/ADOFAi/ADOFAI.LevelEditor.Controls` | 各类具体输入控件，负责把 UI 输入写回 `LevelEvent` 并触发编辑器刷新。 |
 
 ## 核心流程
 
@@ -61,5 +61,4 @@ flowchart TD
 
 ## 后续补齐
 
-阶段 3 接下来要覆盖 `PropertyControl_*` 控件族、`ADOFAI.Editor.Actions` 动作系统、偏好设置、粒子编辑器和编辑器辅助面板。
-
+阶段 3 接下来要覆盖 `ADOFAI.Editor.Actions` 动作系统、偏好设置、粒子编辑器和编辑器辅助面板。

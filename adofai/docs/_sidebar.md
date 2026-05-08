@@ -29,6 +29,7 @@
   * 编辑器系统
     * [InspectorPanel](/api/editor/InspectorPanel.md)
     * [PropertiesPanel](/api/editor/PropertiesPanel.md)
+    * [PropertyControl 控件族](/api/editor/property-controls.md)
 
 * 模块
   * [模块入口](/modules/index.md)
