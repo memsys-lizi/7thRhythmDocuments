@@ -37,6 +37,7 @@
     * [阶段 3 编辑器系统复核](/api/editor/stage-3-review.md)
   * 运行时系统
     * [运行时输入与判定](/api/runtime/input-judgement.md)
+    * [控制器状态、暂停与练习流程](/api/runtime/controller-pause-flow.md)
 
 * 模块
   * [模块入口](/modules/index.md)
@@ -53,3 +54,4 @@
   * [编辑器长流程](/modules/editor-workflows.md)
   * [编辑器小型 UI 组件](/modules/editor-ui-widgets.md)
   * [运行时输入与判定链路](/modules/runtime-input-judgement.md)
+  * [控制器、暂停与练习流程](/modules/runtime-controller-pause.md)

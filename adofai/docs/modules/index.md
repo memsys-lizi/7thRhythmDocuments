@@ -21,6 +21,7 @@ ADOFAI 文档按源码模块组织。模块页面负责解释系统边界、核�
 | [编辑器长流程](/modules/editor-workflows.md) | `scnEditor`、`SaveStateScope`、`LevelState`、`FloorData` | 文件打开保存、新建关卡、状态保存、选择、剪贴板、事件增删、撤销重做和播放预览。 |
 | [编辑器小型 UI 组件](/modules/editor-ui-widgets.md) | `LevelEventButton`、`CategoryTab`、`InspectorTab`、`RDColorPickerPopup`、`ListItem_*`、`TransformGizmoHolder` | 事件栏、tab、颜色选择器、列表项、快捷键提示、地板方向按钮、练习时间线和 gizmo；阶段 3 收口见 [阶段 3 编辑器系统复核](/api/editor/stage-3-review.md)。 |
 | [运行时输入与判定链路](/modules/runtime-input-judgement.md) | `RDInput`、`AsyncInputManager`、`scrController`、`scrPlayer`、`scrPlanet`、`scrMisc` | 普通输入、异步输入、玩家更新、命中判定、输入限制和地板反馈。 |
+| [控制器、暂停与练习流程](/modules/runtime-controller-pause.md) | `scrController`、`States`、`PauseMenu`、`PracticeTimeline`、`scrMistakesManager` | 状态机、暂停、checkpoint 淡入、PlayerControl、练习模式、胜利和失败流程。 |
 | 事件效果运行时 | `ffxPlusBase`、`ffx*Plus`、`ffx*`、`ADOFAI.FloorFX` | `LevelEventType` 怎样映射到运行时效果组件。 |
 | UI、菜单与关卡选择 | `scnLevelSelect`、`LevelSelectBase`、`CustomLevelTile`、`MobileMenu` | 关卡选择、CLS、菜单面板和移动端 UI。 |
 | 平台、存档与服务 | `Persistence`、`ADOFAI.Common.Platform`、Steam、DLC、Analytics | 存档字段、平台差异、服务初始化和 DLC 状态。 |
