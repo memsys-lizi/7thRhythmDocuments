@@ -1,7 +1,7 @@
 import cors from 'cors';
 import express from 'express';
 import { config } from './config.js';
-import { askDeepSeek } from './deepseek.js';
+import { askDeepSeek, streamDeepSeek } from './deepseek.js';
 import { getIndexStatus, searchAdofai } from './index-store.js';
 
 const app = express();
@@ -41,6 +41,44 @@ app.post('/api/ask', async (req, res, next) => {
       sources: publicSources(sources)
     });
   } catch (error) {
+    next(error);
+  }
+});
+
+app.post('/api/ask-stream', async (req, res, next) => {
+  try {
+    const { game, question, topK } = readQuestion(req.body);
+    ensureAdofai(game);
+    const sources = await searchAdofai(question, topK);
+
+    res.setHeader('Content-Type', 'application/x-ndjson; charset=utf-8');
+    res.setHeader('Cache-Control', 'no-cache, no-transform');
+    res.setHeader('X-Accel-Buffering', 'no');
+    res.flushHeaders?.();
+
+    writeJsonLine(res, {
+      type: 'sources',
+      sources: publicSources(sources)
+    });
+
+    await streamDeepSeek(question, sources, async (delta) => {
+      writeJsonLine(res, {
+        type: 'delta',
+        delta
+      });
+    });
+
+    writeJsonLine(res, { type: 'done' });
+    res.end();
+  } catch (error) {
+    if (res.headersSent) {
+      writeJsonLine(res, {
+        type: 'error',
+        error: error.message || '服务内部错误。'
+      });
+      res.end();
+      return;
+    }
     next(error);
   }
 });
@@ -94,4 +132,8 @@ function publicSources(sources) {
     score: Number(source.score.toFixed(4)),
     text: source.text
   }));
+}
+
+function writeJsonLine(res, data) {
+  res.write(`${JSON.stringify(data)}\n`);
 }

@@ -1,89 +1,66 @@
 (function () {
   var config = window.ADOFAI_AI || {};
-  var endpoint = resolveEndpoint(config.endpoint || defaultEndpoint(config.port || '1970'));
+  var askEndpoint = resolveEndpoint(config.endpoint || defaultEndpoint(config.port || '1970', '/api/ask'));
+  var streamEndpoint = toStreamEndpoint(askEndpoint);
   var game = config.game || 'adofai';
   var state = {
-    open: false,
-    busy: false,
-    lastQuestion: ''
+    open: window.localStorage.getItem('adofai-ai-sidebar-open') !== 'false',
+    busy: false
   };
 
-  function createElement(tag, className, text) {
-    var element = document.createElement(tag);
-    if (className) element.className = className;
-    if (text) element.textContent = text;
-    return element;
-  }
-
-  function resolveEndpoint(fallback) {
-    var params = new URLSearchParams(window.location.search);
-    var queryEndpoint = params.get('aiEndpoint');
-    if (queryEndpoint) {
-      window.localStorage.setItem('adofai-ai-endpoint', queryEndpoint);
-      return queryEndpoint;
-    }
-    return window.localStorage.getItem('adofai-ai-endpoint') || fallback;
-  }
-
-  function defaultEndpoint(port) {
-    if (window.location.protocol === 'file:') {
-      return 'http://127.0.0.1:' + port + '/api/ask';
-    }
-    return window.location.protocol + '//' + window.location.hostname + ':' + port + '/api/ask';
-  }
-
   function init() {
-    var root = createElement('section', 'ai-chat');
-    root.setAttribute('aria-label', '文档 AI 问答');
+    var root = createElement('aside', 'ai-sidebar');
+    root.setAttribute('aria-label', '文档 AI 问答侧栏');
     root.innerHTML = [
-      '<button class="ai-chat-toggle" type="button" aria-expanded="false" title="打开文档问答">AI</button>',
-      '<div class="ai-chat-panel" aria-hidden="true">',
-      '  <div class="ai-chat-header">',
+      '<button class="ai-sidebar-rail" type="button" aria-expanded="true" title="展开文档问答">AI</button>',
+      '<div class="ai-sidebar-panel">',
+      '  <header class="ai-sidebar-header">',
       '    <div>',
       '      <strong>文档问答</strong>',
-      '      <span>基于 ADOFAI 源码文档</span>',
+      '      <span>基于 ADOFAI 源码文档检索回答</span>',
       '    </div>',
-      '    <button class="ai-chat-close" type="button" title="关闭">×</button>',
-      '  </div>',
-      '  <div class="ai-chat-messages" role="log" aria-live="polite"></div>',
-      '  <details class="ai-chat-settings">',
+      '    <button class="ai-sidebar-collapse" type="button">收起</button>',
+      '  </header>',
+      '  <div class="ai-sidebar-messages" role="log" aria-live="polite"></div>',
+      '  <details class="ai-sidebar-settings">',
       '    <summary>接口设置</summary>',
       '    <label>AI 服务地址</label>',
-      '    <input class="ai-chat-endpoint" type="url">',
-      '    <button class="ai-chat-save-endpoint" type="button">保存地址</button>',
+      '    <input class="ai-sidebar-endpoint" type="url">',
+      '    <button class="ai-sidebar-save-endpoint" type="button">保存地址</button>',
       '  </details>',
-      '  <form class="ai-chat-form">',
-      '    <textarea class="ai-chat-input" rows="3" placeholder="询问 ADOFAI 源码文档，例如：判定逻辑在哪里？"></textarea>',
-      '    <div class="ai-chat-actions">',
-      '      <button class="ai-chat-clear" type="button">清空</button>',
-      '      <button class="ai-chat-submit" type="submit">发送</button>',
+      '  <form class="ai-sidebar-form">',
+      '    <textarea class="ai-sidebar-input" rows="3" placeholder="询问 ADOFAI 源码文档，例如：判定逻辑在哪里？"></textarea>',
+      '    <div class="ai-sidebar-actions">',
+      '      <button class="ai-sidebar-clear" type="button">清空</button>',
+      '      <button class="ai-sidebar-submit" type="submit">发送</button>',
       '    </div>',
       '  </form>',
       '</div>'
     ].join('');
+
     document.body.appendChild(root);
 
-    var toggle = root.querySelector('.ai-chat-toggle');
-    var close = root.querySelector('.ai-chat-close');
-    var panel = root.querySelector('.ai-chat-panel');
-    var messages = root.querySelector('.ai-chat-messages');
-    var endpointInput = root.querySelector('.ai-chat-endpoint');
-    var saveEndpoint = root.querySelector('.ai-chat-save-endpoint');
-    var form = root.querySelector('.ai-chat-form');
-    var input = root.querySelector('.ai-chat-input');
-    var clear = root.querySelector('.ai-chat-clear');
-    var submit = root.querySelector('.ai-chat-submit');
+    var rail = root.querySelector('.ai-sidebar-rail');
+    var collapse = root.querySelector('.ai-sidebar-collapse');
+    var messages = root.querySelector('.ai-sidebar-messages');
+    var endpointInput = root.querySelector('.ai-sidebar-endpoint');
+    var saveEndpoint = root.querySelector('.ai-sidebar-save-endpoint');
+    var form = root.querySelector('.ai-sidebar-form');
+    var input = root.querySelector('.ai-sidebar-input');
+    var clear = root.querySelector('.ai-sidebar-clear');
+    var submit = root.querySelector('.ai-sidebar-submit');
 
-    addMessage(messages, 'assistant', '可以直接问 ADOFAI 源码文档。回答会附带来源，点击来源可跳转到对应页面。', []);
-    endpointInput.value = endpoint;
+    endpointInput.value = askEndpoint;
+    setOpen(root, rail, state.open);
+    addMessage(messages, 'assistant', '可以直接问 ADOFAI 源码文档。回答会流式显示，点击来源可跳转到对应页面。', []);
 
-    toggle.addEventListener('click', function () {
-      setOpen(root, panel, toggle, !state.open);
-      if (state.open) input.focus();
+    rail.addEventListener('click', function () {
+      setOpen(root, rail, true);
+      input.focus();
     });
 
-    close.addEventListener('click', function () {
-      setOpen(root, panel, toggle, false);
+    collapse.addEventListener('click', function () {
+      setOpen(root, rail, false);
     });
 
     clear.addEventListener('click', function () {
@@ -94,8 +71,9 @@
     saveEndpoint.addEventListener('click', function () {
       var nextEndpoint = endpointInput.value.trim();
       if (!nextEndpoint) return;
-      endpoint = nextEndpoint;
-      window.localStorage.setItem('adofai-ai-endpoint', endpoint);
+      askEndpoint = nextEndpoint;
+      streamEndpoint = toStreamEndpoint(askEndpoint);
+      window.localStorage.setItem('adofai-ai-endpoint', askEndpoint);
       addMessage(messages, 'assistant', 'AI 服务地址已保存。', []);
     });
 
@@ -115,21 +93,16 @@
     });
   }
 
-  function setOpen(root, panel, toggle, open) {
-    state.open = open;
-    root.classList.toggle('is-open', open);
-    panel.setAttribute('aria-hidden', open ? 'false' : 'true');
-    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-  }
-
   function askQuestion(question, messages, submit) {
     state.busy = true;
-    state.lastQuestion = question;
     submit.disabled = true;
     addMessage(messages, 'user', question, []);
-    var pending = addMessage(messages, 'assistant', '正在检索文档并生成回答...', []);
 
-    fetch(endpoint, {
+    var answer = '';
+    var sources = [];
+    var pending = addMessage(messages, 'assistant', '正在检索文档...', [], true);
+
+    fetch(streamEndpoint, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -140,18 +113,39 @@
       })
     })
       .then(function (response) {
-        return response.json().then(function (data) {
-          if (!response.ok) {
+        if (!response.ok) {
+          return response.json().then(function (data) {
             throw new Error(data.error || '问答服务返回错误。');
+          });
+        }
+        if (!response.body) {
+          throw new Error('当前浏览器不支持流式读取。');
+        }
+        return readStream(response, function (event) {
+          if (event.type === 'sources') {
+            sources = event.sources || [];
+            replaceMessage(pending, 'assistant', answer || '已找到相关文档，正在生成回答...', sources, true);
           }
-          return data;
+          if (event.type === 'delta') {
+            answer += event.delta || '';
+            replaceMessage(pending, 'assistant', answer, sources, true);
+          }
+          if (event.type === 'error') {
+            throw new Error(event.error || '流式回答失败。');
+          }
         });
       })
-      .then(function (data) {
-        replaceMessage(pending, 'assistant', data.answer || '没有返回回答。', data.sources || []);
+      .then(function () {
+        replaceMessage(pending, 'assistant', answer || '没有返回回答。', sources, false);
       })
       .catch(function (error) {
-        replaceMessage(pending, 'assistant', '问答服务暂时不可用：' + error.message, []);
+        return askQuestionFallback(question)
+          .then(function (data) {
+            replaceMessage(pending, 'assistant', data.answer || '没有返回回答。', data.sources || [], false);
+          })
+          .catch(function () {
+            replaceMessage(pending, 'assistant', '问答服务暂时不可用：' + error.message, [], false);
+          });
       })
       .finally(function () {
         state.busy = false;
@@ -160,20 +154,78 @@
       });
   }
 
-  function addMessage(messages, role, content, sources) {
-    var message = createElement('article', 'ai-chat-message ai-chat-message-' + role);
-    replaceMessage(message, role, content, sources);
+  function askQuestionFallback(question) {
+    return fetch(askEndpoint, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        game: game,
+        question: question
+      })
+    }).then(function (response) {
+      return response.json().then(function (data) {
+        if (!response.ok) {
+          throw new Error(data.error || '问答服务返回错误。');
+        }
+        return data;
+      });
+    });
+  }
+
+  function readStream(response, onEvent) {
+    var reader = response.body.getReader();
+    var decoder = new TextDecoder();
+    var buffer = '';
+
+    function pump() {
+      return reader.read().then(function (result) {
+        if (result.done) {
+          flushBuffer();
+          return;
+        }
+        buffer += decoder.decode(result.value, { stream: true });
+        flushBuffer();
+        return pump();
+      });
+    }
+
+    function flushBuffer() {
+      var lines = buffer.split(/\r?\n/);
+      buffer = lines.pop() || '';
+      lines.forEach(function (line) {
+        var trimmed = line.trim();
+        if (!trimmed) return;
+        onEvent(JSON.parse(trimmed));
+      });
+    }
+
+    return pump();
+  }
+
+  function setOpen(root, rail, open) {
+    state.open = open;
+    root.classList.toggle('is-open', open);
+    document.body.classList.toggle('ai-sidebar-open', open);
+    rail.setAttribute('aria-expanded', open ? 'true' : 'false');
+    window.localStorage.setItem('adofai-ai-sidebar-open', open ? 'true' : 'false');
+  }
+
+  function addMessage(messages, role, content, sources, streaming) {
+    var message = createElement('article', 'ai-sidebar-message ai-sidebar-message-' + role);
+    replaceMessage(message, role, content, sources, streaming);
     messages.appendChild(message);
     messages.scrollTop = messages.scrollHeight;
     return message;
   }
 
-  function replaceMessage(message, role, content, sources) {
-    message.className = 'ai-chat-message ai-chat-message-' + role;
+  function replaceMessage(message, role, content, sources, streaming) {
+    message.className = 'ai-sidebar-message ai-sidebar-message-' + role + (streaming ? ' is-streaming' : '');
     var label = role === 'user' ? '你' : 'AI';
     var html = [
-      '<div class="ai-chat-role">' + escapeHtml(label) + '</div>',
-      '<div class="ai-chat-content">' + renderMarkdown(content) + '</div>'
+      '<div class="ai-sidebar-role">' + escapeHtml(label) + '</div>',
+      '<div class="ai-sidebar-content">' + renderMarkdown(content) + (streaming ? '<span class="ai-stream-caret"></span>' : '') + '</div>'
     ];
 
     if (sources && sources.length) {
@@ -186,6 +238,11 @@
         jumpToSource(button.getAttribute('data-ai-source'));
       });
     });
+
+    var container = message.parentElement;
+    if (container) {
+      container.scrollTop = container.scrollHeight;
+    }
   }
 
   function renderSources(sources) {
@@ -193,13 +250,13 @@
       var title = source.title || source.path || '来源 ' + (index + 1);
       var score = typeof source.score === 'number' ? ' · ' + source.score.toFixed(4) : '';
       return [
-        '<button class="ai-chat-source" type="button" data-ai-source="' + escapeAttribute(source.url || '') + '">',
+        '<button class="ai-sidebar-source" type="button" data-ai-source="' + escapeAttribute(source.url || '') + '">',
         '<span>' + escapeHtml(title) + '</span>',
         '<small>' + escapeHtml(source.path || '') + score + '</small>',
         '</button>'
       ].join('');
     });
-    return '<div class="ai-chat-sources"><strong>来源</strong>' + items.join('') + '</div>';
+    return '<div class="ai-sidebar-sources"><strong>来源</strong>' + items.join('') + '</div>';
   }
 
   function jumpToSource(url) {
@@ -271,6 +328,35 @@
 
     if (inList) output.push('</ul>');
     return output.join('\n');
+  }
+
+  function defaultEndpoint(port, pathname) {
+    if (window.location.protocol === 'file:') {
+      return 'http://127.0.0.1:' + port + pathname;
+    }
+    return window.location.protocol + '//' + window.location.hostname + ':' + port + pathname;
+  }
+
+  function resolveEndpoint(fallback) {
+    var params = new URLSearchParams(window.location.search);
+    var queryEndpoint = params.get('aiEndpoint');
+    if (queryEndpoint) {
+      window.localStorage.setItem('adofai-ai-endpoint', queryEndpoint);
+      return queryEndpoint;
+    }
+    return window.localStorage.getItem('adofai-ai-endpoint') || fallback;
+  }
+
+  function toStreamEndpoint(endpoint) {
+    if (endpoint.indexOf('/api/ask-stream') !== -1) return endpoint;
+    return endpoint.replace(/\/api\/ask$/, '/api/ask-stream');
+  }
+
+  function createElement(tag, className, text) {
+    var element = document.createElement(tag);
+    if (className) element.className = className;
+    if (text) element.textContent = text;
+    return element;
   }
 
   function escapeHtml(value) {
