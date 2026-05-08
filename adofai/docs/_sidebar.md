@@ -52,6 +52,7 @@
   * 平台、存档、服务与 UI
     * [全局状态、常量与存档](/api/platform/global-state-persistence.md)
     * [平台 Helper、DLC、Steam 与服务](/api/platform/platform-dlc-steam-services.md)
+    * [CLS、关卡选择、移动菜单与本地化](/api/platform/cls-level-select-mobile-localization.md)
 
 * 模块
   * [模块入口](/modules/index.md)

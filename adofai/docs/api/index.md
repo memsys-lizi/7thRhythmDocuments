@@ -18,7 +18,7 @@
 | 结算与保存 | [结算、成绩与进度保存](/api/runtime/results-save-flow.md) | 命中统计、完成度、准确率、X 准确率、官方和自定义成绩保存、详细结果、灯笼和失败条 |
 | 场景流转 | [场景流转与加载跳转](/api/runtime/scene-loading-flow.md) | 传送门分发、官方关卡进入、自定义关卡加载、黑场转场、场景加载和自定义关卡重置 |
 | 事件效果 | [事件执行总览](/api/events/event-execution-overview.md)、[轨道与地板事件](/api/events/track-floor-events.md)、[相机、滤镜与屏幕事件](/api/events/camera-filter-events.md)、[装饰、对象、文本与声音事件](/api/events/decoration-object-text-sound-events.md)、[输入、粒子与剩余运行时事件](/api/events/input-particle-runtime-events.md)、[运行时效果族补充](/api/runtime/effect-families.md)、[官方关卡脚本运行入口](/api/runtime/official-level-scripts.md)、`ffxPlusBase`、`ffx*Plus`、`ffx*` | 事件执行组件、事件到效果映射、轨道、装饰、对象、文本、滤镜、声音、粒子、输入事件、帧率和官方关卡方法调用 |
-| 存档与服务 | [全局状态、常量与存档](/api/platform/global-state-persistence.md)、[平台 Helper、DLC、Steam 与服务](/api/platform/platform-dlc-steam-services.md) | `Persistence`、`GCS`、`GCNS`、平台 helper、DLC、Steam、Workshop、GameServices、Analytics |
+| 存档与服务 | [全局状态、常量与存档](/api/platform/global-state-persistence.md)、[平台 Helper、DLC、Steam 与服务](/api/platform/platform-dlc-steam-services.md)、[CLS、关卡选择、移动菜单与本地化](/api/platform/cls-level-select-mobile-localization.md) | `Persistence`、`GCS`、`GCNS`、平台 helper、DLC、Steam、Workshop、GameServices、Analytics、CLS、关卡选择、移动菜单、本地化 |
 
 ## 当前已确认的关键事实
 
@@ -84,6 +84,11 @@
 | `SteamWorkshop` | `7thRhythmSource/ADOFAi/SteamWorkshop.cs` | Steam Workshop 查询、订阅、下载、上传、预览图、错误状态和进度入口。 |
 | `GameServices` | `7thRhythmSource/ADOFAi/GameServices.cs` | 平台服务抽象层，处理登录、云存档同步、成就队列、震动、帧率和磁盘空间接口。 |
 | `Analytics` | `7thRhythmSource/ADOFAi/Analytics.cs` | 统计官方关卡、编辑器和自定义关卡时长，上传 Steam stats 和 Unity branch 事件。 |
+| `scnCLS` | `7thRhythmSource/ADOFAi/scnCLS.cs` | 自定义关卡选择场景，扫描本地、Workshop 和精选关卡，生成 tile，显示 portal 信息并进入自定义关卡。 |
+| `OptionsPanelsCLS` | `7thRhythmSource/ADOFAi/OptionsPanelsCLS.cs` | CLS 选项面板，处理分类、排序、搜索、No Fail、Speed Trial 和 key limiter。 |
+| `scnLevelSelect` | `7thRhythmSource/ADOFAi/scnLevelSelect.cs` | 桌面主关卡选择场景，处理岛屿、快捷键、隐藏输入、传送门和相机跳转。 |
+| `MobileMenuController` | `7thRhythmSource/ADOFAi/MobileMenu/MobileMenuController.cs` | 移动菜单主控制器，处理地图加载、screen 跳转、方向移动、触摸、按钮、子关卡和进入关卡。 |
+| `RDString` | `7thRhythmSource/ADOFAi/RDString.cs` | 本地化和字体入口，支持平台后缀、语言字体、CJK 处理和参数替换。 |
 | `scnGame.ApplyEventsToFloors` | `7thRhythmSource/ADOFAi/scnGame.cs` | 把激活事件按地板分组，清理旧效果，应用核心事件，并创建运行时效果组件。 |
 | `scnGame.ApplyEvent` | `7thRhythmSource/ADOFAi/scnGame.cs` | 将 `LevelEventType` 映射到 `ffxPlusBase` 子类，解码字段并计算起始时间。 |
 | `scnGame.PrepVfx` | `7thRhythmSource/ADOFAi/scnGame.cs` | 整理普通时间调度、条件事件、手动事件、checkpoint 恢复和 `scrVfxPlus.effects` 排序。 |
