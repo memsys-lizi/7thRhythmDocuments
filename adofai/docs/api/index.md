@@ -1,6 +1,6 @@
 # API 入口
 
-本页作为 ADOFAI 源码 API 文档的入口。当前已完成核心骨架、关卡数据模型、编辑器系统和运行时游戏系统，正在推进事件与效果执行阶段。
+本页作为 ADOFAI 源码 API 文档的入口。当前已完成核心骨架、关卡数据模型、编辑器系统、运行时游戏系统和事件与效果执行阶段，正在推进平台、存档、服务与 UI 阶段。
 
 ## 计划中的核心 API 页
 
@@ -18,7 +18,7 @@
 | 结算与保存 | [结算、成绩与进度保存](/api/runtime/results-save-flow.md) | 命中统计、完成度、准确率、X 准确率、官方和自定义成绩保存、详细结果、灯笼和失败条 |
 | 场景流转 | [场景流转与加载跳转](/api/runtime/scene-loading-flow.md) | 传送门分发、官方关卡进入、自定义关卡加载、黑场转场、场景加载和自定义关卡重置 |
 | 事件效果 | [事件执行总览](/api/events/event-execution-overview.md)、[轨道与地板事件](/api/events/track-floor-events.md)、[相机、滤镜与屏幕事件](/api/events/camera-filter-events.md)、[装饰、对象、文本与声音事件](/api/events/decoration-object-text-sound-events.md)、[输入、粒子与剩余运行时事件](/api/events/input-particle-runtime-events.md)、[运行时效果族补充](/api/runtime/effect-families.md)、[官方关卡脚本运行入口](/api/runtime/official-level-scripts.md)、`ffxPlusBase`、`ffx*Plus`、`ffx*` | 事件执行组件、事件到效果映射、轨道、装饰、对象、文本、滤镜、声音、粒子、输入事件、帧率和官方关卡方法调用 |
-| 存档与服务 | `Persistence`、`GCS`、`GCNS`、平台 helper、DLC、Steam | 全局状态、存档、平台差异、外部服务 |
+| 存档与服务 | [全局状态、常量与存档](/api/platform/global-state-persistence.md)、平台 helper、DLC、Steam | `Persistence`、`GCS`、`GCNS`、存档字段、平台差异、外部服务 |
 
 ## 当前已确认的关键事实
 
@@ -76,6 +76,9 @@
 | `LevelTNO` | `7thRhythmSource/ADOFAi/LevelTNO.cs` | `XN-X` 官方关卡脚本，控制背景调色盘和星体半径收缩。 |
 | `ffxCallMethod` | `7thRhythmSource/ADOFAi/ffxCallMethod.cs` | 从事件属性 `method` 读取方法字符串，并反射调用当前 `ADOBase.controller.level` 方法。 |
 | `TaroBGScript` | `7thRhythmSource/ADOFAi/TaroBGScript.cs` | 官方大型关卡背景脚本基类，维护歌曲时间、拍数、BPM 表和节拍动作表。 |
+| `GCS` | `7thRhythmSource/ADOFAi/GCS.cs` | 跨场景临时状态与运行时常量容器，保存 checkpoint、speed trial、自定义关卡路径、事件元数据、场景加载目标、命中窗口、文件扩展名和输入键集合。 |
+| `GCNS` | `7thRhythmSource/ADOFAi/GCNS.cs` | 常量与世界元数据容器，保存发布号、场景名、世界数据、精选关卡 ID、分支列表和 bundle 路径。 |
+| `Persistence` | `7thRhythmSource/ADOFAi/Persistence.cs` | 存档入口，读写 general/custom prefs、官方进度、自定义关卡成绩、设置项、成就同步、云存档和延迟保存。 |
 | `scnGame.ApplyEventsToFloors` | `7thRhythmSource/ADOFAi/scnGame.cs` | 把激活事件按地板分组，清理旧效果，应用核心事件，并创建运行时效果组件。 |
 | `scnGame.ApplyEvent` | `7thRhythmSource/ADOFAi/scnGame.cs` | 将 `LevelEventType` 映射到 `ffxPlusBase` 子类，解码字段并计算起始时间。 |
 | `scnGame.PrepVfx` | `7thRhythmSource/ADOFAi/scnGame.cs` | 整理普通时间调度、条件事件、手动事件、checkpoint 恢复和 `scrVfxPlus.effects` 排序。 |

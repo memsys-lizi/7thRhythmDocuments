@@ -7,7 +7,7 @@ ADOFAI 文档按源码模块组织。模块页面负责解释系统边界、核�
 | 模块 | 范围 | 重点问题 |
 | --- | --- | --- |
 | [核心启动与全局访问](/modules/core-startup.md) | `ADOStartup`、`ADOBase`、`ADOClass` | 游戏启动时初始化了哪些系统，全局对象从哪里取。 |
-| 核心全局状态 | `GCS`、`GCNS`、`Persistence` | 哪些状态跨场景保存，哪些字段来自存档和全局常量。 |
+| [平台、存档与全局状态模块](/modules/platform-persistence-services.md) | `GCS`、`GCNS`、`Persistence` | 哪些状态跨场景传递，哪些字段来自存档和全局常量。 |
 | [运行时控制器状态机](/modules/runtime-controller.md) | `scrController`、`States` | 游戏状态机、暂停、关卡跳转和控制器协作对象。 |
 | [自定义关卡运行主线](/modules/custom-level-runtime.md) | `scnGame`、`LevelData`、`scrLevelMaker`、`scrFloor`、`ffxPlusBase` | `.adofai` 数据怎样变成运行时地板、装饰、音频和 VFX。 |
 | [官方关卡脚本运行模块](/modules/runtime-official-level-scripts.md) | `Level`、`LevelML`、`LevelTNO`、`ffxCallMethod`、`TaroBGScript` | 官方关卡脚本的运行路径、反射方法入口和大型关卡节拍演出脚本。 |
@@ -32,5 +32,5 @@ ADOFAI 文档按源码模块组织。模块页面负责解释系统边界、核�
 | [装饰、对象、文本与声音事件模块](/modules/decoration-object-text-sound-events.md) | `MoveDecorations`、`SetObject`、`SetText`、`SetDefaultText`、`PlaySound`、`AddComponent`、`KillPlayer` | 装饰、对象装饰、文本、HUD 文案、声音、动态组件和条件死亡事件怎样执行。 |
 | [输入、粒子与剩余运行时事件模块](/modules/input-particle-runtime-events.md) | `SetInputEvent`、`SetFrameRate`、`ScalePlanets`、`SetHitsound`、`SetHoldSound`、`SetParticle`、`EmitParticle` | 输入事件、帧率、星球缩放、命中声音、hold 声音和粒子效果怎样执行。 |
 | UI、菜单与关卡选择 | `scnLevelSelect`、`LevelSelectBase`、`CustomLevelTile`、`MobileMenu` | 关卡选择、CLS、菜单面板和移动端 UI。 |
-| 平台、存档与服务 | `Persistence`、`ADOFAI.Common.Platform`、Steam、DLC、Analytics | 存档字段、平台差异、服务初始化和 DLC 状态。 |
+| 平台、存档与服务 | `ADOFAI.Common.Platform`、Steam、DLC、Analytics | 平台差异、服务初始化和 DLC 状态；存档基础见 [平台、存档与全局状态模块](/modules/platform-persistence-services.md)。 |
 | 第三方依赖接入 | `Rewired`、`ByteSheep.Events`、`BlendModes`、`TMPro.Examples` | 只说明 ADOFAI 使用入口，不逐项深写第三方源码。 |

@@ -49,6 +49,8 @@
     * [相机、滤镜与屏幕事件](/api/events/camera-filter-events.md)
     * [装饰、对象、文本与声音事件](/api/events/decoration-object-text-sound-events.md)
     * [输入、粒子与剩余运行时事件](/api/events/input-particle-runtime-events.md)
+  * 平台、存档、服务与 UI
+    * [全局状态、常量与存档](/api/platform/global-state-persistence.md)
 
 * 模块
   * [模块入口](/modules/index.md)
@@ -76,3 +78,4 @@
   * [相机、滤镜与屏幕事件模块](/modules/camera-filter-events.md)
   * [装饰、对象、文本与声音事件模块](/modules/decoration-object-text-sound-events.md)
   * [输入、粒子与剩余运行时事件模块](/modules/input-particle-runtime-events.md)
+  * [平台、存档与全局状态模块](/modules/platform-persistence-services.md)
