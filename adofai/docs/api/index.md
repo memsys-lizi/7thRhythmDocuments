@@ -12,7 +12,7 @@
 | 关卡数据 | [LevelData](/api/data-models/LevelData.md)、[LevelEvent](/api/data-models/LevelEvent.md)、[LevelEventInfo](/api/data-models/LevelEventInfo.md)、[PropertyInfo](/api/data-models/PropertyInfo.md)、[Property](/api/data-models/Property.md)、[事件类型与属性枚举](/api/data-models/event-metadata-enums.md)、[LevelDataCLS](/api/data-models/LevelDataCLS.md)、[读取结果与序列化](/api/data-models/serialization-validation.md) | `.adofai` 数据、事件对象、属性元数据、事件枚举、属性枚举、关卡选择摘要和序列化 |
 | 编辑器控件 | [InspectorPanel](/api/editor/InspectorPanel.md)、[PropertiesPanel](/api/editor/PropertiesPanel.md)、[Property](/api/data-models/Property.md)、[PropertyControl 控件族](/api/editor/property-controls.md) | 属性面板、控件绑定、事件编辑 |
 | 编辑器动作 | [ADOFAI.Editor.Actions](/api/editor/editor-actions.md) | 撤销、重做、选择、复制、粘贴、播放、文件、书签和面板动作 |
-| 编辑器长流程 | [scnEditor 长流程](/api/editor/scnEditor-workflows.md)、[偏好设置、粒子编辑器与辅助面板](/api/editor/preferences-particle-panels.md) | 文件打开保存、新建关卡、选择、剪贴板、事件增删、撤销重做、播放预览和辅助面板 |
+| 编辑器长流程 | [scnEditor 长流程](/api/editor/scnEditor-workflows.md)、[偏好设置、粒子编辑器与辅助面板](/api/editor/preferences-particle-panels.md)、[编辑器小型 UI 类](/api/editor/editor-ui-widgets.md) | 文件打开保存、新建关卡、选择、剪贴板、事件增删、撤销重做、播放预览、辅助面板和小型 UI 组件 |
 | 事件效果 | `ffxPlusBase`、`ffx*Plus`、`ffx*` | 事件执行组件、相机、轨道、装饰、滤镜、声音 |
 | 存档与服务 | `Persistence`、`GCS`、`GCNS`、平台 helper、DLC、Steam | 全局状态、存档、平台差异、外部服务 |
 
@@ -45,3 +45,6 @@
 | `ParticleEditor` | `7thRhythmSource/ADOFAi/ADOFAI.Editor.ParticleEditor/ParticleEditor.cs` | `AddParticle` 事件的分组属性编辑器和粒子预览面板。 |
 | `FindCommentPanel` | `7thRhythmSource/ADOFAi/ADOFAI.Editor.Panels/FindCommentPanel.cs` | 根据注释文本搜索并跳转地板。 |
 | `SaveStateScope` | `7thRhythmSource/ADOFAi/SaveStateScope.cs` | `scnEditor` 状态保存区间，构造时可调用 `SaveState`，并用 `changingState` 防止嵌套状态切换。 |
+| `LevelEventButton` | `7thRhythmSource/ADOFAi/ADOFAI/LevelEventButton.cs` | 编辑器事件栏按钮，负责点击添加事件、筛选事件和收藏事件。 |
+| `RDColorPickerPopup` | `7thRhythmSource/ADOFAi/ADOFAI/RDColorPickerPopup.cs` | 颜色选择弹窗，连接 Hex、RGBA、色板、透明度和属性控件接口。 |
+| `TransformGizmoHolder` | `7thRhythmSource/ADOFAi/TransformGizmoHolder.cs` | 编辑器 gizmo 手柄集合基类，负责手柄位置、旋转、hover 动画和图标切换。 |

@@ -33,6 +33,7 @@
     * [ADOFAI.Editor.Actions](/api/editor/editor-actions.md)
     * [偏好设置、粒子编辑器与辅助面板](/api/editor/preferences-particle-panels.md)
     * [scnEditor 长流程](/api/editor/scnEditor-workflows.md)
+    * [编辑器小型 UI 类](/api/editor/editor-ui-widgets.md)
 
 * 模块
   * [模块入口](/modules/index.md)
@@ -47,3 +48,4 @@
   * [编辑器动作系统](/modules/editor-actions.md)
   * [编辑器辅助面板](/modules/editor-auxiliary-panels.md)
   * [编辑器长流程](/modules/editor-workflows.md)
+  * [编辑器小型 UI 组件](/modules/editor-ui-widgets.md)
