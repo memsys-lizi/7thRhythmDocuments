@@ -7,7 +7,7 @@
 | 分组 | 计划页面 | 覆盖类型 |
 | --- | --- | --- |
 | 核心入口 | [ADOBase](/api/core/ADOBase.md)、[ADOClass](/api/core/ADOClass.md)、[ADOStartup](/api/core/ADOStartup.md) | 全局访问器、启动流程、平台初始化、资源初始化 |
-| 场景控制 | [scrController](/api/core/scrController.md)、[scrConductor](/api/core/scrConductor.md)、`scnGame`、`scnEditor` | 游戏状态、音频时钟、自定义关卡运行、编辑器入口 |
+| 场景控制 | [scrController](/api/core/scrController.md)、[scrConductor](/api/core/scrConductor.md)、[scnGame](/api/core/scnGame.md)、`scnEditor` | 游戏状态、音频时钟、自定义关卡运行、编辑器入口 |
 | 轨道与地板 | `scrLevelMaker`、`scrFloor`、`Level` | 路径生成、地板对象、官方关卡脚本基类 |
 | 关卡数据 | `LevelData`、`LevelEvent`、`LevelEventInfo`、`PropertyInfo` | `.adofai` 数据、事件对象、属性元数据 |
 | 编辑器控件 | `InspectorPanel`、`PropertiesPanel`、`Property`、`PropertyControl_*` | 属性面板、控件绑定、事件编辑 |
@@ -24,6 +24,7 @@
 | `ADOClass` | `7thRhythmSource/ADOFAi/ADOClass.cs` | 继承 `RDClassDll`，为 `Level` 等普通类提供实例式全局访问器。 |
 | `scrController` | `7thRhythmSource/ADOFAi/scrController.cs` | 继承 `StateBehaviour`，使用 `States` 管理开始、倒计时、checkpoint、玩家控制、失败和胜利状态。 |
 | `scrConductor` | `7thRhythmSource/ADOFAi/scrConductor.cs` | 继承 `ADOBase`，管理歌曲 AudioSource、DSP 时间、BPM、节拍传播、hitsound、hold sound 和校准预设。 |
+| `scnGame` | `7thRhythmSource/ADOFAi/scnGame.cs` | 继承 `ADOBase`，加载 `LevelData`，重建路径，刷新素材，把 `LevelEvent` 应用到地板并准备 VFX。 |
 | `LevelData` | `7thRhythmSource/ADOFAi/ADOFAI/LevelData.cs` | 保存路径数据、角度数据、事件数组、装饰数组和 8 类 settings 事件，并通过属性读取歌曲、关卡、轨道、背景和相机设置。 |
 | `LevelEvent` | `7thRhythmSource/ADOFAi/ADOFAI/LevelEvent.cs` | 保存 `floor`、`eventType`、属性字典、禁用字典、可见/锁定状态和事件元数据，并提供类型化读取方法。 |
 | `PropertyControl` | `7thRhythmSource/ADOFAi/ADOFAI.LevelEditor.Controls/PropertyControl.cs` | 编辑器属性控件基类，负责控件文本、枚举设置、输入校验、启用状态和对路径/地板变化的回写。 |

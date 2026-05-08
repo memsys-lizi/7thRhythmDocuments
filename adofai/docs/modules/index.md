@@ -9,7 +9,8 @@ ADOFAI 文档按源码模块组织。模块页面负责解释系统边界、核�
 | [核心启动与全局访问](/modules/core-startup.md) | `ADOStartup`、`ADOBase`、`ADOClass` | 游戏启动时初始化了哪些系统，全局对象从哪里取。 |
 | 核心全局状态 | `GCS`、`GCNS`、`Persistence` | 哪些状态跨场景保存，哪些字段来自存档和全局常量。 |
 | [运行时控制器状态机](/modules/runtime-controller.md) | `scrController`、`States` | 游戏状态机、暂停、关卡跳转和控制器协作对象。 |
-| 场景与关卡运行 | `scnGame`、`Level`、`LevelML`、`LevelTNO` | 官方关卡与自定义关卡的运行路径。 |
+| [自定义关卡运行主线](/modules/custom-level-runtime.md) | `scnGame`、`LevelData`、`scrLevelMaker`、`scrFloor`、`ffxPlusBase` | `.adofai` 数据怎样变成运行时地板、装饰、音频和 VFX。 |
+| 官方关卡脚本 | `Level`、`LevelML`、`LevelTNO` | 官方关卡脚本的运行路径和特殊逻辑。 |
 | [音频与节拍运行时](/modules/audio-beat-runtime.md) | `scrConductor`、`CalibrationPreset`、`AudioManager`、`AsyncInputManager` | DSP 时间、BPM、偏移、音频输出、节拍传播和预排声音。 |
 | 轨道与地板 | `scrLevelMaker`、`scrFloor`、`FloorRenderer`、轨道形状枚举 | 路径数据怎样生成地板，地板怎样承载事件和判定状态。 |
 | 关卡数据模型 | `LevelData`、`LevelEvent`、`EventsArray`、`DecorationsArray`、序列化转换器 | `.adofai` 文件怎样映射到运行时对象。 |

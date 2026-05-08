@@ -11,7 +11,7 @@ ADOFAI 源码目录当前包含 1222 个 `.cs` 文件。主工程代码大量位
 | 阶段 | 状态 | 目标 | 当前记录 |
 | --- | --- | --- | --- |
 | 阶段 0：文档基础设施与架构侦察 | 已完成 | 建立 docsify 项目、侧边栏、黑白样式、首页、进度页、架构总览和源码地图 | 已确认源码规模和主要类族，已建立文档项目骨架、架构总览、源码地图和初始导航 |
-| 阶段 1：核心骨架 | 进行中 | 深写 `ADOBase`、`ADOClass`、`ADOStartup`、`scrController`、`scrConductor`、`scnGame`、`scnEditor`、`scrLevelMaker`、`scrFloor` | 已完成 [ADOBase](/api/core/ADOBase.md)、[ADOClass](/api/core/ADOClass.md)、[ADOStartup](/api/core/ADOStartup.md)、[scrController](/api/core/scrController.md)、[scrConductor](/api/core/scrConductor.md)、[核心启动与全局访问](/modules/core-startup.md)、[运行时控制器状态机](/modules/runtime-controller.md) 和 [音频与节拍运行时](/modules/audio-beat-runtime.md) |
+| 阶段 1：核心骨架 | 进行中 | 深写 `ADOBase`、`ADOClass`、`ADOStartup`、`scrController`、`scrConductor`、`scnGame`、`scnEditor`、`scrLevelMaker`、`scrFloor` | 已完成 [ADOBase](/api/core/ADOBase.md)、[ADOClass](/api/core/ADOClass.md)、[ADOStartup](/api/core/ADOStartup.md)、[scrController](/api/core/scrController.md)、[scrConductor](/api/core/scrConductor.md)、[scnGame](/api/core/scnGame.md)、[核心启动与全局访问](/modules/core-startup.md)、[运行时控制器状态机](/modules/runtime-controller.md)、[音频与节拍运行时](/modules/audio-beat-runtime.md) 和 [自定义关卡运行主线](/modules/custom-level-runtime.md) |
 | 阶段 2：关卡数据模型 | 未开始 | 深写 `LevelData`、`LevelEvent`、`LevelEventInfo`、`PropertyInfo`、`Property`、`LevelEventType`、`LevelEventCategory`、`LevelEventExecutionTime`、序列化与校验 | 待写 |
 | 阶段 3：编辑器系统 | 未开始 | 覆盖 `scnEditor`、`InspectorPanel`、`PropertiesPanel`、`PropertyControl_*`、`ADOFAI.Editor.Actions`、偏好设置、粒子编辑器和编辑器面板 | 待写 |
 | 阶段 4：运行时游戏系统 | 未开始 | 覆盖控制器状态机、输入、判定、轨道生成、地板、相机、音频、VFX、暂停、结算和场景流程 | 待写 |
