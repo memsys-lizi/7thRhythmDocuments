@@ -11,7 +11,9 @@
     * [ADOBase](/api/core/ADOBase.md)
     * [ADOClass](/api/core/ADOClass.md)
     * [ADOStartup](/api/core/ADOStartup.md)
+    * [scrController](/api/core/scrController.md)
 
 * 模块
   * [模块入口](/modules/index.md)
   * [核心启动与全局访问](/modules/core-startup.md)
+  * [运行时控制器状态机](/modules/runtime-controller.md)
