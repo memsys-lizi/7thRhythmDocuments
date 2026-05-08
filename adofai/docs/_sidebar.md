@@ -64,6 +64,7 @@
     * [根目录 UI、暂停菜单与场景脚本索引](/api/review/root-ui-scene-coverage.md)
     * [官方演出、世界显示与统计脚本索引](/api/review/official-presentation-coverage.md)
     * [工具、枚举与网格渲染脚本索引](/api/review/tools-mesh-light-models-coverage.md)
+    * [编辑器动作补充与移动菜单控件索引](/api/review/editor-actions-mobile-menu-coverage.md)
 
 * 模块
   * [模块入口](/modules/index.md)

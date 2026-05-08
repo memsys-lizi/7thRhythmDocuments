@@ -11,9 +11,9 @@
 | 项目 | 数量 | 说明 |
 | --- | --- | --- |
 | 源码 `.cs` 文件总数 | 1222 | PowerShell 递归统计 `7thRhythmSource/ADOFAi`。 |
-| 文档 `.md` 文件总数 | 82 | PowerShell 递归统计 `adofai/docs`。 |
-| 文件名或类型名已在文档中命中 | 856 | 用文档正文匹配 `.cs` 文件名或去扩展名后的类型名。 |
-| 文件名或类型名尚未在文档中命中 | 366 | 其中包含第三方目录、示例脚本、移动菜单控件、编辑器动作补项和平台输入小类。 |
+| 文档 `.md` 文件总数 | 83 | PowerShell 递归统计 `adofai/docs`。 |
+| 文件名或类型名已在文档中命中 | 902 | 用文档正文匹配 `.cs` 文件名或去扩展名后的类型名。 |
+| 文件名或类型名尚未在文档中命中 | 320 | 其中包含第三方目录、示例脚本、平台输入小类和全站复核补项。 |
 
 这个命中统计只用于找漏项。一个文件名未命中不等于完全没有解释：例如部分 `CameraFilterPack_*` 文件已被相机滤镜流程页从系统层面说明，但还没有按文件族做覆盖索引。
 
@@ -64,11 +64,11 @@
 | 7.1 | `CameraFilterPack_*`、滤镜 shader 驱动组件、`scrVfxPlus` 中滤镜字典使用点 | 已完成：[CameraFilterPack 文件族索引](/api/review/camera-filterpack-coverage.md)。 |
 | 7.2 | 剩余 `ffx*`、旧式官方关卡效果、sprite tween、相机 tween、菜单效果 | 已完成：[旧式 ffx 效果组件索引](/api/review/legacy-ffx-coverage.md)。 |
 | 7.3 | 剩余 `scr*` 条件开关、按钮、菜单、文本、调试 HUD 和小型 UI | 进行中：第一批见 [scr UI、条件与文本辅助组件索引](/api/review/scr-ui-condition-coverage.md)，第二批见 [scr 动画、相机与 HUD 辅助组件索引](/api/review/scr-animation-hud-camera-coverage.md)，第三批见 [scr 场景、菜单与服务辅助组件索引](/api/review/scr-scene-menu-service-coverage.md)。 |
-| 7.4 | 根目录 UI、按钮、暂停菜单、场景脚本、`MobileMenu` 目录剩余控件、`nn.hid`、Switch/移动端输入小类 | 进行中：根目录 UI 与场景脚本见 [根目录 UI、暂停菜单与场景脚本索引](/api/review/root-ui-scene-coverage.md)。 |
-| 7.5 | `ADOFAI.Editor.Actions` 剩余动作类、编辑器模型和接口 | 编辑器动作文件级索引。 |
+| 7.4 | 根目录 UI、按钮、暂停菜单、场景脚本、`MobileMenu` 目录剩余控件、`nn.hid`、Switch/移动端输入小类 | 进行中：根目录 UI 与场景脚本见 [根目录 UI、暂停菜单与场景脚本索引](/api/review/root-ui-scene-coverage.md)，移动菜单剩余控件见 [编辑器动作补充与移动菜单控件索引](/api/review/editor-actions-mobile-menu-coverage.md)。 |
+| 7.5 | `ADOFAI.Editor.Actions` 剩余动作类、编辑器模型和接口 | 已完成：[编辑器动作补充与移动菜单控件索引](/api/review/editor-actions-mobile-menu-coverage.md)。 |
 | 7.6 | 官方关卡大型脚本、Taro cutscene、世界显示和小游戏脚本剩余类 | 进行中：官方演出和世界显示见 [官方演出、世界显示与统计脚本索引](/api/review/official-presentation-coverage.md)。 |
 | 7.7 | 枚举、轻量模型、扩展方法、IO/音频工具、渲染网格类和小型行为组件 | 已完成：[工具、枚举与网格渲染脚本索引](/api/review/tools-mesh-light-models-coverage.md)。 |
-| 7.8 | 第三方目录归档表和全站链接复核 | 第三方依赖边界与全站复核页。 |
+| 7.8 | 平台输入小类、第三方目录归档表和全站链接复核 | 平台输入与第三方依赖边界复核页。 |
 
 ## 已覆盖专题入口
 
@@ -83,4 +83,4 @@
 
 ## 阶段 7 当前状态
 
-阶段 7 正在补齐剩余文件族。当前已完成文件级统计、`CameraFilterPack_*`、旧式 `ffx*`、三批 `scr*`、根目录 UI/场景、官方演出、世界显示、枚举、扩展工具、IO/音频工具、地板网格、遮罩和小型行为组件索引。下一轮继续处理编辑器动作剩余文件、移动菜单剩余控件、平台输入小类和第三方目录边界。
+阶段 7 正在补齐剩余文件族。当前已完成文件级统计、`CameraFilterPack_*`、旧式 `ffx*`、三批 `scr*`、根目录 UI/场景、官方演出、世界显示、枚举、扩展工具、IO/音频工具、地板网格、遮罩、小型行为组件、编辑器缩放动作和移动菜单剩余控件索引。下一轮继续处理平台输入小类、第三方目录边界和全站最终复核。

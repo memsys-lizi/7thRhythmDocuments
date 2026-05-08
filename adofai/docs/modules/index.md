@@ -42,3 +42,4 @@ ADOFAI 文档按源码模块组织。模块页面负责解释系统边界、核�
 | [根目录 UI、暂停菜单与场景脚本索引](/api/review/root-ui-scene-coverage.md) | 根目录 UI 与场景脚本 | 覆盖成就弹窗、暂停菜单按钮、暂停关卡选择、Taro medal、玩家选择、Splash、Taro 菜单和扫雷小游戏。 |
 | [官方演出、世界显示与统计脚本索引](/api/review/official-presentation-coverage.md) | 官方演出文件族 | 覆盖世界完成灯光、Neo Cosmos/Taro 统计类、Mawaru 演出对象、Taro 剧情文本系统和 Cutscene 系列。 |
 | [工具、枚举与网格渲染脚本索引](/api/review/tools-mesh-light-models-coverage.md) | 工具、轻量模型和渲染辅助 | 覆盖剩余枚举、`AsyncKeyCode`、`PlanetColor`、扩展方法、目录/音频/CSV 工具、地板网格、遮罩和小型行为组件。 |
+| [编辑器动作补充与移动菜单控件索引](/api/review/editor-actions-mobile-menu-coverage.md) | 编辑器缩放动作与移动菜单剩余控件 | 覆盖 `Zoom*EditorAction`、`MobileMenuScreen` 派生类、箭头方向、拖拽对象、隐藏交互、DLC transition、视频和评价弹窗。 |
