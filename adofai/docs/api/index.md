@@ -17,7 +17,7 @@
 | 相机与 VFX | [相机与 VFX 运行链路](/api/runtime/camera-vfx-chain.md) | 相机跟随、自由相机、缩放、旋转、RenderTexture、VFX 调度、滤镜、闪屏、震屏和 Bloom |
 | 结算与保存 | [结算、成绩与进度保存](/api/runtime/results-save-flow.md) | 命中统计、完成度、准确率、X 准确率、官方和自定义成绩保存、详细结果、灯笼和失败条 |
 | 场景流转 | [场景流转与加载跳转](/api/runtime/scene-loading-flow.md) | 传送门分发、官方关卡进入、自定义关卡加载、黑场转场、场景加载和自定义关卡重置 |
-| 事件效果 | [事件执行总览](/api/events/event-execution-overview.md)、[轨道与地板事件](/api/events/track-floor-events.md)、[相机、滤镜与屏幕事件](/api/events/camera-filter-events.md)、[装饰、对象、文本与声音事件](/api/events/decoration-object-text-sound-events.md)、[运行时效果族补充](/api/runtime/effect-families.md)、[官方关卡脚本运行入口](/api/runtime/official-level-scripts.md)、`ffxPlusBase`、`ffx*Plus`、`ffx*` | 事件执行组件、事件到效果映射、轨道、装饰、对象、文本、滤镜、声音、粒子、输入事件、帧率和官方关卡方法调用 |
+| 事件效果 | [事件执行总览](/api/events/event-execution-overview.md)、[轨道与地板事件](/api/events/track-floor-events.md)、[相机、滤镜与屏幕事件](/api/events/camera-filter-events.md)、[装饰、对象、文本与声音事件](/api/events/decoration-object-text-sound-events.md)、[输入、粒子与剩余运行时事件](/api/events/input-particle-runtime-events.md)、[运行时效果族补充](/api/runtime/effect-families.md)、[官方关卡脚本运行入口](/api/runtime/official-level-scripts.md)、`ffxPlusBase`、`ffx*Plus`、`ffx*` | 事件执行组件、事件到效果映射、轨道、装饰、对象、文本、滤镜、声音、粒子、输入事件、帧率和官方关卡方法调用 |
 | 存档与服务 | `Persistence`、`GCS`、`GCNS`、平台 helper、DLC、Steam | 全局状态、存档、平台差异、外部服务 |
 
 ## 当前已确认的关键事实
@@ -91,3 +91,6 @@
 | `ffxSetObjectPlus` | `7thRhythmSource/ADOFAi/ffxSetObjectPlus.cs` | `SetObject` 运行时效果，修改对象装饰中的 Planet 和 Floor 属性。 |
 | `ffxSetTextPlus` / `ffxSetDefaultText` | `7thRhythmSource/ADOFAi/ffxSetTextPlus.cs`、`7thRhythmSource/ADOFAi/ffxSetDefaultText.cs` | 装饰文本和 HUD 默认文本效果。 |
 | `ffxPlaySound` | `7thRhythmSource/ADOFAi/ffxPlaySound.cs` | `PlaySound` 运行时效果，按 conductor DSP 时间排程 hitsound。 |
+| `ffxSetInputEventPlus` | `7thRhythmSource/ADOFAi/ffxSetInputEventPlus.cs` | `SetInputEvent` 运行时效果，把同 tag 效果登记为输入触发。 |
+| `ffxSetParticlePlus` / `ffxEmitParticlePlus` | `7thRhythmSource/ADOFAi/ADOFAI.FloorFX/ffxSetParticlePlus.cs`、`7thRhythmSource/ADOFAi/ADOFAI.FloorFX/ffxEmitParticlePlus.cs` | 粒子装饰模块修改和立即发射。 |
+| `ffxSetFrameRatePlus` / `ffxScalePlanetsPlus` | `7thRhythmSource/ADOFAi/ffxSetFrameRatePlus.cs`、`7thRhythmSource/ADOFAi/ffxScalePlanetsPlus.cs` | 自定义帧率和星球缩放运行时效果。 |
