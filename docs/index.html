@@ -14,6 +14,15 @@
   <body>
     <div id="app">正在加载文档...</div>
     <script>
+      function escapeHtml(html) {
+        return html
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")
+          .replace(/"/g, "&quot;")
+          .replace(/'/g, "&#039;");
+      }
+
       window.$docsify = {
         name: "节奏医生项目文档",
         repo: "",
@@ -21,12 +30,50 @@
         subMaxLevel: 2,
         auto2top: true,
         themeColor: "#111111",
+        maxLevel: 3,
         search: {
           placeholder: "搜索文档",
           noData: "没有找到结果",
           depth: 4
-        }
+        },
+        markdown: {
+          renderer: {
+            code: function(code, lang) {
+              if (lang === "mermaid") {
+                return '<div class="mermaid">' + escapeHtml(code) + "</div>";
+              }
+              return this.origin.code.apply(this, arguments);
+            }
+          }
+        },
+        plugins: [
+          function(hook) {
+            hook.doneEach(function() {
+              if (window.mermaid) {
+                window.mermaid.run();
+              }
+            });
+          }
+        ]
       };
+    </script>
+    <script src="//cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>
+      if (window.mermaid) {
+        mermaid.initialize({
+          startOnLoad: false,
+          theme: "base",
+          themeVariables: {
+            primaryColor: "#ffffff",
+            primaryTextColor: "#111111",
+            primaryBorderColor: "#111111",
+            lineColor: "#111111",
+            secondaryColor: "#f4f4f4",
+            tertiaryColor: "#ffffff",
+            fontFamily: "Arial, sans-serif"
+          }
+        });
+      }
     </script>
     <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
     <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script>

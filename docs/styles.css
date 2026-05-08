@@ -4,6 +4,7 @@
   --text-color-secondary: #555555;
   --border-color: #dddddd;
   --sidebar-background: #ffffff;
+  --mono-tint: #f4f4f4;
 }
 
 body {
@@ -38,6 +39,31 @@ body {
 
 .markdown-section blockquote {
   border-left-color: #111111;
+}
+
+.markdown-section table {
+  display: table;
+  width: 100%;
+}
+
+.markdown-section th {
+  background: #f4f4f4;
+  color: #111111;
+}
+
+.markdown-section td,
+.markdown-section th {
+  border-color: #dddddd;
+}
+
+.markdown-section code {
+  background: #f4f4f4;
+  color: #111111;
+}
+
+.markdown-section pre {
+  background: #f4f4f4;
+  border: 1px solid #dddddd;
 }
 
 .search input {
