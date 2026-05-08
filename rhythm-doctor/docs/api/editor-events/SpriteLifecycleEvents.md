@@ -228,3 +228,4 @@ flowchart TD
 `MakeSprite` 负责把目标放入 `LevelBase.sprites`。其他精灵事件依赖这个字典查找目标，因此 `spriteId` 是精灵事件链的核心连接点。
 
 
+

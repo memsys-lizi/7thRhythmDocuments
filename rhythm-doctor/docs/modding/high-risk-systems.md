@@ -146,6 +146,7 @@
 | 3 | [编辑器事件系统](/modules/editor-events.md) | 检查事件分组、Inspector、控件和运行路径是否互相连通。 |
 | 4 | [数据模型与枚举](/modules/data-models.md) | 检查 `.rdlevel`、settings、条件、音频和枚举页面是否覆盖源码模型。 |
 | 5 | [官方关卡覆盖清单](/api/levels/coverage.md) | 对 75 个 `Level_*.cs` 文件做页面归属复核。 |
-| 6 | [源码 API 索引](/api/README.md) | 检查侧边栏、API 索引和模块页链接是否一致。 |
+| 6 | [源码 API 索引](/api/index.md) | 检查侧边栏、API 索引和模块页链接是否一致。 |
+
 
 

@@ -304,3 +304,4 @@ Booth 版本与普通 Freezeshot 同样使用 afterimage，但只创建 6 个 re
 本页已纳入 [官方关卡覆盖清单](/api/levels/coverage.md)，对应运动与节奏变体类群已完成阶段 7 复核。
 
 
+

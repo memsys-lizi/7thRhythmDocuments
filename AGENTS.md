@@ -32,7 +32,7 @@
 - 重点类、关卡脚本、事件类、数据模型、枚举、运行时系统和源码研究入口已经解释其字段、属性、方法、生命周期和协作关系。
 - 自动生成或人工维护的覆盖清单中，没有未分类的大块源码文件。
 - 阶段 0 到阶段 7 均为 `已完成`，并且阶段 7 已完成全站复核、交叉链接、术语表、调用图和缺失项清单清理。
-- `rhythm-doctor/docs/progress.md`、`rhythm-doctor/docs/_sidebar.md`、`rhythm-doctor/docs/api/README.md`、模块页和 `AGENTS.md` 的进度一致。
+- `rhythm-doctor/docs/progress.md`、`rhythm-doctor/docs/_sidebar.md`、`rhythm-doctor/docs/api/index.md`、模块页和 `AGENTS.md` 的进度一致。
 
 如果自动化任务启动时发现上述条件已经满足，应停止继续写作，不再新增重复页面或空泛总结；只需要报告“文档已完成，自动化无需继续推进”。如果自动化系统允许删除或暂停当前任务，必须删除当前文档自动化任务，避免用户不在时继续空转。
 

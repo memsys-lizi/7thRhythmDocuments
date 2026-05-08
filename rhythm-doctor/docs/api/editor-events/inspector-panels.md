@@ -132,3 +132,4 @@ flowchart LR
 | [BasePropertyInfo](/api/editor-events/BasePropertyInfo.md) | 自动属性面板的字段来源与控件映射。 |
 
 
+

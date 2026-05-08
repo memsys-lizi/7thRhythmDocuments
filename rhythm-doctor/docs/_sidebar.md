@@ -3,14 +3,14 @@
   * [工程概览](/architecture/overview.md)
   * [依赖说明](/architecture/dependencies.md)
 * 模块
-  * [模块总览](/modules/README.md)
+  * [模块总览](/modules/index.md)
   * [核心骨架](/modules/core.md)
   * [编辑器事件系统](/modules/editor-events.md)
   * [运行时游戏系统](/modules/runtime.md)
   * [数据模型与枚举](/modules/data-models.md)
   * [官方关卡脚本](/modules/levels.md)
 * API
-  * [源码 API 索引](/api/README.md)
+  * [源码 API 索引](/api/index.md)
   * 复核清单
     * [阶段 3 与阶段 4 复核](/api/review/stage-3-4-review.md)
     * [阶段 7 全站复核](/api/review/stage-7-site-review.md)
@@ -98,7 +98,7 @@
     * [其余官方与测试脚本](/api/levels/misc-official-levels.md)
     * [官方关卡覆盖清单](/api/levels/coverage.md)
 * 源码研究
-  * [源码研究入口](/modding/README.md)
+  * [源码研究入口](/modding/index.md)
   * [可调用方法索引](/modding/callable-methods.md)
   * [事件写法索引](/modding/event-patterns.md)
   * [数据字段索引](/modding/data-fields.md)
@@ -107,5 +107,6 @@
   * [高风险系统索引](/modding/high-risk-systems.md)
   * [未分类源码覆盖清单](/modding/source-coverage.md)
 * [术语表](/glossary.md)
+
 
 

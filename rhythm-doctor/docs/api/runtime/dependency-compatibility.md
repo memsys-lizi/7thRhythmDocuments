@@ -118,6 +118,7 @@ flowchart TD
 | 类型 | 行为 |
 | --- | --- |
 | `System.Runtime.CompilerServices.IsExternalInit` | 空内部静态类，用于让当前编译目标识别 `init` 相关元数据。源码中没有字段和方法。 |
+| `UnitySourceGeneratedAssemblyMonoScriptTypes_v1` | Unity 生成的 MonoScript 类型索引元信息，带 `CompilerGenerated`、`EditorBrowsable(Never)` 和 `GeneratedCode` 标记；内部 `MonoScriptData` 保存脚本路径数据、类型数据、类型总数、文件总数和是否 editor-only。 |
 
 ## 与其他页面的关系
 
@@ -127,5 +128,6 @@ flowchart TD
 | [视觉与动画辅助类](/api/runtime/visual-animation-helpers.md) | 使用 `Kino.Mirror`、`Perspective2DSpriteExtensions`、`RDProceduralTree` 等视觉依赖。 |
 | [小游戏与测试组件](/api/runtime/mini-games-tests.md) | 波形测试、举重音频和测试脚本会复用本页的部分辅助类型。 |
 | [架构依赖说明](/architecture/dependencies.md) | 汇总 Unity 包、插件和第三方命名空间。 |
+
 
 

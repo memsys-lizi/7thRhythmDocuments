@@ -1,13 +1,13 @@
 # 未分类源码覆盖清单
 
-本页记录 `RDFucked/Assets/Scripts/Assembly-CSharp` 的源码覆盖统计。统计方式是读取当前源码目录下所有 `.cs` 文件，再用文件名在 `docs/**/*.md` 中做字符串命中检查。
+本页记录 RD 主工程源码覆盖统计。统计方式是读取当前源码目录下所有 `.cs` 文件，再用文件名在 `docs/**/*.md` 中做字符串命中检查。
 
 ## 当前统计
 
 | 项目 | 数量 |
 | --- | --- |
-| `Assembly-CSharp` 下 `.cs` 文件总数 | 1050 |
-| 文件名已在文档中命中 | 1050 |
+| `Assembly-CSharp` 下 `.cs` 文件总数 | 1051 |
+| 文件名已在文档中命中 | 1051 |
 | 文件名未在文档中命中 | 0 |
 
 ## 文档规模统计
@@ -33,6 +33,7 @@
 | `Kino` | 2 | 已归入后处理与依赖说明 |
 | `Rewired` | 2 | Rewired 本地化辅助，按依赖说明处理 |
 | 其他单文件目录 | 6 | `DG`、`ProceduralTree`、`Properties`、`RowEntranceTest`、`System` 等 |
+| Unity 源码生成文件 | 1 | `UnitySourceGeneratedAssemblyMonoScriptTypes_v1`，Unity 生成的 MonoScript 类型索引元信息 |
 
 ## 已有主干覆盖
 
@@ -118,9 +119,10 @@
 
 | 项目 | 说明 |
 | --- | --- |
-| 文件总数 | 使用 `Get-ChildItem RDFucked/Assets/Scripts/Assembly-CSharp -Recurse -Filter *.cs` 统计 |
+| 文件总数 | 使用当前 RD 源码目录下 `.cs` 文件统计 |
 | 文档命中 | 把文件名去掉 `.cs` 后，在 `docs/**/*.md` 正文中查找同名字符串 |
 | 未命中含义 | 文件名没有出现在当前文档正文中；当前未命中为 0 |
 | 覆盖目标 | 页面覆盖类职责、字段、方法、生命周期和跨模块关系 |
+
 
 
