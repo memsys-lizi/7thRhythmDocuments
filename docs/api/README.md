@@ -1,86 +1,106 @@
-# API 草稿区
+# 源码 API 索引
 
-这里用于放置自动生成并等待人工复核的 API 页面。
+本区按源码类型和编辑器事件整理 API 页面。页面内容以 `RDFucked/Assets/Scripts/Assembly-CSharp` 中的 RD 主工程代码为依据，侧重类职责、关键字段、方法行为、调用关系和 Mod 使用风险。
 
-## 生成目标
+## 阅读方式
 
-后续将使用 Roslyn 解析 `RDFucked/Assets/Scripts/Assembly-CSharp`，生成：
-
-- 类型索引。
-- 类、结构体、接口、枚举页面。
-- 字段、属性、方法签名。
-- 继承关系和源码路径。
-
-## 页面状态
-
-| 状态 | 含义 |
-| --- | --- |
-| 草稿 | 自动生成，尚未人工解释 |
-| 复核中 | 已开始检查源码和调用点 |
-| 已复核 | 字段、属性、方法说明已人工确认 |
-| 需补充 | 已发现成员或页面缺口，需要继续阅读源码后补写 |
-
-## 约束
-
-- 自动生成脚本不能修改 `RDFucked/`。
-- 自动草稿不能替代人工深写。
-- 核心模块 API 页必须与模块讲解页互相链接。
+- 先读 [核心骨架](/modules/core.md)，理解全局入口、关卡状态、音乐时间轴、游戏场景和编辑器场景。
+- 再读 [编辑器事件系统](/modules/editor-events.md)，理解事件数据、时间线控件和 Inspector 面板如何协作。
+- 查具体事件时，可以从 [事件覆盖清单](/api/editor-events/event-coverage.md) 按 `LevelEventType` 编号进入对应页面。
 
 ## 核心类
 
-| 页面 | 状态 | 说明 |
-| --- | --- | --- |
-| [RDBase](/api/core/RDBase.md) | 初稿 | 已人工阅读源码，记录字段、属性、方法和风险 |
-| [RDClass](/api/core/RDClass.md) | 初稿 | 已人工阅读源码，记录非组件便利基类 |
-| [LevelBase](/api/core/LevelBase.md) | 初稿 | 已人工阅读主结构，先按职责分组，后续拆页逐项深写 |
-| [scrConductor](/api/core/scrConductor.md) | 初稿 | 已人工阅读源码，记录音乐时间轴、播放、Scrub、BPM 和校准入口 |
-| [scnGame](/api/core/scnGame.md) | 初稿 | 已人工阅读源码，记录游戏场景状态、Beat、行、房间、判定和流程入口 |
-| [scnEditor](/api/core/scnEditor.md) | 初稿 | 已人工阅读源码，记录编辑器场景状态、事件控件、文件、播放预览和选择流程 |
+| 页面 | 内容 |
+| --- | --- |
+| [RDBase](/api/core/RDBase.md) | 组件脚本的全局入口、字段、属性、方法和风险 |
+| [RDClass](/api/core/RDClass.md) | 非组件便利基类和常用单例访问方式 |
+| [LevelBase](/api/core/LevelBase.md) | 关卡运行状态、事件列表、BPM、判定统计和 Mod 可调用方法入口 |
+| [scrConductor](/api/core/scrConductor.md) | 音乐时间轴、播放、Scrub、BPM 和校准入口 |
+| [scnGame](/api/core/scnGame.md) | 游戏场景状态、Beat、行、房间、判定和流程入口 |
+| [scnEditor](/api/core/scnEditor.md) | 编辑器场景状态、事件控件、文件、播放预览和选择流程 |
 
 ## 编辑器事件基础机制
 
-| 页面 | 状态 | 说明 |
-| --- | --- | --- |
-| [LevelEvent_Base](/api/editor-events/LevelEvent_Base.md) | 初稿 | 已人工阅读源码，记录事件公共字段、编码解码、条件、标签和节拍调度 |
-| [LevelEventInfo](/api/editor-events/LevelEventInfo.md) | 初稿 | 已人工阅读源码，记录事件元数据 Attribute、属性反射和枚举范围 |
-| [BasePropertyInfo](/api/editor-events/BasePropertyInfo.md) | 初稿 | 已人工阅读源码，记录事件属性序列化、默认控件映射和 PropertyControl 管线 |
-| [InspectorPanel](/api/editor-events/InspectorPanel.md) | 初稿 | 已人工阅读源码，记录自动面板、保存监听、本地化和面板管理器 |
-| [编辑器控件索引](/api/editor-events/editor-controls.md) | 初稿 | 已人工阅读源码，记录时间线控件、属性面板和属性字段控件关系 |
-| [自定义方法事件](/api/editor-events/custom-methods.md) | 初稿 | 已人工阅读源码，记录自定义方法事件、自动补全规则、`ListedMethod` 和可调用方法清单 |
-| [事件覆盖清单](/api/editor-events/event-coverage.md) | 初稿 | 已按 `LevelEventType` 枚举顺序记录 0 到 80 号事件的页面归属和覆盖状态 |
-| [事件运行路径](/api/editor-events/runtime-flow.md) | 初稿 | 已人工阅读源码，记录 `LevelEvent_Base`、`LevelBase`、`scrExecuteOnCertainBeat` 的运行调度关系 |
-| [Inspector 面板读写链路](/api/editor-events/inspector-flow.md) | 初稿 | 已人工阅读源码，记录自动面板、手工面板、输入监听和 `AddOneshotBeat` 面板读写示例 |
+| 页面 | 内容 |
+| --- | --- |
+| [LevelEvent_Base](/api/editor-events/LevelEvent_Base.md) | 事件公共字段、编码解码、条件、标签和节拍调度 |
+| [LevelEventInfo](/api/editor-events/LevelEventInfo.md) | 事件元数据 Attribute、属性反射和枚举范围 |
+| [BasePropertyInfo](/api/editor-events/BasePropertyInfo.md) | 事件属性序列化、默认控件映射和 PropertyControl 管线 |
+| [InspectorPanel](/api/editor-events/InspectorPanel.md) | 自动面板、保存监听、本地化和面板管理器 |
+| [编辑器控件索引](/api/editor-events/editor-controls.md) | 时间线控件、属性面板和属性字段控件关系 |
+| [时间线与事件控件](/api/editor-events/timeline-controls.md) | `Timeline`、`TabSection`、事件控件、点击创建、拖拽移动和坐标换算 |
+| [Inspector 面板索引与专项行为](/api/editor-events/inspector-panels.md) | `InspectorPanel_*` 子类、手工面板、自动面板和专项字段联动 |
+| [自定义方法事件](/api/editor-events/custom-methods.md) | 自定义方法事件、自动补全规则、`ListedMethod` 和可调用方法清单 |
+| [事件覆盖清单](/api/editor-events/event-coverage.md) | `LevelEventType` 0 到 80 号事件的页面归属 |
+| [事件运行路径](/api/editor-events/runtime-flow.md) | `LevelEvent_Base`、`LevelBase`、`scrExecuteOnCertainBeat` 的运行调度关系 |
+| [Inspector 面板读写链路](/api/editor-events/inspector-flow.md) | 自动面板、手工面板、输入监听和 `AddOneshotBeat` 面板读写示例 |
 
 ## 编辑器事件分组
 
-| 页面 | 状态 | 说明 |
-| --- | --- | --- |
-| [歌曲与音频事件](/api/editor-events/song-audio-events.md) | 初稿 | 已人工阅读源码，记录歌曲、BPM、节拍声音、计数音、拍手音和游戏音效事件 |
-| [行与节拍事件](/api/editor-events/row-events.md) | 初稿 | 已人工阅读源码，记录行创建、Classic/Oneshot/FreeTime 节拍、行移动、隐藏、换行和 X pattern |
-| [视觉与镜头事件](/api/editor-events/visual-camera-events.md) | 初稿 | 已人工阅读源码，记录主题、VFX、背景前景、闪光、镜头、震屏、行染色和手部事件 |
-| [房间与精灵事件](/api/editor-events/room-sprite-events.md) | 初稿 | 已人工阅读源码，记录房间显示、变换、遮罩、透视、精灵创建、移动、染色、平铺、动画和排序 |
-| [文本与脚本控制事件](/api/editor-events/text-control-events.md) | 初稿 | 已人工阅读源码，记录对话、浮动文字、旁白、注释指令、标签、自定义方法、表情、换角色和 Stutter |
-| [自定义方法事件](/api/editor-events/custom-methods.md) | 初稿 | 已人工阅读源码，记录自定义方法事件、自动补全规则、`ListedMethod` 和可调用方法清单 |
-| [窗口与剩余事件](/api/editor-events/window-misc-events.md) | 初稿 | 已人工阅读源码，记录窗口舞蹈、缩放、内容、标题、显示、排序、播放风格和精灵混合 |
+| 页面 | 内容 |
+| --- | --- |
+| [歌曲与音频事件](/api/editor-events/song-audio-events.md) | 歌曲、BPM、节拍声音、计数音、拍手音和游戏音效事件 |
+| [行与节拍事件](/api/editor-events/row-events.md) | 行创建、Classic/Oneshot/FreeTime 节拍、行移动、隐藏、换行和 X pattern |
+| [视觉与镜头事件](/api/editor-events/visual-camera-events.md) | 主题、VFX、背景前景、闪光、镜头、震屏、行染色和手部事件 |
+| [房间与精灵事件](/api/editor-events/room-sprite-events.md) | 房间显示、变换、遮罩、透视、精灵创建、移动、染色、平铺、动画和排序 |
+| [文本与脚本控制事件](/api/editor-events/text-control-events.md) | 对话、浮动文字、旁白、注释指令、标签、自定义方法、表情、换角色和 Stutter |
+| [自定义方法事件](/api/editor-events/custom-methods.md) | 自定义方法事件、自动补全规则、`ListedMethod` 和可调用方法清单 |
+| [窗口与剩余事件](/api/editor-events/window-misc-events.md) | 窗口舞蹈、缩放、内容、标题、显示、排序、播放风格和精灵混合 |
 
 ## 重点事件专页
 
-| 页面 | 状态 | 说明 |
-| --- | --- | --- |
-| [AddClassicBeat](/api/editor-events/AddClassicBeat.md) | 初稿 | 已人工阅读源码，记录 Classic 字段、Hold、Swing、Prepare、Run、拆 FreeTime 和面板读写 |
-| [AddOneshotBeat](/api/editor-events/AddOneshotBeat.md) | 初稿 | 已人工阅读源码，记录 Oneshot 字段、验证、解码、准备、预备音频、运行和面板读写 |
-| [音频与声音事件](/api/editor-events/AudioSoundEvents.md) | 初稿 | 已人工阅读源码，记录播放音效、拍手音、系统音、行 pulse sound、数拍音和 SoundData |
-| [FloatingText 事件](/api/editor-events/FloatingTextEvents.md) | 初稿 | 已人工阅读源码，记录 `FloatingText`、`AdvanceText`、歌词推进、朗读、面板和时间线联动 |
-| [镜头与震屏事件](/api/editor-events/CameraShakeEvents.md) | 初稿 | 已人工阅读源码，记录 `MoveCamera`、`ShakeScreen`、`PulseCamera`、`ShakeScreenCustom` 的字段与运行路径 |
-| [PlaySong](/api/editor-events/PlaySong.md) | 初稿 | 已人工阅读源码，记录歌曲字段、旧音量迁移、音频准备、播放、BPM 设置和时间线控件 |
-| [房间控制事件](/api/editor-events/RoomControlEvents.md) | 初稿 | 已人工阅读源码，记录房间显示、移动、排序、遮罩、透明度、内容模式和透视顶点 |
-| [行控制与自由节拍事件](/api/editor-events/RowControlEvents.md) | 初稿 | 已人工阅读源码，记录行创建、自由节拍、显示隐藏、移动、玩家换行、波形、排序和旋转行 |
-| [SetRowXs](/api/editor-events/SetRowXs.md) | 初稿 | 已人工阅读源码，记录 X pattern、Synco、运行修饰、面板读写和时间线显示 |
-| [ShowDialogue](/api/editor-events/ShowDialogue.md) | 初稿 | 已人工阅读源码，记录普通文本、Ink 指令、本地化、自定义角色准备、RDInk 调用和面板关系 |
-| [精灵生命周期事件](/api/editor-events/SpriteLifecycleEvents.md) | 初稿 | 已人工阅读源码，记录 `MakeSprite`、`Move`、`PlayAnimation`、自定义资源加载、精灵注册和面板读写 |
-| [精灵渲染与排序事件](/api/editor-events/SpriteRenderEvents.md) | 初稿 | 已人工阅读源码，记录 `Tint`、`Tile`、`SetVisible`、`ReorderSprite`、`Blend` 和 `CustomSprite` 平铺更新 |
-| [文本控制与脚本事件](/api/editor-events/TextControlEvents.md) | 初稿 | 已人工阅读源码，记录表情、文字爆炸、注释脚本、标签、Stutter、旁白和换角色 |
-| [视觉样式与特效事件](/api/editor-events/VisualStyleEvents.md) | 初稿 | 已人工阅读源码，记录主题、VFX、背景前景、闪光、行染色、手部和桌面颜色事件 |
-| [窗口控制事件](/api/editor-events/WindowControlEvents.md) | 初稿 | 已人工阅读源码，记录窗口舞蹈、缩放、内容、显示、标题、排序和主窗口 |
-| [杂项游戏事件](/api/editor-events/MiscGameEvents.md) | 初稿 | 已人工阅读源码，记录爆心、RDGS、BassDrop、状态牌、完成关卡、手部归属和播放风格 |
-| [歌曲时间线事件](/api/editor-events/SongTimingEvents.md) | 初稿 | 已人工阅读源码，记录 `SetBeatsPerMinute`、`SetCrotchetsPerBar`、面板、时间线和换算关系 |
+| 页面 | 内容 |
+| --- | --- |
+| [AddClassicBeat](/api/editor-events/AddClassicBeat.md) | Classic 字段、Hold、Swing、Prepare、Run、拆 FreeTime 和面板读写 |
+| [AddOneshotBeat](/api/editor-events/AddOneshotBeat.md) | Oneshot 字段、验证、解码、准备、预备音频、运行和面板读写 |
+| [音频与声音事件](/api/editor-events/AudioSoundEvents.md) | 播放音效、拍手音、系统音、行 pulse sound、数拍音和 SoundData |
+| [FloatingText 事件](/api/editor-events/FloatingTextEvents.md) | `FloatingText`、`AdvanceText`、歌词推进、朗读、面板和时间线联动 |
+| [镜头与震屏事件](/api/editor-events/CameraShakeEvents.md) | `MoveCamera`、`ShakeScreen`、`PulseCamera`、`ShakeScreenCustom` 的字段与运行路径 |
+| [PlaySong](/api/editor-events/PlaySong.md) | 歌曲字段、旧音量迁移、音频准备、播放、BPM 设置和时间线控件 |
+| [房间控制事件](/api/editor-events/RoomControlEvents.md) | 房间显示、移动、排序、遮罩、透明度、内容模式和透视顶点 |
+| [行控制与自由节拍事件](/api/editor-events/RowControlEvents.md) | 行创建、自由节拍、显示隐藏、移动、玩家换行、波形、排序和旋转行 |
+| [SetRowXs](/api/editor-events/SetRowXs.md) | X pattern、Synco、运行修饰、面板读写和时间线显示 |
+| [ShowDialogue](/api/editor-events/ShowDialogue.md) | 普通文本、Ink 指令、本地化、自定义角色准备、RDInk 调用和面板关系 |
+| [精灵生命周期事件](/api/editor-events/SpriteLifecycleEvents.md) | `MakeSprite`、`Move`、`PlayAnimation`、自定义资源加载、精灵注册和面板读写 |
+| [精灵渲染与排序事件](/api/editor-events/SpriteRenderEvents.md) | `Tint`、`Tile`、`SetVisible`、`ReorderSprite`、`Blend` 和 `CustomSprite` 平铺更新 |
+| [文本控制与脚本事件](/api/editor-events/TextControlEvents.md) | 表情、文字爆炸、注释脚本、标签、Stutter、旁白和换角色 |
+| [视觉样式与特效事件](/api/editor-events/VisualStyleEvents.md) | 主题、VFX、背景前景、闪光、行染色、手部和桌面颜色事件 |
+| [窗口控制事件](/api/editor-events/WindowControlEvents.md) | 窗口舞蹈、缩放、内容、显示、标题、排序和主窗口 |
+| [杂项游戏事件](/api/editor-events/MiscGameEvents.md) | 爆心、RDGS、BassDrop、状态牌、完成关卡、手部归属和播放风格 |
+| [歌曲时间线事件](/api/editor-events/SongTimingEvents.md) | `SetBeatsPerMinute`、`SetCrotchetsPerBar`、面板、时间线和换算关系 |
+
+## 运行时系统
+
+| 页面 | 内容 |
+| --- | --- |
+| [运行时系统总览](/api/runtime/overview.md) | `scnGame`、`LevelBase`、`scrConductor`、Beat、输入、房间、VFX 和窗口系统的主干数据流 |
+| [节拍与判定](/api/runtime/beats-judgement.md) | `Beat`、`BeatClassic`、`BeatOneshot`、`scrPlayerbox`、`HitType`、`OffsetType`、`RDHitStrip` 和 `HitStripManager` |
+| [输入系统](/api/runtime/input-system.md) | `RDInput`、`RDInputType`、键盘、手柄、触摸、自定义按钮、模拟按键和输入交换 |
+| [行与角色系统](/api/runtime/rows-characters.md) | `Row`、`RowEntity`、`scrPlayerbox`、`scrBeatbox`、Classic/Oneshot 行控制器和角色枚举 |
+| [房间与 VFX 系统](/api/runtime/rooms-vfx.md) | `scrVfxControl`、`RDRoom`、`RDCamera`、`RoomCamera`、背景前景、遮罩、透视、主题和 VFX preset |
+| [窗口系统](/api/runtime/windows.md) | `WindowChoreographer`、真实窗口、虚拟窗口、`WindowDancer`、窗口事件、blit 链路和窗口舞蹈 preset |
+| [音频运行时](/api/runtime/audio-runtime.md) | `AudioManager`、`scrConductor`、`RDGameSounds`、`SoundData`、`RDSongOffsets`、mixer group 和音频调度 |
+| [场景流程与暂停流程](/api/runtime/scene-flow.md) | `scnGame`、`PauseMenu`、`PauseMenuMode`、`Rankscreen`、关卡加载、开始、暂停、重开、失败和结算 |
+
+## 数据模型与枚举
+
+| 页面 | 内容 |
+| --- | --- |
+| [关卡数据模型](/api/data-models/level-data.md) | `RDLevelData`、`.rdlevel` 根结构、行、装饰、事件、条件、书签、调色板和窗口舞蹈扫描 |
+| [关卡设置模型](/api/data-models/level-settings.md) | `RDLevelSettings`、关卡元信息、预览资源、难度、玩家模式、rank、mods 和校验边界 |
+| [自定义关卡与错误模型](/api/data-models/custom-levels-errors.md) | `CustomLevelData`、`LevelValidation`、`LevelErrorName`、错误展示和设置校验 |
+| [Rank 与难度枚举](/api/data-models/rank-difficulty.md) | `Rank`、`Difficulty`、`LevelDifficulty`、`LevelPlayMode`、`LevelType` 和 `LevelSource` |
+| [条件系统](/api/data-models/conditionals.md) | `Conditional`、`Conditionals`、条件枚举、全局条件、Inspector、事件绑定和运行时检查 |
+| [音频与辅助数据模型](/api/data-models/audio-and-auxiliary.md) | `SoundData`、`SoundDataStruct`、`RDGameSounds`、书签、颜色调色板、标签动作和枚举属性 |
+| [属性反射与小型模型](/api/data-models/property-reflection-small-models.md) | `BasePropertyInfo` 派生类、Attribute 控件映射、Float 表达式、自定义动画数据和指针事件模型 |
+
+## 官方关卡脚本
+
+| 页面 | 内容 |
+| --- | --- |
+| [官方关卡脚本总览](/api/levels/overview.md) | `Level_*` 脚本范围、分组索引、共同生命周期、重点脚本入口和后续拆分计划 |
+| [教程与开场关卡](/api/levels/tutorials-opening.md) | `Level_Intro`、`Level_Tutorial_*`、`Level_OpeningCreds` 的资源、流程、回调、跳转和公开方法 |
+| [Boss 与高压段落](/api/levels/boss-high-pressure.md) | `Level_Boss2`、`Level_Boss2Booth`、`Level_Boss2Hard`、`Level_PaigesReckoning`、`Level_InsomniacHard`、`Level_FinalRemix` 的 Boss、失败、低血量和高压段落逻辑 |
+| [运动与节奏变体](/api/levels/athlete-freezeshot.md) | `Level_Freezeshot`、`Level_FreezeshotH`、`Level_FreezeshotBooth`、`Level_AthleteTherapy`、`Level_AthleteFinale`、`Level_Injury` 的棒球、灯牌、afterimage、杯子、泡泡和手机直播逻辑 |
+| [视觉与窗口特殊关卡](/api/levels/visual-special.md) | `Level_SVT`、`Level_Smokin`、`Level_Blurred`、`Level_Bitterness`、`Level_Montage`、`Level_Montage2`、`Level_Trailer` 的 kaleidoscope、咖啡杯、窗口 peek、粒子、Boss 失败和 trailer 演示逻辑 |
+| [叙事与场景关卡](/api/levels/story-scene-levels.md) | `Level_Lofi`、`Level_Lounge`、`Level_LuckyBreak`、`Level_HaileyDuet`、`Level_DistantDuet`、`Level_HelpingHands`、`Level_Steinway`、`Level_SteinwayH`、`Level_StevensonsTango` 的手部、背景、灯光、体育场和 credits 逻辑 |

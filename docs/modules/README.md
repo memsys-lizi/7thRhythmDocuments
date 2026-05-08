@@ -2,17 +2,17 @@
 
 文档按源码系统拆分，不把所有内容塞进单页。
 
-## 模块路线
+## 模块入口
 
-| 模块 | 状态 | 入口 |
-| --- | --- | --- |
-| 核心骨架 | 进行中 | [核心骨架](/modules/core.md) |
-| 编辑器事件系统 | 未开始 | [编辑器事件系统](/modules/editor-events.md) |
-| 运行时游戏系统 | 未开始 | [运行时游戏系统](/modules/runtime.md) |
-| 数据模型与枚举 | 未开始 | [数据模型与枚举](/modules/data-models.md) |
-| 官方关卡脚本 | 未开始 | [官方关卡脚本](/modules/levels.md) |
-| Mod 作者索引 | 未开始 | [Mod 作者入口](/modding/README.md) |
+| 模块 | 入口 |
+| --- | --- |
+| 核心骨架 | [核心骨架](/modules/core.md) |
+| 编辑器事件系统 | [编辑器事件系统](/modules/editor-events.md) |
+| 运行时游戏系统 | [运行时游戏系统](/modules/runtime.md) |
+| 数据模型与枚举 | [数据模型与枚举](/modules/data-models.md) |
+| 官方关卡脚本 | [官方关卡脚本](/modules/levels.md) |
+| Mod 作者索引 | [Mod 作者入口](/modding/README.md) |
 
-## 优先级
+## 阅读路径
 
-第一批优先写核心骨架和编辑器事件系统，因为它们连接了运行时、关卡数据和 Mod 作者最常接触的事件模型。
+建议先从核心骨架进入，理解 `RDBase`、`RDClass`、`LevelBase`、`scrConductor`、`scnGame` 和 `scnEditor` 的关系。随后阅读编辑器事件系统，它连接关卡数据、运行时调度、Inspector 面板和 Mod 作者最常接触的事件模型。

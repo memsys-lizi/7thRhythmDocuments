@@ -4,16 +4,16 @@
 
 本模块覆盖 `RDFucked/Assets/Scripts/Assembly-CSharp/RDLevelEditor` 中的关卡编辑器事件系统。
 
-优先类型：
+核心类型：
 
-| 类型族 | 说明 | 状态 |
-| --- | --- | --- |
-| `LevelEvent_Base` | 所有关卡事件的数据基类 | 已写初稿 |
-| `LevelEvent_*` | 具体事件数据，如移动、播放声音、显示房间、设置 BPM | 待深写 |
-| `InspectorPanel` | 编辑器右侧属性面板基类 | 已写初稿 |
-| `InspectorPanel_*` | 具体事件 Inspector 面板 | 已建立索引，待逐类深写 |
-| `LevelEventControl_*` | 时间线上的事件控件 | 已建立索引，待逐类深写 |
-| `ControlAttribute` 及子类 | 自动生成属性控件的元数据 | 已写初稿 |
+| 类型族 | 说明 |
+| --- | --- |
+| `LevelEvent_Base` | 所有关卡事件的数据基类 |
+| `LevelEvent_*` | 具体事件数据，如移动、播放声音、显示房间、设置 BPM |
+| `InspectorPanel` | 编辑器右侧属性面板基类 |
+| `InspectorPanel_*` | 具体事件 Inspector 面板 |
+| `LevelEventControl_*` | 时间线上的事件控件 |
+| `ControlAttribute` 及子类 | 自动生成属性控件的元数据 |
 
 ## 核心流程
 
@@ -59,6 +59,8 @@ flowchart TD
 | [BasePropertyInfo](/api/editor-events/BasePropertyInfo.md) | 事件属性反射、序列化映射、默认控件映射、`Property` 和 `PropertyControl`。 |
 | [InspectorPanel](/api/editor-events/InspectorPanel.md) | 自动面板、保存监听、本地化、属性控件更新和 `RDInspectorPanelManager`。 |
 | [编辑器控件索引](/api/editor-events/editor-controls.md) | 时间线控件、属性面板和字段控件三层 UI 关系。 |
+| [时间线与事件控件](/api/editor-events/timeline-controls.md) | `Timeline`、`TabSection`、事件控件、点击创建、拖拽移动、书签、波形和坐标换算。 |
+| [Inspector 面板索引与专项行为](/api/editor-events/inspector-panels.md) | `InspectorPanel_*` 子类、手工面板、自动面板和专项字段联动。 |
 | [事件覆盖清单](/api/editor-events/event-coverage.md) | 按 `LevelEventType` 枚举顺序记录事件页面归属和覆盖状态。 |
 | [事件运行路径](/api/editor-events/runtime-flow.md) | 事件从关卡数据进入 `Prepare`、`RunPrebar`、按节拍调度和 Scrub 追赶的运行链路。 |
 | [Inspector 面板读写链路](/api/editor-events/inspector-flow.md) | 自动面板与手工面板的显示、保存、输入监听和字段回写路径。 |
@@ -96,10 +98,11 @@ flowchart TD
 | UI 入口 | 手工面板继承 `InspectorPanel`；自动面板通过 `BasePropertyInfo` 和 `ControlAttribute` 生成。 |
 | 条件 | 本地条件存在 `conditionals`，全局条件存在 `globalConditionals`，取反分别使用负数编码和 `~` 前缀。 |
 
-## 待补充
+## 相关页面
 
-- 重点事件的数据字段和用途专页。
-- 重点 Inspector Panel 的逐类字段读写表。
-- `LevelEventControl_*` 时间线控件逐类行为。
-- 重点事件运行时按模块分类的执行流程。
-- Mod 作者可调用事件和字段索引。
+- [事件覆盖清单](/api/editor-events/event-coverage.md)：按 `LevelEventType` 编号定位每个事件页面。
+- [编辑器控件索引](/api/editor-events/editor-controls.md)：解释时间线控件、属性面板和字段控件的关系。
+- [时间线与事件控件](/api/editor-events/timeline-controls.md)：解释底部时间线、标签页、事件控件、坐标换算、点击创建和拖拽编辑。
+- [Inspector 面板索引与专项行为](/api/editor-events/inspector-panels.md)：解释手工面板、自动面板和复杂字段联动。
+- [Inspector 面板读写链路](/api/editor-events/inspector-flow.md)：解释属性面板如何显示事件并把字段写回数据对象。
+- [自定义方法事件](/api/editor-events/custom-methods.md)：解释 `CallCustomMethod` 与 `[ListedMethod(true)]` 的 Mod 入口。

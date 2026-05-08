@@ -9,7 +9,7 @@
 | 声明 | `public class RDBase : RDBaseDllDummy` |
 | 父类链路 | `RDBaseDllDummy`，其源码声明为 `MonoBehaviour` 子类 |
 | 主要职责 | 为 Unity 组件脚本提供 RD 常用单例、场景对象、坐标快捷属性和少量静态工具 |
-| 文档状态 | 初稿，已人工阅读源码 |
+| 覆盖内容 | 单例入口、静态字段、坐标属性、开发者判断和调用风险 |
 
 ## 用途概览
 
@@ -22,7 +22,7 @@
 | 名称 | 类型 | 可见性 | 作用 |
 | --- | --- | --- | --- |
 | `Vfx` | `scrVfxControl` | `public static` | 全局 VFX 控制器引用，供 `RDBase` 和 `RDClass` 系列代码访问视觉效果系统 |
-| `appIsInSteamLibrary` | `bool` | `public static` | 标记应用是否位于 Steam 库路径中，具体写入点需后续搜索 |
+| `appIsInSteamLibrary` | `bool` | `public static` | 标记应用是否位于 Steam 库路径中 |
 | `platform` | `Platform` | `public static` | 保存当前平台枚举或平台状态 |
 | `discordDevIDs` | `long[]` | `private static` | Discord 开发者 ID 白名单，用于 `isDev` 判断 |
 | `steamDevIDs` | `ulong[]` | `private static` | Steam 开发者 ID 白名单，用于 `isDev` 判断 |
@@ -35,7 +35,7 @@
 | `scnCurrent` | `scnBase` | 只读 | 返回当前场景基类实例 `scnBase.instance` |
 | `game` | `scnGame` | 只读 | 将当前场景实例转换为 `scnGame`，只在游戏场景有效 |
 | `menu` | `scnMenu` | 只读 | 将当前场景实例转换为 `scnMenu`，只在菜单场景有效 |
-| `cls` | `scnCLS` | 只读 | 返回 `scnCLS.instance`，具体场景职责待后续补充 |
+| `cls` | `scnCLS` | 只读 | 返回 `scnCLS.instance` |
 | `gm` | `scrGameManager` | 只读 | 返回全局游戏管理器实例 |
 | `ink` | `RDInk` | 只读 | 返回 `scrGameManager.instance.inkDialogue`，即 Ink 对话系统入口 |
 | `mainCamera` | `Camera` | 只读 | 返回当前场景的世界相机 `scnBase.instance.wrldCamera` |

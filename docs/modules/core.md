@@ -4,14 +4,14 @@
 
 本模块先覆盖以下核心类型：
 
-| 类型 | 源码路径 | 状态 |
+| 类型 | 源码路径 | 页面 |
 | --- | --- | --- |
-| `RDBase` | `Assets/Scripts/Assembly-CSharp/RDBase.cs` | [初稿已写](/api/core/RDBase.md) |
-| `RDClass` | `Assets/Scripts/Assembly-CSharp/RDClass.cs` | [初稿已写](/api/core/RDClass.md) |
-| `LevelBase` | `Assets/Scripts/Assembly-CSharp/LevelBase.cs` | [初稿已写](/api/core/LevelBase.md) |
-| `scrConductor` | `Assets/Scripts/Assembly-CSharp/scrConductor.cs` | [初稿已写](/api/core/scrConductor.md) |
-| `scnGame` | `Assets/Scripts/Assembly-CSharp/scnGame.cs` | [初稿已写](/api/core/scnGame.md) |
-| `scnEditor` | `Assets/Scripts/Assembly-CSharp/RDLevelEditor/scnEditor.cs` | [初稿已写](/api/core/scnEditor.md) |
+| `RDBase` | `Assets/Scripts/Assembly-CSharp/RDBase.cs` | [RDBase](/api/core/RDBase.md) |
+| `RDClass` | `Assets/Scripts/Assembly-CSharp/RDClass.cs` | [RDClass](/api/core/RDClass.md) |
+| `LevelBase` | `Assets/Scripts/Assembly-CSharp/LevelBase.cs` | [LevelBase](/api/core/LevelBase.md) |
+| `scrConductor` | `Assets/Scripts/Assembly-CSharp/scrConductor.cs` | [scrConductor](/api/core/scrConductor.md) |
+| `scnGame` | `Assets/Scripts/Assembly-CSharp/scnGame.cs` | [scnGame](/api/core/scnGame.md) |
+| `scnEditor` | `Assets/Scripts/Assembly-CSharp/RDLevelEditor/scnEditor.cs` | [scnEditor](/api/core/scnEditor.md) |
 
 ## 初步关系
 
@@ -68,9 +68,8 @@ flowchart TD
 | `RDClass` | 适合从普通 C# 类中访问 `game`、`conductor`、`editor`、`gc` | 同样依赖场景单例；不适合当作独立数据模型使用 |
 | `LevelBase` | 包含大量 `[ListedMethod(true)]` 方法；`MethodAutocompleteUI` 会把带该属性且签名受支持的 void 方法列入公开自定义方法候选 | 方法范围很广，很多会直接改游戏状态、判定、角色、房间或输入 |
 
-## 待补充
+## 相关页面
 
-- `scrConductor`、`scnGame`、`scnEditor` 全量成员拆页。
-- Unity 生命周期和初始化顺序。
-- `LevelBase` 与 `LevelEvent_Base` 的调用关系。
-- `LevelBase` 全量成员拆页。
+- [事件运行路径](/api/editor-events/runtime-flow.md)：说明 `LevelBase` 与 `LevelEvent_Base` 的调度关系。
+- [自定义方法事件](/api/editor-events/custom-methods.md)：说明 `LevelBase` 中带 `[ListedMethod(true)]` 的 Mod 可调用方法如何进入自动补全。
+- [编辑器事件系统](/modules/editor-events.md)：说明编辑器事件如何连接运行时和 Inspector UI。

@@ -9,7 +9,7 @@
 | 声明 | `public class LevelBase : RDClass` |
 | 文件规模 | 约 3700 行 |
 | 主要职责 | 承载关卡数据、运行时事件、关卡 Mod 开关、判定统计、音乐与视觉控制方法 |
-| 文档状态 | 初稿，已人工阅读主结构；成员需继续拆页逐项深写 |
+| 覆盖内容 | 构造加载流程、核心字段分组、重要属性、方法分组和 Mod 可调用方法入口 |
 
 ## 用途概览
 
@@ -130,7 +130,7 @@
 
 ## 方法分组索引
 
-`LevelBase` 方法数量很大，下面先按职责分组。后续会把这些分组拆成单独页面逐项解释。
+`LevelBase` 方法数量很大，下面按职责分组说明主要入口。
 
 | 分组 | 方法示例 | 说明 |
 | --- | --- | --- |
@@ -147,7 +147,7 @@
 | 关卡跳转 | `GoToLevel`、`GoToLevelInstantly`、`SetNextBar`、`SetPlayStyle` | 切换关卡、小节和播放风格 |
 | 对话和叙述 | `PlayDialogueBasedOnTries`、`PlayGameOverDialogue`、`StopDialogue`、`NarrateDescription` | Ink 对话和旁白控制 |
 
-## ListedMethod 初步说明
+## ListedMethod 说明
 
 源码中有 45 个 `[ListedMethod(true)]` 标注的方法。`ListedMethodAttribute` 保存 `showDescription` 标记；`MethodAutocompleteUI` 使用反射读取 `LevelBase`、`scrVfxControl`、`RDRoom` 的公开实例方法，只有返回 `void` 且参数类型属于 `int`、`float`、`string`、`bool` 的方法会进入候选列表。带 `ListedMethodAttribute` 的方法显示为公开候选；没有该属性的方法只在开发者模式下出现。
 

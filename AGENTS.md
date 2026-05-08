@@ -23,6 +23,18 @@
 
 第三方插件目录 `RDFucked/Assets/Plugins/Assembly-CSharp-firstpass` 不逐项深写，只说明依赖用途和 RD 中的接入点。
 
+## 完成判定与自动化停止规则
+
+本项目的“文档写完”不是指阶段页面存在，而是指 `RDFucked/Assets/Scripts/Assembly-CSharp` 中 RD 主工程代码文件已经被系统性覆盖：
+
+- 绝大多数 RD 主工程 `.cs` 文件都有对应页面、分组页面或索引说明。
+- 重点类、关卡脚本、事件类、数据模型、枚举、运行时系统和 Mod 入口已经解释其字段、属性、方法、生命周期和协作关系。
+- 自动生成或人工维护的覆盖清单中，没有未分类的大块源码文件。
+- 阶段 0 到阶段 7 均为 `已完成`，并且阶段 7 已完成全站复核、交叉链接、术语表、调用图和缺失项清单清理。
+- `docs/progress.md`、`docs/_sidebar.md`、`docs/api/README.md`、模块页和 `AGENTS.md` 的进度一致。
+
+如果后续自动化任务启动时发现上述条件已经满足，应停止继续写作，不再新增重复页面或空泛总结；只需要报告“文档已完成，自动化无需继续推进”。如果自动化系统允许删除或暂停当前任务，应优先暂停或删除对应自动化，避免用户不在时继续空转。
+
 ## 写作准则
 
 正式文档只写已经从源码、调用点、Unity 配置或反编译结果中确认过的内容。遇到暂时没有读透的字段或方法，继续追踪源码；如果当轮没有查清，就先从该页面移出，放到工作清单里，等查清后再写入正式文档。
@@ -31,12 +43,12 @@
 
 | 阶段 | 状态 | 目标 | 进度记录 |
 | --- | --- | --- | --- |
-| 阶段 0：文档基础设施 | 待复核 | 完善 docsify 首页、侧边栏、搜索、黑白样式、模块目录 | 已创建 docsify 站点、长期手册、模块导航和写作规范 |
-| 阶段 1：核心骨架 | 待复核 | 深写 `RDBase`、`RDClass`、`LevelBase`、`scrConductor`、`scnGame`、`scnEditor` | 六个核心类均已完成第一版人工初稿；后续进入全量成员拆页和交叉链接复核 |
-| 阶段 2：关卡编辑器事件系统 | 进行中 | 深写 `LevelEvent_Base`、`LevelEvent_*`、`InspectorPanel`、`InspectorPanel_*`、事件属性与控件关系 | 已完成 `LevelEvent_Base`、`LevelEventInfo`、`BasePropertyInfo`、`InspectorPanel` 第一版人工初稿；已补歌曲与音频事件、行与节拍事件、视觉与镜头事件、房间与精灵事件、文本与脚本控制事件、窗口与剩余事件分组页、编辑器控件索引、事件覆盖清单、事件运行路径、Inspector 面板读写链路、`AddClassicBeat`、`AddOneshotBeat`、`SetRowXs`、`PlaySong`、歌曲时间线事件、`ShowDialogue`、`FloatingText` 事件、精灵生命周期事件、精灵渲染与排序事件、镜头与震屏事件、房间控制事件、窗口控制事件、视觉样式与特效事件、行控制与自由节拍事件、音频与声音事件、文本控制与脚本事件、杂项游戏事件专页；当前步骤是阶段 2 复核：补 Inspector 面板、时间线控件、交叉链接和缺失项清单 |
-| 阶段 3：运行时游戏系统 | 未开始 | 覆盖节拍、判定、行、房间、窗口、音频、VFX、场景流程 | 待开始 |
-| 阶段 4：数据模型与枚举 | 未开始 | 覆盖 `RDLevelData`、`RDLevelSettings`、自定义关卡、错误、难度、平台等模型 | 待开始 |
-| 阶段 5：官方关卡脚本 | 未开始 | 覆盖 `Level_*` 系列，说明每个关卡脚本的特殊逻辑 | 待开始 |
+| 阶段 0：文档基础设施 | 已完成 | 完善 docsify 首页、侧边栏、搜索、黑白样式、模块目录 | 已复核 docsify 首页、侧边栏、搜索配置和黑白样式；公开导航已移除维护者入口 |
+| 阶段 1：核心骨架 | 已完成 | 深写 `RDBase`、`RDClass`、`LevelBase`、`scrConductor`、`scnGame`、`scnEditor` | 六个核心类页面已完成读者向整理，并与核心骨架模块页、编辑器事件运行路径建立交叉入口 |
+| 阶段 2：关卡编辑器事件系统 | 已完成 | 深写 `LevelEvent_Base`、`LevelEvent_*`、`InspectorPanel`、`InspectorPanel_*`、事件属性与控件关系 | 已完成阶段复核：覆盖 `LevelEventType` 0 到 80 的分组页或专页，补齐基础机制、事件运行路径、Inspector 读写链路、事件覆盖清单、时间线与事件控件、Inspector 面板索引和重点事件专页 |
+| 阶段 3：运行时游戏系统 | 待复核 | 覆盖节拍、判定、行、房间、窗口、音频、VFX、场景流程 | 已完成运行时系统总览、节拍与判定、输入系统、行与角色系统、房间与 VFX 系统、窗口系统、音频运行时、场景流程与暂停流程；下一步复核阶段 3 缺口并进入阶段 4 数据模型与枚举 |
+| 阶段 4：数据模型与枚举 | 待复核 | 覆盖 `RDLevelData`、`RDLevelSettings`、自定义关卡、错误、难度、平台等模型 | 主体页面已完成：覆盖 `RDLevelData`、`RDLevelSettings`、`CustomLevelData`、`LevelValidation`、`LevelError*`、`Rank`、`Difficulty`、`LevelDifficulty`、`LevelPlayMode`、`LevelType`、`LevelSource`、`Conditional`、`ConditionalInfo`、`ConditionalID`、`Conditionals`、`Conditional_*`、`SoundData`、`SoundDataStruct`、`RDGameSounds`、`BookmarkData`、`ColorOrPalette`、`TagAction`、`LevelSettingName`、`BasePropertyInfo`、属性 Attribute、控件 Attribute、`Float2`、`FloatExpression`、`CustomAnimationData` 和小型设置模型；下一步进入阶段 5 官方关卡脚本 |
+| 阶段 5：官方关卡脚本 | 进行中 | 覆盖 `Level_*` 系列，说明每个关卡脚本的特殊逻辑 | 已建立 [官方关卡脚本总览](/api/levels/overview.md)、[教程与开场关卡](/api/levels/tutorials-opening.md)、[Boss 与高压段落](/api/levels/boss-high-pressure.md)、[运动与节奏变体](/api/levels/athlete-freezeshot.md)、[视觉与窗口特殊关卡](/api/levels/visual-special.md) 和 [叙事与场景关卡](/api/levels/story-scene-levels.md)：覆盖教程、开场、Boss2、Boss2 Booth、Boss2 Hard、Paige、Insomniac Hard、FinalRemix、Freezeshot、AthleteTherapy、AthleteFinale、Injury、SVT、Smokin、Blurred、Bitterness、Montage、Montage2、Trailer、Lofi、LuckyBreak、HaileyDuet、DistantDuet、HelpingHands、Steinway 和 StevensonsTango 的资源、流程、回调、失败与公开方法；下一步深写其他官方与测试脚本 |
 | 阶段 6：Mod 作者索引 | 进行中 | 整理可调用方法、编辑器事件、数据字段、扩展点和风险提示 | 已完成自定义方法事件第一版，页面归入编辑器事件目录，Mod 区保留交叉入口 |
 | 阶段 7：全站复核 | 未开始 | 补交叉链接、术语表、调用图、缺失项清单 | 待开始 |
 

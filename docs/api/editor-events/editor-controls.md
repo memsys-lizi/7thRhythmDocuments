@@ -2,6 +2,8 @@
 
 本页整理关卡编辑器事件 UI 的三层控件：时间线控件 `LevelEventControl_*`、属性面板 `InspectorPanel_*`、属性字段控件 `PropertyControl_*`。三者共同把 `LevelEvent_Base` 数据显示到编辑器，并把用户输入保存回事件对象。
 
+时间线层的详细说明已经拆到 [时间线与事件控件](/api/editor-events/timeline-controls.md)。本页保留三层结构索引和跨页面入口。
+
 ## 三层结构
 
 ```mermaid
@@ -179,4 +181,6 @@ flowchart LR
 | [LevelEvent_Base](/api/editor-events/LevelEvent_Base.md) | 事件数据来源 |
 | [BasePropertyInfo](/api/editor-events/BasePropertyInfo.md) | 字段反射和属性包装来源 |
 | [InspectorPanel](/api/editor-events/InspectorPanel.md) | 面板创建、显示、保存和自动控件生成 |
+| [Inspector 面板索引与专项行为](/api/editor-events/inspector-panels.md) | `InspectorPanel_*` 子类、空子类、手工面板和字段联动 |
+| [时间线与事件控件](/api/editor-events/timeline-controls.md) | `Timeline`、`TabSection`、事件控件、点击创建、拖拽移动和坐标换算 |
 | [自定义方法事件](/api/editor-events/custom-methods.md) | `InspectorPanel_CallCustomMethod` 的方法补全与调用规则 |

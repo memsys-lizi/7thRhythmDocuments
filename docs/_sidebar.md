@@ -1,7 +1,4 @@
 * [首页](/)
-* [任务进度](progress.md)
-* 指南
-  * [文档规范](guide/writing-rules.md)
 * 架构
   * [工程概览](architecture/overview.md)
   * [依赖说明](architecture/dependencies.md)
@@ -13,7 +10,7 @@
   * [数据模型与枚举](modules/data-models.md)
   * [官方关卡脚本](modules/levels.md)
 * API
-  * [API 草稿区](api/README.md)
+  * [源码 API 索引](api/README.md)
   * 核心类
     * [RDBase](api/core/RDBase.md)
     * [RDClass](api/core/RDClass.md)
@@ -28,6 +25,8 @@
       * [BasePropertyInfo](api/editor-events/BasePropertyInfo.md)
       * [InspectorPanel](api/editor-events/InspectorPanel.md)
       * [编辑器控件索引](api/editor-events/editor-controls.md)
+      * [时间线与事件控件](api/editor-events/timeline-controls.md)
+      * [Inspector 面板索引与专项行为](api/editor-events/inspector-panels.md)
       * [事件覆盖清单](api/editor-events/event-coverage.md)
       * [事件运行路径](api/editor-events/runtime-flow.md)
       * [Inspector 面板读写链路](api/editor-events/inspector-flow.md)
@@ -57,6 +56,30 @@
       * [窗口控制事件](api/editor-events/WindowControlEvents.md)
       * [杂项游戏事件](api/editor-events/MiscGameEvents.md)
       * [歌曲时间线事件](api/editor-events/SongTimingEvents.md)
+  * 运行时系统
+    * [运行时系统总览](api/runtime/overview.md)
+    * [节拍与判定](api/runtime/beats-judgement.md)
+    * [输入系统](api/runtime/input-system.md)
+    * [行与角色系统](api/runtime/rows-characters.md)
+    * [房间与 VFX 系统](api/runtime/rooms-vfx.md)
+    * [窗口系统](api/runtime/windows.md)
+    * [音频运行时](api/runtime/audio-runtime.md)
+    * [场景流程与暂停流程](api/runtime/scene-flow.md)
+  * 数据模型与枚举
+    * [关卡数据模型](api/data-models/level-data.md)
+    * [关卡设置模型](api/data-models/level-settings.md)
+    * [自定义关卡与错误模型](api/data-models/custom-levels-errors.md)
+    * [Rank 与难度枚举](api/data-models/rank-difficulty.md)
+    * [条件系统](api/data-models/conditionals.md)
+    * [音频与辅助数据模型](api/data-models/audio-and-auxiliary.md)
+    * [属性反射与小型模型](api/data-models/property-reflection-small-models.md)
+  * 官方关卡脚本
+    * [官方关卡脚本总览](api/levels/overview.md)
+    * [教程与开场关卡](api/levels/tutorials-opening.md)
+    * [Boss 与高压段落](api/levels/boss-high-pressure.md)
+    * [运动与节奏变体](api/levels/athlete-freezeshot.md)
+    * [视觉与窗口特殊关卡](api/levels/visual-special.md)
+    * [叙事与场景关卡](api/levels/story-scene-levels.md)
 * Mod
   * [Mod 作者入口](modding/README.md)
 * [术语表](glossary.md)

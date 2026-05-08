@@ -8,7 +8,7 @@
 | 命名空间 | 全局命名空间 |
 | 声明 | `public class scnGame : scnBase, IRequiredControllerPrompt` |
 | 主要职责 | 管理游戏场景运行状态：当前关卡、行、房间、Beat、判定、HP、暂停、输入、视觉 UI 和关卡流程 |
-| 文档状态 | 初稿，已人工阅读字段、属性和公开方法结构 |
+| 覆盖内容 | 字段、属性、公开方法、游戏场景状态、Beat、行、房间和判定入口 |
 
 ## 用途概览
 
@@ -115,4 +115,3 @@ flowchart TD
 | 判定历史集中在列表中 | `allHitOffsets` 和 `rowsHitOffsets` 被 `LevelBase` 的成绩统计属性读取 |
 | Beat 创建方法会改场景对象 | `AddBeat*` 方法会创建 Beat 实例并进入场景运行列表 |
 | 输入可被强制忽略 | `ignoreInput` 被 `LevelBase.IgnoreInput` 直接设置 |
-

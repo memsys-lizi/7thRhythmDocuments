@@ -8,7 +8,7 @@
 | 命名空间 | 全局命名空间 |
 | 声明 | `public class scrConductor : RDBase` |
 | 主要职责 | 管理歌曲时间、BPM、小节节拍、音频播放、节拍音播放、Scrub、播放风格、音量和校准 |
-| 文档状态 | 初稿，已人工阅读字段、属性和公开方法结构 |
+| 覆盖内容 | 字段、属性、公开方法、播放流程、时间轴和校准入口 |
 
 ## 用途概览
 
@@ -124,4 +124,3 @@ flowchart TD
 | `PlayBeat` 会记录音源 | `audiosourcesFromPlayBeat` 和相关字典保存音源起止时间 |
 | `SetPlayStyle` 改变流程 | 该方法会影响播放风格、跳转和 Scrub 行为 |
 | 静态立即播放入口 | `RDBase.PlaySound` 最终调用 `scrConductor.PlayImmediately` |
-

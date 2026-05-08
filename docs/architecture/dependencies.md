@@ -28,7 +28,7 @@
 | `tk2dRuntime` | 2D Toolkit 运行时 |
 | `UnityStandardAssets.ImageEffects` | 后处理效果 |
 
-## 后续工作
+## 阅读重点
 
 - 找出 RD 主工程中调用插件的入口。
 - 为 Mod 作者标注哪些依赖不适合直接改动。
